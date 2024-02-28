@@ -1,0 +1,32 @@
+/* Student Testimonials Section Styling */
+.student-testimonials {
+    background-color: #f9f9f9; /* Lys grå bakgrunn for å skille seksjonen */
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.student-testimonials h2 {
+    color: #507DBC; /* Blå for overskrifter for å fremme fokus og klarhet */
+    margin-bottom: 1.5rem;
+}
+
+.testimonial {
+    background-color: #ffffff; /* Hvit bakgrunn for hver testimonial */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #A9D794; /* Grønn kant for å fremheve */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.testimonial p {
+    font-size: 1rem; /* Standard tekststørrelse */
+    color: #666; /* Mørk grå tekst for god lesbarhet */
+    margin-bottom: 0.5rem; /* Litt plass under hver testimonial */
+}
+
+.testimonial cite {
+    font-style: italic;
+    color: #507DBC; /* Blå for å matche overskriftsfargen */
+}

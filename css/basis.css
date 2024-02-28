@@ -1,0 +1,44 @@
+*, *::before, *::after { 
+    box-sizing: border-box; 
+} 
+
+html {
+    scroll-behavior: smooth;
+    background-color: #eee;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+    font-size: 1rem; 
+    min-width: 320px;
+    max-width: 600px; 
+    background-color: white;
+    margin: 1rem auto; 
+}
+
+h1 { font-size: 2.5rem; font-weight: 500;}
+h2 { font-size: 2rem; font-weight: 500;}
+h3 { font-size: 1.75rem; font-weight: 500;}
+h4 { font-size: 1.5rem; font-weight: 500;} 
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin-top: 0; 
+}
+
+figure, blockquote {
+    margin: 0; 
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0) !important; 
+    overflow: hidden !important;
+    width: 1px !important; 
+    white-space: nowrap !important;
+    height: 1px !important; 
+    padding: 0 !important; 
+    border: 0 !important; 
+    margin: -1px !important; 
+}

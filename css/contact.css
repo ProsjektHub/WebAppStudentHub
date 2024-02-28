@@ -1,0 +1,90 @@
+/* ==================================
+   CSS Fundamentals for StudentHub Website
+
+   contact.css
+   Included in style.css via @import
+
+   Stylesheet for user interactions
+   - Contact Information
+   - Contact Form
+*/
+
+/** 
+  * Contact Information Styles
+  */ 
+
+/* Styling the section */
+.contact-info {
+    background: whitesmoke;
+    color: black; 
+    padding: 1rem;
+    border-radius: 0.25rem; 
+    margin-bottom: 2rem;
+}
+
+/* Styling address text */
+.contact-info address { 
+    font-style: normal; 
+}
+
+/** 
+  * Contact Form Styles
+  */ 
+
+/* Label styling */
+.contact-form label { 
+    display: block; /* Make label a block element to occupy its own line */
+    cursor: pointer; /* Cursor as a "click hand", like a hyperlink */
+}
+
+/* Spacing between form fields */
+.contact-form div { 
+    margin-bottom: 1rem; 
+}
+
+/* Styling input fields */ 
+.contact-form input[type="text"], 
+.contact-form input[type="email"], 
+.contact-form textarea {
+    font-size: inherit; /* Inherit font size and family */
+    font-family: inherit;
+    width: 100%; /* Make input fields full width */
+    padding: 0.5rem; /* Padding inside the input fields */
+    border: 1px solid dimgrey; /* Border styling */
+    border-radius: 0.25rem; /* Rounded corners for input fields */
+}
+
+/* Background color for active input fields */
+.contact-form input[type="text"]:focus, 
+.contact-form input[type="email"]:focus, 
+.contact-form textarea:focus {
+    background-color: whitesmoke;
+    color: black; 
+}
+
+/* <textarea> width limit and minimum height */
+.contact-form textarea {
+    max-width: 100%; /* Adjust max-width for responsiveness */
+    min-height: 8rem;
+}
+
+/* Submit button styling */
+.contact-form button {
+    font-size: inherit; /* Inherit font size and family */
+    font-family: inherit; 
+    text-align: center; /* Center button text */
+    background: #07b; /* Button background color */
+    color: white; /* Button text color */
+    width: auto; /* Adjust width as needed */
+    padding: 1rem; /* Button padding */
+    border: none; /* No border */
+    border-radius: 0.25rem; /* Rounded corners */
+    cursor: pointer; /* Cursor as a "click hand" */
+}
+
+/* Highlight button on hover or focus */
+.contact-form button:hover, 
+.contact-form button:focus {
+    background: #f63; /* Change background color on hover/focus */
+}
+
