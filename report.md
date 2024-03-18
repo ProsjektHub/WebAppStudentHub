@@ -1,7 +1,6 @@
 # Introduction:
 
-Introduction
-"We have conducted thorough research and found that many students, especially the young ones, struggle with organizational issues, financial challenges, and social integration. 
+We have conducted thorough research and found that many students, especially the young ones, struggle with organizational issues, financial challenges, and social integration. 
 
 These three main challenges impact students' overall success and well-being in their academic life.
 
@@ -24,7 +23,7 @@ Our emphasis on simplicity and comprehensive support distinguishes our app. We e
 
 It is imperative to highlight the necessity for our app in addressing the identified challenges effectively.
 
-Our platform is a web application designed to provide accessible solutions to students' needs."
+Our platform is a web application designed to provide accessible solutions to students' needs.
 
 
 
