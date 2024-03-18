@@ -1,16 +1,37 @@
 # Introduction:
 
-We have conducted thorough research and found that many students, especially the young ones, struggle with organizational issues, financial challenges, and social integration. These three main challenges impact students' overall success and well-being in their academic life.
+Introduction
+"We have conducted thorough research and found that many students, especially the young ones, struggle with organizational issues, financial challenges, and social integration. 
 
-The potential benefit with our app, "StudentHub," is significant. By offering an all-in-one solution, the app can simplify and enhance students' experience and efficiency in various aspects of their lives. For instance, with features such as task organization, financial management, community building, and access to guidance and support, "StudentHub" aims to address these challenges directly.
+These three main challenges impact students' overall success and well-being in their academic life.
 
-Our goal with "StudentHub" is not only to provide a solution to these challenges but also to attract as many visitors as possible to our website to indirectly generate revenue through other sources, such as advertising. By creating a valuable and appealing platform for students, we hope to contribute to their success and well-being while achieving financial sustainability for our project.
+Our target audience primarily consists of young students. 
+
+Through our analysis, we not only conducted extensive online research but also identified the needs specific to young students and referenced Maslow's hierarchy of needs. 
+Recognizing the fundamental importance of physiological and safety needs, we integrated features addressing financial management within our app. Additionally, to fulfill the social needs and the need for belonging, we developed the community feature.
+
+In today's hectic academic environment, students face numerous obstacles that hinder their academic and personal growth. From managing tasks and finances to building social connections and seeking guidance, these challenges are pervasive. Through thorough analysis and consideration of various statistics, we identified the most significant challenges.
+
+After collaborative brainstorming sessions, we decided to develop an app focusing on these three main challenges. 
+
+Our app aims to provide a simple yet effective solution to address the needs of students. 
+
+We conducted both domain analysis and surveys among young students to ensure our app's relevance.
+
+While there are existing apps addressing similar needs, many tend to be overly complex and lack adequate support features. 
+
+Our emphasis on simplicity and comprehensive support distinguishes our app. We envision expanding the support component to include assistance from academic advisors in the future.
+
+It is imperative to highlight the necessity for our app in addressing the identified challenges effectively.
+
+Our platform is a web application designed to provide accessible solutions to students' needs."
 
 
 
 
 
-# User Stories- Representing Functionalities from the User's Perspective:
+
+# User Stories
 
 1. As a user, I want to be able to log into the "StudentHub" app with my unique user ID and password, so that I can access my personal data and features. 
 
