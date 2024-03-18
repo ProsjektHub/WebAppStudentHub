@@ -8,11 +8,13 @@
         <link href="css/style.css" rel="stylesheet">
         <link href="css/contact.css" rel="stylesheet">
     </head>
+
     <body>
         <header class="site-header">
-            <h1>Contact StudentHub</h1>
+            <h1> StudentHub</h1>
             <p>We're here to support your academic journey every step of the way.</p>
         </header>
+
         <nav class="site-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,21 +24,41 @@
                 <li><a href="contact.html" class="current">Contact</a></li>
             </ul>
         </nav>
+
         <main class="site-content" id="content">
-            <section class="contact-form">
+
+            <section class="content-intro">
                 <h2>We'd Love to Hear From You</h2>
                 <p>Whether you have a question about features, trials, pricing, need a demo, or anything else, our team is ready to answer all your questions.</p>
+            </section>
+
+            <section class="contact-form">
+                <h2>Send Message</h2>
+                
                 <form id="contactForm">
-                    <label for="name">Your Name:</label><br>
-                    <input type="text" id="name" name="name" required><br>
-                    <label for="email">Your Email:</label><br>
-                    <input type="email" id="email" name="email" required><br>
-                    <label for="message">Your Message:</label><br>
-                    <textarea id="message" name="message" required></textarea><br>
-                    <input type="submit" value="Send Message">
+
+                    <div>
+                        <label for="name">Your Name:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                    </div>
+
+                    <div>
+                        <label for="email">Your Email:</label><br>
+                        <input type="email" id="email" name="email" required><br>
+                    </div>
+
+                    <div>
+                        <label for="message">Your Message:</label><br>
+                        <textarea id="message" name="message" required></textarea><br>
+                    </div>
+                                                 
+                   <button type=" submit">Send Message</button>
+
                 </form>
             </section>
+
         </main>
+
         <footer class="site-footer">
             <a href="#top">Back to Top</a>
         </footer>

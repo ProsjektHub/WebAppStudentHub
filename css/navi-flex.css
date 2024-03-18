@@ -3,7 +3,8 @@
   */
 
   .site-nav { 
-    background: #333; 
+     background: 
+     #507DBC; 
     color: white; 
     
     padding: 0 1rem; 
@@ -49,7 +50,7 @@
     
     /* Center text within the block */
     text-align: center; 
-    text-decoration: none;
+    text-decoration: none  !important; 
     color: white; 
   
     /* Increase the clickable area of the links */
@@ -65,6 +66,8 @@
   .site-nav a.current {
     background-color: #07b;
     color: white; 
+    /* text-decoration: underline; */
+    border-bottom:1px solid white; 
   } 
   .site-nav a:active {
     background-color: #3ad;

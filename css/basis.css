@@ -1,6 +1,6 @@
-*, *::before, *::after { 
+ *, *::before, *::after { 
     box-sizing: border-box; 
-} 
+}  
 
 html {
     scroll-behavior: smooth;
@@ -27,9 +27,9 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
     margin-top: 0; 
 }
 
-figure, blockquote {
+/* figure, blockquote {
     margin: 0; 
-}
+} */
 
 .visually-hidden {
     position: absolute !important;
@@ -42,3 +42,5 @@ figure, blockquote {
     border: 0 !important; 
     margin: -1px !important; 
 }
+
+/* *{outline: 1px solid red; } */

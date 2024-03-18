@@ -1,16 +1,16 @@
-/* Link styling within content area */
+/* Link styling within content area
 .site-content a:link { color: #07b; }
 .site-content a:visited { color: #70b; }
 .site-content a:hover, 
 .site-content a:focus { color: #f63; }
-.site-content a:active { color: #ec3; }
+.site-content a:active { color: #ec3; } */
 
-/* Mark external links with a symbol */
+/* Mark external links with a symbol
 .site-content a[href^="https"]::after {
   content: " \29c9"; 
-}
+} */
 
-/* Styling for infoboxes, typically found on the homepage */
+/* Styling for infoboxes */
 .infoboxen {
     background-color: whitesmoke;
     color: black; 
