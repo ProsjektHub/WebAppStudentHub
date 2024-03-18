@@ -32,7 +32,7 @@
     flex: 1; 
   
     /* Add a border line to the left of list items, ... */
-    border-left: 1px solid white; 
+    /* border-left: 1px solid white;  */
   }
   /* ... and also to the right of the last item */
   .site-nav li:last-child {
@@ -60,17 +60,20 @@
   /* Style the current link and various states */
   .site-nav a:hover, 
   .site-nav a:focus {
-    background-color: #07b;
+    background-color: #2c4464;
     color: white; 
   }
   .site-nav a.current {
-    background-color: #07b;
+    background-color: #1b4d89;
     color: white; 
     /* text-decoration: underline; */
     border-bottom:1px solid white; 
   } 
   .site-nav a:active {
-    background-color: #3ad;
+    background-color: #2c4464;
     color: white; 
   }
+
+
+
   

@@ -5,6 +5,16 @@
 html {
     scroll-behavior: smooth;
     background-color: #eee;
+    
+    
+    /* #0076ff;  */
+    /* z-index: 2147483647; 
+    transition: width 300ms ease-out;
+    opacity 160ms 150ms ease-in; 
+    transform:translate3d(0,0,0) */
+    /* background-color: #eee; */
+
+
 }
 
 body {

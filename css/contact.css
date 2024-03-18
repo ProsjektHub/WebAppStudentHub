@@ -1,4 +1,4 @@
-/* ==================================
+/* 
    CSS Fundamentals for StudentHub Website
 
    contact.css
@@ -73,7 +73,7 @@
     font-size: inherit; /* Inherit font size and family */
     font-family: inherit; 
     text-align: center; /* Center button text */
-    background: #07b; /* Button background color */
+    background: #2e6d9c; /* Button background color */
     color: white; /* Button text color */
     width: auto; /* Adjust width as needed */
     padding: 1rem; /* Button padding */
@@ -85,6 +85,6 @@
 /* Highlight button on hover or focus */
 .contact-form button:hover, 
 .contact-form button:focus {
-    background: #A9D794; /* Change background color on hover/focus */
+    background: #2c4464; /* Change background color on hover/focus */
 }
 
