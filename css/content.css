@@ -12,16 +12,21 @@
 
 /* Styling for infoboxes */
 .infoboxen {
-    background-color: whitesmoke;
-    color: black; 
+    background-color: #e9e9e9; 
+    color: #120800; 
     padding: 1rem; 
     margin-bottom: 1rem; 
 }
 
 .infobox {
     text-align: center;
-    background-color: white;
-    color: black; 
+    background-color: #f9f9f9;
+    color: #120800; 
     padding: 1rem; 
     margin: 1rem; 
+}
+
+.icon img[src$="svg"] {
+  width: 4rem;
+  height: auto; 
 }

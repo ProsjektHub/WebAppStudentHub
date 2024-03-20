@@ -6,12 +6,14 @@
 .site-header { padding: 1rem 1rem 0 1rem; }
 
 /* Margin between logo and slogan */
+/* logo er tatt bort */
 .site-header h1 { margin-bottom: 0; }
 .site-header p  { margin-top: 0; }
 
+/* nav - se navi-flex.css */
 
 /** 
-  * 2. Content Area (Styles in a separate stylesheet) 
+  * 2. Content Area (Infobox - Styles in a separate stylesheet: content.css) 
   */ 
 
 /* Line height and margins for the content area <main> */
@@ -29,7 +31,7 @@
 
 /* Styling for the footer area (similar to site navigation) */
 .site-footer {
-    background-color: #507DBC;
+    background-color: #00a3d2;
     color: white; 
 
     padding: 0.5rem 1rem; 
