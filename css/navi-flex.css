@@ -60,11 +60,11 @@
   /* Style the current link and various states */
   .site-nav a:hover, 
   .site-nav a:focus {
-    background-color: #1e0043;
+    background-color: #81c1d3;
     color: white; 
   }
   .site-nav a.current {
-    background-color: #1e0043;
+    background-color: #81c1d3;
     color: white; 
     
     /* text-decoration: underline;

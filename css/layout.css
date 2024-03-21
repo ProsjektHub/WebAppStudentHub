@@ -1,5 +1,10 @@
 /** 
   * 1. Site-Header 
+  * 2. Content Area (infobox)
+  * 3. Site-Footer 
+( nav - se navi-flex.css)
+(content (infobox) - se content.css)
+
   */ 
 
 /* Padding for the header area */
@@ -10,11 +15,7 @@
 .site-header h1 { margin-bottom: 0; }
 .site-header p  { margin-top: 0; }
 
-/* nav - se navi-flex.css */
 
-/** 
-  * 2. Content Area (Infobox - Styles in a separate stylesheet: content.css) 
-  */ 
 
 /* Line height and margins for the content area <main> */
 .site-content { 

@@ -1,31 +1,27 @@
 /* 
-   CSS Fundamentals for StudentHub Website
 
-   contact.css
-   Included in style.css via @import
-
-   Stylesheet for user interactions
-   - Contact Information
+  * Contact Information Styles
+  
+    Stylesheet for user interactions
+   - lenker eller noe - eller noe annet? 
    - Contact Form
 */
 
-/** 
-  * Contact Information Styles
-  */ 
 
-/* Styling the section */
+
+/* Styling the section
 .contact-info {
-    background: whitesmoke;
-    color: black; 
+    background: #b80c0c;
+    color: #120800; 
     padding: 1rem;
     border-radius: 0.25rem; 
     margin-bottom: 2rem;
-}
+} */
 
-/* Styling address text */
+/* Styling address text
 .contact-info address { 
     font-style: normal; 
-}
+} */
 
 /** 
   * Contact Form Styles
@@ -50,7 +46,7 @@
     font-family: inherit;
     width: 100%; /* Make input fields full width */
     padding: 0.5rem; /* Padding inside the input fields */
-    border: 1px solid dimgrey; /* Border styling */
+    border: 1px solid #818889; /* Border styling */
     border-radius: 0.25rem; /* Rounded corners for input fields */
 }
 
@@ -58,8 +54,8 @@
 .contact-form input[type="text"]:focus, 
 .contact-form input[type="email"]:focus, 
 .contact-form textarea:focus {
-    background-color: whitesmoke;
-    color: black; 
+    background-color: #e9e9e9;
+    color: #120800; 
 }
 
 /* <textarea> width limit and minimum height */
@@ -73,7 +69,7 @@
     font-size: inherit; /* Inherit font size and family */
     font-family: inherit; 
     text-align: center; /* Center button text */
-    background: #2e6d9c; /* Button background color */
+    background: #00a3d2; /* Button background color */
     color: white; /* Button text color */
     width: auto; /* Adjust width as needed */
     padding: 1rem; /* Button padding */
@@ -85,6 +81,6 @@
 /* Highlight button on hover or focus */
 .contact-form button:hover, 
 .contact-form button:focus {
-    background: #2c4464; /* Change background color on hover/focus */
+    background: #81c1d3; /* Change background color on hover/focus */
 }
 

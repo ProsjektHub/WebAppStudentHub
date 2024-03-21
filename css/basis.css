@@ -1,4 +1,13 @@
- 
+ /* 
+  * 1. Global setting 
+  * 2. general, useful classes (visually-hidden)
+  * 3. element selectors: html, body, h1, h2..; figure, image, icon
+  
+ */
+
+ /* 1. Global setting  */
+
+
  /* Border-Box-Modell aktivieren */
  *, *::before, *::after { 
     box-sizing: border-box; 
@@ -17,6 +26,11 @@ html {
     /* background-color: #eee; */
 
 
+}
+
+/* er title stylet en annen plass?  */
+title {
+    color: #120800
 }
 
 body {
@@ -43,9 +57,9 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 figure, blockquote {
     margin: 0; 
 }
-
+/* Boxen am Bildschirm visuell verbergen - der man bei Bedarf elementen zuweisen kann. (screenreader) */
 .visually-hidden {
-    position: absolute !important;
+    position: absolute !important; 
     clip: rect(0, 0, 0, 0) !important; 
     overflow: hidden !important;
     width: 1px !important; 
@@ -56,7 +70,7 @@ figure, blockquote {
     margin: -1px !important; 
 }
 
-/* *{outline: 1px solid red; } */
+
 
 figure {
     padding: 1rem; 

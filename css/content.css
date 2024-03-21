@@ -1,3 +1,8 @@
+/* 
+* 1. Content area (infobox)
+*/
+
+
 /* Link styling within content area
 .site-content a:link { color: #07b; }
 .site-content a:visited { color: #70b; }
@@ -24,6 +29,9 @@
     color: #120800; 
     padding: 1rem; 
     margin: 1rem; 
+    box-shadow: 4px 8px  8px rgba(0, 0, 0, 0.2); 
+    border-radius: 1rem;
+    
 }
 
 .icon img[src$="svg"] {

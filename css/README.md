@@ -4,9 +4,12 @@ This section provides an overview of sources and attributions for images and oth
 
 
 
-The images used in this project have been sourced from: Pixabay.
+The images, icons, .. used in this project have been sourced from: 
+images:Pixabay, 
+icons: flaticon, 
 
-bilde: students-pixabayCom:
+images:
+ students-pixabayCom:
 
  https://pixabay.com/illustrations/avatar-clients-icons-customers-2191932/
 
@@ -33,4 +36,12 @@ logo student hub:
 https://www.canva.com/design/DAGAD9B-ypA/l1NeKIaJk5aEElU5IiszGw/edit
 
 
+for neste commit - melding:
+infobox: shadow, border - radius (runde kanter), hyperlinks som button, contact formular, farger, styleguide, 
+
+(lager en liste med farger som kan brukes snart....)
+
+farger:
+skrift: #120800
+background: #f9f9f9
 
