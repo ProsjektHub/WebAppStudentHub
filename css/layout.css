@@ -22,6 +22,7 @@
 /* Hintergrundfarbe für das Stammelement */ 
 html { background-color: var(--grey-very-light, whitesmoke); }
 
+<<<<<<< HEAD
 /* Grundlegende Gestaltung für body */
 body {
   /* Hintergrundfarbe und Begrenzung der Breite */ 
@@ -60,12 +61,21 @@ body {
 } 
 
 /* Fine-Tuning: Die Abstände um Logo und Slogan anpassen */ 
+=======
+/* Margin between logo and slogan */
+/* logo er tatt bort */
+>>>>>>> 5a2cb61 (Added image, icons, and styled with colors)
 .site-header h1 { margin-bottom: 0; }
 .site-header p { margin-top: 0; }
 
+/* nav - se navi-flex.css */
 
 /** 
+<<<<<<< HEAD
   * 3. Inhaltsbereich (Inhalte in content.css)  
+=======
+  * 2. Content Area (Infobox - Styles in a separate stylesheet: content.css) 
+>>>>>>> 5a2cb61 (Added image, icons, and styled with colors)
   */ 
 
 /* Innen- und Außenabstände */
@@ -85,6 +95,7 @@ body {
 
 /* Grundlegende Gestaltung für den Footer */ 
 .site-footer {
+<<<<<<< HEAD
   font-size: smaller; 
   background-color: var(--grey-very-dark, #333);
   color: var(--color-base-light, white); 
@@ -113,6 +124,19 @@ body {
 .footer-nav li:last-child {
   margin-right: 0; 
   margin-left: auto; 
+=======
+    background-color: #00a3d2;
+    color: white; 
+
+    padding: 0.5rem 1rem; 
+    margin: 1rem 0; 
+}  
+
+/* "Back to top" link - font slightly smaller and aligned to the right */
+.site-footer {
+    font-size: smaller;
+    text-align: right;
+>>>>>>> 5a2cb61 (Added image, icons, and styled with colors)
 }
 
 .site-footer a {
