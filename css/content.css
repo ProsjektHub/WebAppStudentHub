@@ -23,6 +23,10 @@
     margin-bottom: 1rem; 
 }
 
+/* Media Query - soll gemacht werden wenn genügend Platz zur Verfügung ist*/
+
+
+
 .infobox {
     text-align: center;
     background-color: #f9f9f9;
@@ -31,7 +35,8 @@
     margin: 1rem; 
     box-shadow: 4px 8px  8px rgba(0, 0, 0, 0.2); 
     border-radius: 1rem;
-    
+
+  
 }
 
 .icon img[src$="svg"] {

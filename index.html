@@ -1,45 +1,72 @@
-
 <!DOCTYPE html>
-<html lang="en" id="top">
-<head>
+<html lang="en" id="top" class = "no-js">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>StudentHub - Your All-in-One Student Organizer</title>
         <meta name="description" content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, manage finances, and much more.">
 
         <link href="css/style.css" rel="stylesheet">
 
+        <script>
+            document.documentElement.classList.remove('no-js'); 
+            document.documentElement.classList.add('js');
+        </script>
+
  </head>
 
 
-<body>
+ <body class="home">
+
     <header class="site-header">
-        <h1>StudentHub</h1>
-        <p>Your Ultimate Companion for Student Life</p>
+
+        <div class="inside">
+
+            <h1>
+                <img src ="bilder/icon/iconfinderCom/SVG.svg"  
+                srcset ="bilder/icon/iconfinderCom/SVG.svg 2x"
+                alt="HTML und CSS"
+                width="222"
+                height="36">
+       </h1>
+                <h1>StudentHub</h1>
+                <p>Your Ultimate Companion for Student Life
+
+                </p>
+            </div>
     </header>
+
     <nav class="site-nav">
-        <ul>
-            <li><a href="index.html" class="current">Home</a></li>
-            <li><a href="tasks.html">Tasks</a></li>
-            <li><a href="finance.html">Finance</a></li>
-            <li><a href="together.html">Together</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <!-- <li><a href="Overview.html">Overview</a></li>  -->
-            <!-- jeg vuderer om jeg legger en overview på startsiden senere -->
-        </ul>
+
+        <div class="inside">
+                        
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menü</button>
+
+            <ul>
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="finance.html">Finance</a></li>
+                <li><a href="together.html">Together</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
     </nav>
 
-    <figure class = "image">
-        <img src="bilder/pixabay/students-pixabayCom.webp" alt="students-pixabayCom">
+    <figure class="image">
+        <img src="bilder/pixabay/students-pixabayCom.webp" alt="">
+        <img src="bilder/pixabay/studentHubPNG.png" 
+             alt="" 
+             srcset="bilder/pixabay/studentHubPNG.png 1x">
 
-        <!-- Husk også å ha en fallback for eldre nettlesere som ikke støtter WebP. Du kan oppnå dette ved å inkludere den samme bildet, men i et annet format (for eksempel JPEG eller PNG), og angi det som en kilde ved hjelp av srcset-attributtet. Her er et eksempel: -->
-        <!-- <img src="bilde.webp" alt="" srcset="bilde.jpg"> -->
-        <!-- <figcaption>Image by coffeebeanworks from Pixabay (https://pixabay.com/illustrations/avatar-clients-icons-customers-2191932/)</figcaption> -->
-
+        <!-- <figcaption>Image by Coffe Bean from Pixabay</figcaption> -->
 
     </figure>
+
+    <!-- https://pixabay.com/illustrations/avatar-clients-icons-customers-2191932/ -->
+    
 
     <main class="site-content" id="content">
 
@@ -51,6 +78,8 @@
 
         <section class="infoboxen">
             <h2 class="visually-hidden">Features Overview</h2>
+
+            <div class="insideGrid "
 
             <article class="infobox">
 

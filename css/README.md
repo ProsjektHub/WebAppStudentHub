@@ -9,9 +9,16 @@ images:Pixabay,
 icons: flaticon, 
 
 images:
- students-pixabayCom:
+ studentHub:
 
  https://pixabay.com/illustrations/avatar-clients-icons-customers-2191932/
+ <!-- Image by <a href="https://pixabay.com/users/coffeebeanworks-558718/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2191932">Coffee Bean</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2191932">Pixabay</a>
+  -->
+
+ <!-- Lisensen for dette bilde:
+ Ifølge Pixabay-lisensen trenger ikke attribusjonen "Image by Coffee Bean from Pixabay" å vises direkte på nettsiden der bildet er brukt. Lisensen angir at du må gi attribusjon når du bruker bildene, men det spesifiserer ikke på hvilken måte dette må gjøres.
+
+Så, det er tilstrekkelig å inkludere attribusjonen i HTML-koden, slik du har gjort med alt-attributtet for bildet. Dette oppfyller kravene til Pixabay-lisensen selv om attribusjonen ikke er synlig for brukeren på nettsiden. -->
 
  icons: 
 
@@ -31,17 +38,19 @@ support:
 
 https://www.flaticon.com/free-icon-font/hands-heart_12442274?term=support&related_id=12442274
 
-logo student hub:
+logo student hub: (ikke brukt)
 
 https://www.canva.com/design/DAGAD9B-ypA/l1NeKIaJk5aEElU5IiszGw/edit
 
+icon / logo topp venstre:
 
-for neste commit - melding:
+https://www.iconfinder.com/icons/8673534/ic_fluent_people_community_filled_icon
+
+
+commit - melding:
 infobox: shadow, border - radius (runde kanter), hyperlinks som button, contact formular, farger, styleguide, 
 
-(lager en liste med farger som kan brukes snart....)
+commit - melding
 
-farger:
-skrift: #120800
-background: #f9f9f9
+
 

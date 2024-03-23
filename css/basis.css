@@ -1,32 +1,39 @@
  /* 
-  * 1. Global setting 
-  * 2. general, useful classes (visually-hidden)
-  * 3. element selectors: html, body, h1, h2..; figure, image, icon
+ * Custom properties (CSS variable) 
+  * Global setting 
+  * general, useful classes (visually-hidden)
+  *element selectors: html, body, h1, h2..; figure, image, icon
   
  */
 
- /* 1. Global setting  */
+ /* global custom properties (CSS variable - color) */
+
+html {
+    --color-background-light: #f9f9f9; 
+    --color-background-dark: #e9e9e9; 
+    --color-font: #120800; 
+    --color-nav: #00a3d2; 
+    --color-nav-dark: #007293; 
+    --color-shadow: 4px 8px  8px rgba(0, 0, 0, 0.2); 
+    /* background-color: var(); */
+}
+/* 2. Global setting  */
 
 
  /* Border-Box-Modell aktivieren */
  *, *::before, *::after { 
     box-sizing: border-box; 
+    background-color: ;
 }  
 
 html {
     scroll-behavior: smooth;
-    background-color: #f9f9f9;
-    
-    
-    /* #0076ff;  */
-    /* z-index: 2147483647; 
-    transition: width 300ms ease-out;
-    opacity 160ms 150ms ease-in; 
-    transform:translate3d(0,0,0) */
-    /* background-color: #eee; */
-
-
-}
+    background-color: var(--color-background-light);
+ }
+/* ??
+html {
+    background-color: transparent;
+} */
 
 /* er title stylet en annen plass?  */
 title {
@@ -35,12 +42,38 @@ title {
 
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+    background-color: var(--light-base-color);
     font-size: 1rem; 
-    min-width: 320px;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+
+    /* min-width: 320px;
     max-width: 600px; 
-    background-color: #f9f9f9;
-    margin: 1rem auto; 
+    margin: 1rem auto;  */
+
+    /* Media Queries für die responsive Schriftgrösse */
+
+    /* für tablets - 768 typische breite für den vieport eines Tablets: */
+
+    @media screen and (min-width: 768px) {
+        html {
+            font-size:1.25rem; // skriftstørrelsen økes
+
+        }
+    }
+    /* für noch breitere viewports gilt dann die nächste Query: */
+    @media screen and (min-width: 1280px) {
+        html {
+            font-size:1 .25rem; 
+
+        }
+    }
+
 }
+
+
+/*Überschriften-Schriftgrösse und Strichstärke */
 
 h1 { font-size: 2.5rem; font-weight: 500;}
 h2 { font-size: 2rem; font-weight: 500;}
@@ -49,10 +82,12 @@ h4 { font-size: 1.5rem; font-weight: 500;}
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1rem; }
 
-/* Collapsing margin vermeiden */
-h1, h2, h3, h4, h5, h6, p, ul, ol {
-    margin-top: 0; 
-} 
+/* Unterstreichung für Hyperlinks dünn und etwas weiter weg vom Text */ 
+a { text-decoration-thickness: 1px; text-underline-offset: 0.1875em; }
+
+/* Collapsing Margins vermeiden */ 
+h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote { margin-top: 0; }
+
 
 figure, blockquote {
     margin: 0; 
@@ -73,15 +108,19 @@ figure, blockquote {
 
 
 figure {
-    padding: 1rem; 
-    margin-bottom: 1rem;
+    padding: 0 1rem;
+    margin: 0 auto;
     /* Andre stiler for figure-elementet */
+    text-align: center; /* Sentrerer innholdet horisontalt */
 }
 
 .image img {
     max-width: 100%;
     height: auto;
     overflow: hidden;
+    padding: 0 1rem;
+    margin: 0 auto;
+    
     
 }
 

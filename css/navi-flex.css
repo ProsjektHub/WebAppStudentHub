@@ -1,80 +1,179 @@
+/*  ==========================================
+    Webtechniken lernen 3: CSS-Layouts  
+    Stylesheet für die Übungswebsite 
+
+    navi-responsiv.css  
+    wird in style.css per @import eingebunden  
+
+    Stylesheet zur Gestaltung der Site-Navigation
+    - basiert auf display: flex
+    - Gestaltung nach dem Prinzip Mobile First: 
+      1. Gestaltung für die mobile Navigation  
+      2. Menübutton per CSS gestalten 
+      3. Menübutton per CSS ausblenden 
+      4. Navigationsliste mit dem Menübutton einblenden
+      5. Eine horizontale Navigation für breitere Viewports 
+
+    ======================================= */
+
+
 /** 
-  * 1. Navigation Area  
+  * 1. Gestaltung für die mobile Navigation  
+  */     
+    
+/* Navigationsbereich gestalten */
+.site-nav { 
+  background-color: var(--color-nav);
+  color: white; 
+
+  box-shadow: 0 2px 6px var(--color-shadow);
+  margin-bottom: 2rem; 
+}
+
+.site-nav .inside {
+  padding: 0; 
+}
+
+/* Navigationsliste als Flex-Container */
+.site-nav ul { 
+  display: flex;
+  flex-flow: column; 
+  list-style: none;  
+  
+  padding: 0; 
+  margin: 0; 
+}
+
+/* Die Listenelemente li benötigen in der mobilen Navigation kein CSS ;-) */
+
+/* Navigationslinks gestalten */
+.site-nav a {
+  display: block;
+  background: var(--);
+  color: white; 
+  text-decoration: none; 
+  padding: 0.5rem 1rem; 
+}
+
+/* Hover und Focus gestalten */
+.site-nav a:hover, .site-nav a:focus {
+  background: var(--color-nav-dark); 
+  color: white; 
+}
+
+/* Im Moment der Aktivierung */
+.site-nav a:active {
+  background: var(--color-nav-dark);  
+  color: white; 
+}
+
+/* Aktuellen Menüpunkt hervorheben */
+.site-nav a:current  { 
+  background: var(--color-nav-dark); 
+  color: white; 
+  text-decoration: none; 
+}
+
+
+
+/** 
+  * 2. Menübutton per CSS gestalten 
+  */     
+
+/* Kein JavaScript? Menübutton ausblenden */
+.no-js .menubutton { display: none; }
+
+/* Menübutton gestalten */
+.js .menubutton {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  background: inherit;
+  color: var(--color-base-light); 
+  font: inherit; 
+  text-align: center; 
+  padding: 0.5rem 1rem; 
+  border: 0; 
+  margin: 0; 
+}
+
+.js .menubutton::before {
+  content: url("../bilder/menuburger.svg"); 
+  width: 1rem; 
+  height: 1rem; 
+  margin: 0.25rem; 
+}
+
+
+/**
+  * 3. Menübutton per CSS ausblenden 
   */
 
-  .site-nav { 
-     background: 
-     #00a3d2; 
-    color: white; 
-    
+.js .site-nav ul {
+  max-height: 0; 
+  overflow: hidden; 
+}
+
+
+/**
+  * 4. Navigationsliste mit dem Menübutton einblenden 
+  */
+
+/* Navigationsliste mit leichter Animation einblenden  */
+.js .showmenu + ul {
+  max-height: 100rem; 
+  transition: max-height 0.5s ease;
+  overflow: auto; 
+}
+
+/* Tausche Hamburger gegen X */
+.js .menubutton.showmenu::before {
+  content: url("../bilder/menuclose.svg");
+}
+
+
+/**
+  * 5. Eine horizontale Navigation für breitere Viewports 
+  */
+
+@media screen and (min-width: 600px) {
+  
+  .menubutton { display: none !important; }
+
+  .site-nav {
+    position: sticky;
+    top: 0; 
+  }
+
+  .site-nav .inside {
     padding: 0 1rem; 
-    margin: 1rem 0; 
   }
-  
-  
-  /** 
-    * 2. Navigation List  
-    */
-  
-  .site-nav ul {
-    /* Activate Flexbox */
-    display: flex;   
-    
-    /* Disable list bullets */
-    list-style: none; 
-  
+
+  .site-nav ul { 
+    max-height: none !important; 
+    flex-flow: row; 
     padding: 0; 
-    margin: 0; 
   }
-  
+
   .site-nav li {
-    /* Make all list items equal width */
     flex: 1; 
-  
-    /* Add a border line to the left of list items, ... */
-    /* border-left: 1px solid white;  */
+    max-width: 10rem; 
+    text-align: center;
+    border-left: 1px solid var(--grey-light); 
   }
-  /* ... and also to the right of the last item */
   .site-nav li:last-child {
-    border-right: 1px solid white;
+    border-right: 1px solid var(--grey-light);
   }
-  
-  
+
   /** 
-    * 3. Navigation Links   
+    * Anmerkung: 
+    * Die Gestaltung der Links wird von der mobilen Navigation übernommen 
     */
-  
-  .site-nav a {
-    /* Make links block-level to take full width */
-    display: block;
-    
-    /* Center text within the block */
-    text-align: center; 
-    text-decoration: none  !important; 
-    color: white; 
-  
-    /* Increase the clickable area of the links */
-    padding: 0.5rem 0.25rem; 
-  }
-  
-  /* Style the current link and various states */
-  .site-nav a:hover, 
-  .site-nav a:focus {
-    background-color: #81c1d3;
-    color: white; 
-  }
-  .site-nav a.current {
-    background-color: #81c1d3;
-    color: white; 
-    
-    /* text-decoration: underline;
-    border-bottom:1px solid pink;  */
-  } 
-  .site-nav a:active {
-    background-color: #1e0043;
-    color: white; 
-  }
+
+}
 
 
-
-  
+/** 
+  * Ende navi-responsiv.css 
+  */ 
