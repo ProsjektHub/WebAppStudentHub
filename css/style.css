@@ -7,19 +7,24 @@
 @import url("basis.css");
 
 @import url("layout.css"); 
+@import url("layout-modern.css"); 
+
+@import url("header.css"); 
 
 /* @import url("layout-modern.css");  */
 
 
 /* Modul für eine responsive Inline-Navigation */
-@import url("navi-flex.css");
+@import url("navi-responsive.css");
 
 
 @import url("content.css");
 
+
 @import url("contact.css"); 
 
-@import url("overview.css"); 
+
+@import url("footer.css"); 
 
 
 

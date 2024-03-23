@@ -1,128 +1,114 @@
- /* 
- * Custom properties (CSS variable) 
-  * Global setting 
-  * general, useful classes (visually-hidden)
-  *element selectors: html, body, h1, h2..; figure, image, icon
-  
- */
+/* Stylesheet zur grundlegenden Gestaltung:  
+1. Globale Custom Properties definieren 
+2. Globale Einstellungen für die gesamte Website
+3. Grundlegende Gestaltung für Schrift und Text 
+4. Nützliche, allgemeine Klassen */
 
- /* global custom properties (CSS variable - color) */
+ /* Globale Custom Properties definieren  */
 
 html {
     --color-background-light: #f9f9f9; 
     --color-background-dark: #e9e9e9; 
+
     --color-font: #120800; 
     --color-nav: #00a3d2; 
     --color-nav-dark: #007293; 
+
     --color-shadow: 4px 8px  8px rgba(0, 0, 0, 0.2); 
-    /* background-color: var(); */
-}
-/* 2. Global setting  */
-
-
- /* Border-Box-Modell aktivieren */
- *, *::before, *::after { 
-    box-sizing: border-box; 
-    background-color: ;
-}  
-
-html {
-    scroll-behavior: smooth;
-    background-color: var(--color-background-light);
- }
-/* ??
-html {
-    background-color: transparent;
-} */
-
-/* er title stylet en annen plass?  */
-title {
-    color: #120800
 }
 
-body {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
-    background-color: var(--light-base-color);
-    font-size: 1rem; 
-    max-width: none;
-    padding: 0;
-    margin: 0;
+   
+/**  
+  * 2. Globale Einstellungen für die gesamte Website 
+  */ 
 
-    /* min-width: 320px;
-    max-width: 600px; 
-    margin: 1rem auto;  */
+/* border-box aktivieren */ 
+*, *::before, *::after { box-sizing: border-box; }
 
-    /* Media Queries für die responsive Schriftgrösse */
-
-    /* für tablets - 768 typische breite für den vieport eines Tablets: */
-
-    @media screen and (min-width: 768px) {
-        html {
-            font-size:1.25rem; // skriftstørrelsen økes
-
-        }
-    }
-    /* für noch breitere viewports gilt dann die nächste Query: */
-    @media screen and (min-width: 1280px) {
-        html {
-            font-size:1 .25rem; 
-
-        }
-    }
-
-}
-
-
-/*Überschriften-Schriftgrösse und Strichstärke */
-
-h1 { font-size: 2.5rem; font-weight: 500;}
-h2 { font-size: 2rem; font-weight: 500;}
-h3 { font-size: 1.75rem; font-weight: 500;}
-h4 { font-size: 1.5rem; font-weight: 500;} 
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
-
-/* Unterstreichung für Hyperlinks dünn und etwas weiter weg vom Text */ 
-a { text-decoration-thickness: 1px; text-underline-offset: 0.1875em; }
+/* Sanftes Scrollen aktivieren */ 
+html { scroll-behavior: smooth; }
 
 /* Collapsing Margins vermeiden */ 
 h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote { margin-top: 0; }
 
+/* Bilder und Videos mit flexibler Breite einbinden */ 
+img, video { max-width: 100%; height: auto; }
 
-figure, blockquote {
-    margin: 0; 
-}
-/* Boxen am Bildschirm visuell verbergen - der man bei Bedarf elementen zuweisen kann. (screenreader) */
+/* figure ohne horizontale Außenabstände */
+figure { margin-left: 0; margin-right: 0; } 
+
+
+/**  
+  * 3. Grundlegende Gestaltung für Schrift und Text  
+  */ 
+
+body {
+/* Systemschriftart auf dem Gerät des Benutzers; »Best Practice« kann sich ändern */
+font-family: system-ui, -apple-system, "Segoe UI", Roboto, 
+             "Helvetica Neue", Arial, sans-serif; 
+
+/* Definition der Standardschriftgröße (optional)  */
+font-size: 1rem; 
+}  
+
+/* Überschriften - Schriftgröße und Strichstärke */ 
+h1 { font-size: 2.5rem; font-weight: 500; } 
+h2 { font-size: 2rem; font-weight: 500; } 
+h3 { font-size: 1.75rem; font-weight: 500; } 
+h4 { font-size: 1.5rem; font-weight: 500; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; } 
+
+/* Unterstreichung für Hyperlinks dünn und etwas weiter weg vom Text */ 
+a { text-decoration-thickness: 1px; text-underline-offset: 0.1875em; }
+
+/* Kontaktaddressen nicht kursiv */
+address { font-style: normal; }
+
+
+/**  
+  * 4. Nützliche, allgemeine Klassen 
+  */ 
+
+/* Boxen am Bildschirm ausblenden */
 .visually-hidden {
-    position: absolute !important; 
+    position: absolute !important;
     clip: rect(0, 0, 0, 0) !important; 
     overflow: hidden !important;
-    width: 1px !important; 
     white-space: nowrap !important;
+  
+    width: 1px !important; 
     height: 1px !important; 
     padding: 0 !important; 
     border: 0 !important; 
     margin: -1px !important; 
-}
+  }
 
+  /* Klassen zum Floaten und Clearen */
+  .float-links { float: left; margin: 0 1rem 1rem 0; }
+  .float-rechts { float: right; margin: 0 0 1rem 1rem; }
 
+  .float-stoppen { clear: both; }
 
-figure {
-    padding: 0 1rem;
-    margin: 0 auto;
-    /* Andre stiler for figure-elementet */
-    text-align: center; /* Sentrerer innholdet horisontalt */
-}
+  /* Bildbeschriftung bei gefloateten Bildern zentrieren */
+  figure[class~="float-rechts"], 
+  figure[class~="float-links"] {
+    text-align: center;
+  }
 
-.image img {
-    max-width: 100%;
-    height: auto;
-    overflow: hidden;
-    padding: 0 1rem;
-    margin: 0 auto;
-    
-    
-}
+  /* Floats umschliessen */ 
+  .float-umschliessen { overflow: hidden; }
 
+  @supports (display:flow-root) {
 
-
+    .float-umschliessen {
+      display: flow-root; 
+      overflow: initial;       
+    }
+  
+  }
+  
+  
+/** 
+  * Ende basis.css 
+  */ 

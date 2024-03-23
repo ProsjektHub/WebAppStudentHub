@@ -1,61 +1,134 @@
-/** 
-  * 1. Site-Header 
-  * 2. Content Area (infobox)
-  * 3. Site-Footer 
-( nav - se navi-flex.css)
-(content (infobox) - se content.css)
+/*
+    
 
+    layout.css  
+    wird in style.css per @import eingebunden  
+
+    Stylesheet zur Gestaltung der Layoutbereiche
+    1. Klassisches Seitenlayout (begrenzte Breite, zentriert, Sticky Footer vorbereiten) 
+    2. Kopfbereich (inklusive Inhalte) 
+    3. Inhaltsbereich (Inhalte in eigenem Stylesheet, Sticky Footer mit flex:1) 
+    4. Site-Footer (inklusive Inhalte) 
+
+    Die Gestaltung der Site-Navigation steht in einem eigenen Stylesheet. 
+
+   */
+
+
+/** 
+  * 1. Klassisches Seitenlayout (begrenzte Breite, zentriert) 
   */ 
 
-/* header area */
-/* .site-header { padding: 1rem 1rem 0 1rem; }
+/* Hintergrundfarbe für das Stammelement */ 
+html { background-color: var(--grey-very-light, whitesmoke); }
 
-/* Margin between logo and slogan */
-/* logo er tatt bort */
+/* Grundlegende Gestaltung für body */
+body {
+  /* Hintergrundfarbe und Begrenzung der Breite */ 
+  background-color: var(--color-base-light, white); 
+  min-width: 320px; 
+  max-width: 600px; 
+
+  /* Horizontal zentrieren */ 
+  margin: 0 auto;   
+
+  /* Sticky Footer, Schritt 1/2 */
+  display: flex;
+  flex-flow: column; 
+  min-height: 100vh;    
+
+}
+
+/* Optional: Für moderne Browser mehr Platz auch beim klassischen Layout */
+@supports (display: grid) {
+  
+  body {
+    max-width: 960px; 
+  }
+
+} /* Ende @supports */ 
+
+
+/** 
+  * 2. Kopfbereich (inklusive Inhalte)  
+  */ 
+
+/* Innen- und Außenabstände */
+.site-header { 
+  padding: 1rem 1rem 0 1rem; 
+  margin-bottom: 1rem; 
+} 
+
+/* Fine-Tuning: Die Abstände um Logo und Slogan anpassen */ 
 .site-header h1 { margin-bottom: 0; }
-.site-header p  { margin-top: 0; } */
-
-
-
-
-/* Line height and margins for the content area <main> */
-
-.site-content { 
-    line-height: 1.5; 
-    padding: 0 1rem; 
-    margin-bottom: 3rem; 
-}
+.site-header p { margin-top: 0; }
 
 
 /** 
-  * 3. Site-Footer 
+  * 3. Inhaltsbereich (Inhalte in content.css)  
   */ 
 
-/* Styling for the footer area (similar to site navigation) */
+/* Innen- und Außenabstände */
+.site-content { 
+  line-height: 1.5; 
+  padding: 0 1rem; 
+  margin-bottom: 2rem; 
 
+  /* Sticky Footer, Schritt 2/2 */
+  flex: 1; 
+} 
+ 
+
+/** 
+  * 4. Fußbereich (inklusive Inhalte)  
+  */ 
+
+/* Grundlegende Gestaltung für den Footer */ 
 .site-footer {
-    background-color: #00a3d2;
-    color: white; 
-
-    padding: 0.5rem 1rem; 
-    margin: 1rem 0; 
-}  
-
-/* "Back to top" link - font slightly smaller and aligned to the right */
-
-.site-footer {
-    font-size: smaller;
-    text-align: right;
+  font-size: smaller; 
+  background-color: var(--grey-very-dark, #333);
+  color: var(--color-base-light, white); 
+  text-align: right; 
+  padding: 1rem;
 }
 
-/* Links in the footer (similar to site navigation) */
+/* Die Navigation im Fußbereich */   
+.footer-nav ul {
+  display: flex;
+  list-style: none; 
+
+  padding: 0; 
+  margin: 0; 
+}
+
+.footer-nav li {
+  margin-right: 0.5rem;
+}
+
+.footer-nav li:first-child {
+  padding-right: 0.5rem; 
+  border-right: 1px solid var(--grey-light); 
+}
+
+.footer-nav li:last-child {
+  margin-right: 0; 
+  margin-left: auto; 
+}
 
 .site-footer a {
-    color: white; 
-    text-decoration: none;
+  color: var(--color-base-light, white); 
+  text-decoration: none; 
 }
+
 .site-footer a:hover, 
 .site-footer a:focus {
-    /* border-bottom is more flexible than text-decoration: underline */    
-    border-bottom: 1px solid white; 
+  text-decoration: underline; 
 }
+
+.site-footer a:active {
+  color: var(--color-accent-active); 
+}
+
+/** 
+  * Ende layout.css 
+  */ 

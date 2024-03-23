@@ -1,45 +1,107 @@
 /* 
-* 1. Content area (infobox)
+* 1. Content area (infobox) og updates
 */
 
 
-/* Link styling within content area
-.site-content a:link { color: #07b; }
-.site-content a:visited { color: #70b; }
-.site-content a:hover, 
-.site-content a:focus { color: #f63; }
-.site-content a:active { color: #ec3; } */
 
-/* Mark external links with a symbol
-.site-content a[href^="https"]::after {
-  content: " \29c9"; 
-} */
+
+
 
 /* Styling for infoboxes */
 .infoboxen {
-    background-color: #e9e9e9; 
-    color: #120800; 
+    background-color: var(--color-background-dark); 
+    color: var(--color-font); 
     padding: 1rem; 
     margin-bottom: 1rem; 
 }
 
-/* Media Query - soll gemacht werden wenn genügend Platz zur Verfügung ist*/
-
-
-
 .infobox {
-    text-align: center;
-    background-color: #f9f9f9;
-    color: #120800; 
-    padding: 1rem; 
-    margin: 1rem; 
-    box-shadow: 4px 8px  8px rgba(0, 0, 0, 0.2); 
-    border-radius: 1rem;
+  display: flex;
+  flex-flow: column;
 
+  text-align: center;
+  background-color: var(--color-background-light);
+  color: var(--color-font) 
+  padding: 1rem; 
+  margin: 1rem; 
   
+  box-shadow: 4px 8px  8px rgba(0, 0, 0, 0.2); 
+  border-radius: 1rem;
 }
+
+/* das letzte Element in jeder Infobox: */
+.infobox :last-child {
+  margin-top: auto;
+}
+
+
+@media screen and (min-width: 600px) {
+
+  .infoboxen > .inside {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}
+
 
 .icon img[src$="svg"] {
   width: 4rem;
   height: auto; 
 }
+
+
+/* Oppdateringsoversikt Stiler */
+.update-overview {
+  background-color: var(--grey-very-light, whitesmoke); 
+  padding: 1rem; 
+  margin-bottom: 1rem; 
+}
+
+.update-overview > .updates-container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem; 
+}
+
+.update-overview > .updates-container > h2 {
+  grid-column: 1/-1; 
+}
+
+/* Enkelt oppdateringselement */
+.update-tasks, .update-budget, .update-community {
+  text-align: center; 
+  background-color: var(--grey-light, #eee);
+  color: var(--color-base-dark, black);
+  background-image: linear-gradient(to right, var(--grey-light, #eee), var(--grey-very-light, whitesmoke)); 
+  box-shadow: 0 1px 3px var(--color-shadow); 
+
+  padding: 1rem;
+  border-left: 5px solid var(--color-primary, #07b);
+  margin: 0; 
+  margin-bottom: 1rem;
+}
+
+.update-tasks p:first-child, .update-budget p:first-child, .update-community p:first-child { 
+  font-size: 1.25rem; 
+  font-weight: bold; 
+}
+
+/* Stil for listeelementer i oppdateringer, om nødvendig */
+.update-tasks ul, .update-budget ul, .update-community ul {
+  padding-left: 20px; /* Justering for listeinnrykk */
+}
+
+/* Gjelder for skjermer bredere enn 600px */
+@media screen and (min-width: 600px) {
+  .update-overview > .updates-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem; 
+  }
+
+  .update-tasks, .update-budget, .update-community {
+    /* Tilpassinger for bredere skjermer her, om nødvendig */
+  }
+}
+
