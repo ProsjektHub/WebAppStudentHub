@@ -1,4 +1,6 @@
 /*  ==========================================
+
+
     
 
     Stylesheet zur Gestaltung der Layoutbereiche
@@ -22,7 +24,7 @@ html {
     margin: 0; 
   }
   
-  /* Layoutbereiche in der Breite begrenzen und zentrieren */
+  /* Layoutbereiche (mit dem div.inside) in der Breite begrenzen und zentrieren */
   .inside {
     max-width: 600px; 
     padding: 0 1rem; 
@@ -36,8 +38,21 @@ html {
   
   } /* Ende @supports */ 
   
-  
+
+
+
+
   /* Die in content.css definierten Abstände korrigieren - zusätzliche Klasse erhöht die Spezifität */ 
+
+
+.site-content .image  { 
+  background-color: var(--color-background-dark);
+  padding-right: 0; 
+  padding-left: 0; 
+}
+
+
+
   .site-content .infoboxen { 
     padding-right: 0; 
     padding-left: 0; 
@@ -46,6 +61,17 @@ html {
     margin-right: 0; 
     margin-left: 0; 
   }
+
+  .site-content .updateboxen { 
+    padding-right: 0; 
+    padding-left: 0; 
+  }
+
+  .site-content .updatebox { 
+    margin-right: 0; 
+    margin-left: 0; 
+  }
+
   
   /* Layoutbereiche - horizontale Innenabstände entfernen */
   .site-header, 

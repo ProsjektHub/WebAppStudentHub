@@ -50,7 +50,8 @@ https://www.iconfinder.com/icons/8673534/ic_fluent_people_community_filled_icon
 commit - melding:
 infobox: shadow, border - radius (runde kanter), hyperlinks som button, contact formular, farger, styleguide, 
 
-commit - melding
+commit - melding:
+responsiv webdesign, responsiv layout, responsiv font, 
 
 
 

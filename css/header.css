@@ -1,3 +1,20 @@
+/* Styling for header */
+
+.site-logo, .site-slogan {
+  margin: 0; /* Fjerner standardmarg */
+}
+
+/* Tillegg: Sørger for at hele headeren er venstrejustert */
+.site-header {
+  background-color: var(--color-background-light);
+  color: var(--color-font);
+  padding: 1rem;
+  margin-bottom: 0;
+
+
+  text-align: left; /* Venstrejusterer innholdet i headeren */
+}
+/* wrapper endret til inside?? */
 .wrapper {
   display: flex; /* Fortsetter med Flexbox for layouten */
   align-items: center; /* Sørger for at elementene er sentrert vertikalt i forhold til hverandre */
@@ -23,11 +40,4 @@
   padding-left: 1rem; /* Gir litt plass mellom logoen og tekstinnholdet */
 }
 
-.site-logo, .site-slogan {
-  margin: 0; /* Fjerner standardmarg */
-}
 
-/* Tillegg: Sørger for at hele headeren er venstrejustert */
-.site-header {
-  text-align: left; /* Venstrejusterer innholdet i headeren */
-}

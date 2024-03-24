@@ -22,60 +22,15 @@
 /* Hintergrundfarbe für das Stammelement */ 
 html { background-color: var(--grey-very-light, whitesmoke); }
 
-<<<<<<< HEAD
-/* Grundlegende Gestaltung für body */
-body {
-  /* Hintergrundfarbe und Begrenzung der Breite */ 
-  background-color: var(--color-base-light, white); 
-  min-width: 320px; 
-  max-width: 600px; 
-
-  /* Horizontal zentrieren */ 
-  margin: 0 auto;   
-
-  /* Sticky Footer, Schritt 1/2 */
-  display: flex;
-  flex-flow: column; 
-  min-height: 100vh;    
-
-}
-
-/* Optional: Für moderne Browser mehr Platz auch beim klassischen Layout */
-@supports (display: grid) {
-  
-  body {
-    max-width: 960px; 
-  }
-
-} /* Ende @supports */ 
-
-
-/** 
-  * 2. Kopfbereich (inklusive Inhalte)  
-  */ 
-
-/* Innen- und Außenabstände */
-.site-header { 
-  padding: 1rem 1rem 0 1rem; 
-  margin-bottom: 1rem; 
-} 
-
-/* Fine-Tuning: Die Abstände um Logo und Slogan anpassen */ 
-=======
 /* Margin between logo and slogan */
 /* logo er tatt bort */
->>>>>>> 5a2cb61 (Added image, icons, and styled with colors)
 .site-header h1 { margin-bottom: 0; }
 .site-header p { margin-top: 0; }
 
 /* nav - se navi-flex.css */
 
 /** 
-<<<<<<< HEAD
-  * 3. Inhaltsbereich (Inhalte in content.css)  
-=======
   * 2. Content Area (Infobox - Styles in a separate stylesheet: content.css) 
->>>>>>> 5a2cb61 (Added image, icons, and styled with colors)
   */ 
 
 /* Innen- und Außenabstände */

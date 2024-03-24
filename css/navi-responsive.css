@@ -30,20 +30,20 @@
 
 /* Hover und Focus gestalten */
 .site-nav a:hover, .site-nav a:focus {
-  background: var(--color-nav-dark); /* Bruker din fargevariabel for mørkere navigasjonsbakgrunn */
+  background: var(--color-nav-darker); /* Bruker din fargevariabel for mørkere navigasjonsbakgrunn */
   color: white;
   text-decoration: none; /* Beholder ingen understrekning på hover og focus */
 }
 
 /* Im Moment der Aktivierung */
 .site-nav a:active {
-  background: var(--color-nav-dark); /* Bruker din fargevariabel for mørkere navigasjonsbakgrunn */
+  background: var(--color-nav-darker); /* Bruker din fargevariabel for mørkere navigasjonsbakgrunn */
   color: white;
 }
 
 /* Aktuellen Menüpunkt hervorheben */
 .current a { 
-  background: var(--color-nav-dark); /* Bruker din fargevariabel for mørkere navigasjonsbakgrunn */
+  background: var(--color-nav-darker); /* Bruker din fargevariabel for mørkere navigasjonsbakgrunn */
   color: white;
   text-decoration: underline; /* Kun den aktive lenken har understreking */
 }

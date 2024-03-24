@@ -9,23 +9,16 @@
 
 
 
-/* Styling the section
-.contact-info {
-    background: #b80c0c;
-    color: #120800; 
+
+.contact-form {
+    background: var(--color-background-dark);
+    color: var(--color-font); 
     padding: 1rem;
     border-radius: 0.25rem; 
     margin-bottom: 2rem;
-} */
+}
 
-/* Styling address text
-.contact-info address { 
-    font-style: normal; 
-} */
 
-/** 
-  * Contact Form Styles
-  */ 
 
 /* Label styling */
 .contact-form label { 
@@ -46,7 +39,7 @@
     font-family: inherit;
     width: 100%; /* Make input fields full width */
     padding: 0.5rem; /* Padding inside the input fields */
-    border: 1px solid #818889; /* Border styling */
+    border: 1px solid var(--color-grey-border); /* Border styling */
     border-radius: 0.25rem; /* Rounded corners for input fields */
 }
 
@@ -54,8 +47,8 @@
 .contact-form input[type="text"]:focus, 
 .contact-form input[type="email"]:focus, 
 .contact-form textarea:focus {
-    background-color: #e9e9e9;
-    color: #120800; 
+    background-color: var(color-background-daker);
+    color: var(--color-font); 
 }
 
 /* <textarea> width limit and minimum height */
@@ -81,6 +74,6 @@
 /* Highlight button on hover or focus */
 .contact-form button:hover, 
 .contact-form button:focus {
-    background: #81c1d3; /* Change background color on hover/focus */
+    background: var(--color-nav-darker); /* Change background color on hover/focus */
 }
 
