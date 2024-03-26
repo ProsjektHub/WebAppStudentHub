@@ -14,8 +14,8 @@
 
         <script>
             document.documentElement.classList.remove('no-js'); 
-            document.documentElement.classList.add('js');
-        </script>
+            document.documentElement.classList.add('js'); 
+          </script>
 
  </head>
 
@@ -44,8 +44,10 @@
             
 
     <nav class="site-nav">
-        <button class="menubutton">Menu</button>
         <div class="inside">
+
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menü</button>
+
             <ul>
                 <li><a href="index.html" class="current">Home</a></li>
                 <li><a href="tasks.html">Tasks</a></li>
@@ -62,16 +64,16 @@
 
     <main class="site-content" id="content">
 
-        <figure class="image">
-       
-            
-                <img src="bilder/pixabay/studentHubPNG.png"
-                     alt=""
-                     srcset="bilder/pixabay/studentHubPNG.png 1x">
-                <!-- <figcaption>Image by Coffe Bean from Pixabay</figcaption> -->
-            
-    
-        </figure>
+        <section class="content-intro">
+
+        </section> 
+
+
+        <img src="bilder/pixabay/studentHubPNG.png"
+        alt=""
+        srcset="bilder/pixabay/studentHubPNG.png 1x">
+
+
     
         <!-- https://pixabay.com/illustrations/avatar-clients-icons-customers-2191932/ -->
 
@@ -81,6 +83,9 @@
             <p>Struggling with managing your academic life? StudentHub offers tools for task organization, financial management, and much more.</p>
         </section> -->
 
+
+
+        
         <section class="infoboxen">
             <div class="inside">
                 <h2 class="visually-hidden">Features Overview</h2>
@@ -129,37 +134,36 @@
                 <p><a href="contact.html">Contact</a></p>
             </article> -->
             </div>  
-
         </section>
 
+
+
         <section class="updateboxen">
-            <h2>Latest Updates - lage en oversikt fra deres feature her
-                
-            </h2>
-            <p>Get a quick overview of what's new with your tasks, budget, and community engagement.</p>
-            
             <div class="inside">
+                <h2>Today's Dashboard                 
+                </h2>
+
                 
-                <article class="updatebox">
-                    <h3>Upcoming Tasks</h3>
+                <figure class="updatebox">
+                    <h3>Tasks</h3>
                     <ul>
-                        <li>Complete your Math assignment by tomorrow.</li>
-                        <li>Start researching for your History paper.</li>
+                        <li>Complete  Math assignment</li>
+                        <li>Researching for your History paper.</li>
                     </ul>
                     <p>Manage all your <a href="tasks.html">tasks</a>.</p>
-                </article>
+                </figure>
                 
-                <article class="updatebox">
-                    <h3>Weekly Budget Summary</h3>
-                    <p>You've spent 80% of your weekly budget. Watch your expenses to stay on track!</p>
+                <figure class="updatebox">
+                    <h3>Budget</h3>
+                    <p>You've spent 80% of your weekly budget. </p>
                     <p>Review your <a href="finance.html">budget</a> in detail.</p>
-                </article>
+                </figure>
                 
-                <article class="updatebox">
-                    <h3>Community Highlights</h3>
+                <figure class="updatebox">
+                    <h3>Events</h3>
                     <p>You're invited to join the "Study Smart" group this Friday!</p>
                     <p>Discover more in <a href="community.html">Together</a>.</p>
-                </article>
+                </figure>
             </div>
         </section>
         
@@ -168,11 +172,17 @@
 
     </main>
 
-                <footer class="site-footer">
-                    <a href="#top">Back to Top</a>
-
-                    
-                </footer>
+    <footer class="site-footer"> 
+        <div class="inside">
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="#">Impressum</a></li>
+              <li><a href="#">Datenschutz</a></li>
+              <li><a href="#top">Back to Top </a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer> 
 </body>
     
 </html>
