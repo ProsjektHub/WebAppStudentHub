@@ -156,3 +156,15 @@ Instead, we hide the default checkbox and create a new one that can be styled mo
 .hidden {
   display: none;
 }
+/* Style the forgot password link */
+a[href="/forgotPassword.html"] {
+  font-size: 10px;
+}
+/* Style the registration prompt */
+.login-container p {
+  font-size: 12px;
+}
+/* Style the registration prompt */
+.registration-prompt {
+  font-size: 10px;
+}
