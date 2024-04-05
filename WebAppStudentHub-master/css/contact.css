@@ -1,35 +1,24 @@
-/* ==================================
-   CSS Fundamentals for StudentHub Website
+/* 
 
-   contact.css
-   Included in style.css via @import
-
-   Stylesheet for user interactions
-   - Contact Information
+  * Contact Information Styles
+  
+    Stylesheet for user interactions
+   - lenker eller noe - eller noe annet? 
    - Contact Form
 */
 
-/** 
-  * Contact Information Styles
-  */ 
 
-/* Styling the section */
-.contact-info {
-    background: whitesmoke;
-    color: black; 
+
+
+.contact-form {
+    background: var(--color-background-dark);
+    color: var(--color-font); 
     padding: 1rem;
     border-radius: 0.25rem; 
     margin-bottom: 2rem;
 }
 
-/* Styling address text */
-.contact-info address { 
-    font-style: normal; 
-}
 
-/** 
-  * Contact Form Styles
-  */ 
 
 /* Label styling */
 .contact-form label { 
@@ -50,7 +39,7 @@
     font-family: inherit;
     width: 100%; /* Make input fields full width */
     padding: 0.5rem; /* Padding inside the input fields */
-    border: 1px solid dimgrey; /* Border styling */
+    border: 1px solid var(--color-grey-border); /* Border styling */
     border-radius: 0.25rem; /* Rounded corners for input fields */
 }
 
@@ -58,8 +47,8 @@
 .contact-form input[type="text"]:focus, 
 .contact-form input[type="email"]:focus, 
 .contact-form textarea:focus {
-    background-color: whitesmoke;
-    color: black; 
+    background-color: var(color-background-daker);
+    color: var(--color-font); 
 }
 
 /* <textarea> width limit and minimum height */
@@ -73,7 +62,7 @@
     font-size: inherit; /* Inherit font size and family */
     font-family: inherit; 
     text-align: center; /* Center button text */
-    background: #07b; /* Button background color */
+    background: #00a3d2; /* Button background color */
     color: white; /* Button text color */
     width: auto; /* Adjust width as needed */
     padding: 1rem; /* Button padding */
@@ -85,6 +74,6 @@
 /* Highlight button on hover or focus */
 .contact-form button:hover, 
 .contact-form button:focus {
-    background: #f63; /* Change background color on hover/focus */
+    background: var(--color-nav-darker); /* Change background color on hover/focus */
 }
 

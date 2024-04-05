@@ -1,44 +1,128 @@
-*, *::before, *::after { 
-    box-sizing: border-box; 
-} 
+/* Stylesheet zur grundlegenden Gestaltung:  
+1. Globale Custom Properties definieren 
+2. Globale Einstellungen für die gesamte Website
+3. Grundlegende Gestaltung für Schrift und Text 
+4. Nützliche, allgemeine Klassen */
+
+ /* Globale Custom Properties definieren  */
 
 html {
-    scroll-behavior: smooth;
-    background-color: #eee;
+    --color-background-light: #f9f9f9; 
+    --color-background-dark: #e9e9e9; 
+    --color-grey-border:#818889; 
+    --color-yellow: #fcd770; 
+    --color-icon-community:#e18a00;
+    --color-icon-finance: #a19dff;
+    --color-icon-task:#00a3d2;
+
+    --color-skincolour2:#fcd4b4; 
+    --color-purple-light:#ff33cc; 
+
+    --color-font: #120800; 
+    --color-nav: #00a3d2; 
+    --color-nav-darker: #007293; 
+
+    --color-shadow: 4px 8px  8px rgba(0, 0, 0, 0.2); 
 }
+
+   
+/**  
+  * 2. Globale Einstellungen für die gesamte Website 
+  */ 
+
+/* border-box aktivieren */ 
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Sanftes Scrollen aktivieren */ 
+html { scroll-behavior: smooth; }
+
+/* Collapsing Margins vermeiden */ 
+h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote { margin-top: 0; }
+
+
+
+
+/**  
+  * 3. Grundlegende Gestaltung für Schrift und Text  
+  */ 
 
 body {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
-    font-size: 1rem; 
-    min-width: 320px;
-    max-width: 600px; 
-    background-color: white;
-    margin: 1rem auto; 
+/* Systemschriftart auf dem Gerät des Benutzers; »Best Practice« kann sich ändern */
+font-family: system-ui, -apple-system, "Segoe UI", Roboto, 
+             "Helvetica Neue", Arial, sans-serif; 
+
+/* Definition der Standardschriftgröße (optional)  */
+font-size: 1rem; 
+max-width: 600px;
+line-height: 1.5; 
+padding:1rem; 
+margin: 0 auto; 
+}  
+@media screen and (min-width: 768px) {
+    html{ font-size: 1.125rem;}
+}
+@media screen and (min-width: 1280px) {
+  html{ font-size: 1.25rem;}
 }
 
-h1 { font-size: 2.5rem; font-weight: 500;}
-h2 { font-size: 2rem; font-weight: 500;}
-h3 { font-size: 1.75rem; font-weight: 500;}
-h4 { font-size: 1.5rem; font-weight: 500;} 
+
+/* Überschriften - Schriftgröße und Strichstärke */ 
+h1 { font-size: 2.5rem; font-weight: 500; } 
+h2 { font-size: 2rem; font-weight: 500; } 
+h3 { font-size: 1.75rem; font-weight: 500; } 
+h4 { font-size: 1.5rem; font-weight: 500; }
 h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
+h6 { font-size: 1rem; } 
 
-h1, h2, h3, h4, h5, h6, p, ul, ol {
-    margin-top: 0; 
-}
+/* Unterstreichung für Hyperlinks dünn und etwas weiter weg vom Text */ 
+a { text-decoration-thickness: 1px; text-underline-offset: 0.1875em; }
 
-figure, blockquote {
-    margin: 0; 
-}
 
+
+
+/**  
+  * 4. Nützliche, allgemeine Klassen 
+  */ 
+
+/* Boxen am Bildschirm ausblenden */
 .visually-hidden {
     position: absolute !important;
     clip: rect(0, 0, 0, 0) !important; 
     overflow: hidden !important;
-    width: 1px !important; 
     white-space: nowrap !important;
+  
+    width: 1px !important; 
     height: 1px !important; 
     padding: 0 !important; 
     border: 0 !important; 
     margin: -1px !important; 
-}
+  }
+
+  /* Klassen zum Floaten und Clearen */
+  .float-links { float: left; margin: 0 1rem 1rem 0; }
+  .float-rechts { float: right; margin: 0 0 1rem 1rem; }
+
+  .float-stoppen { clear: both; }
+
+  /* Bildbeschriftung bei gefloateten Bildern zentrieren */
+  figure[class~="float-rechts"], 
+  figure[class~="float-links"] {
+    text-align: center;
+  }
+
+  /* Floats umschliessen */ 
+  .float-umschliessen { overflow: hidden; }
+
+  @supports (display:flow-root) {
+
+    .float-umschliessen {
+      display: flow-root; 
+      overflow: initial;       
+    }
+  
+  }
+  
+  
+/** 
+  * Ende basis.css 
+  */ 
