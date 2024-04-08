@@ -120,9 +120,9 @@ Instead, we hide the default checkbox and create a new one that can be styled mo
   /* Position the pseudo-element at the left edge of the label */
   top: 0;
   /* Position the pseudo-element at the top edge of the label */
-  width: 20px;
+  width: 15px;
   /* Set the width of the pseudo-element */
-  height: 20px;
+  height: 15px;
   /* Set the height of the pseudo-element */
   border: 1px solid #ccc;
   /* Add a border around the pseudo-element */
@@ -138,13 +138,13 @@ Instead, we hide the default checkbox and create a new one that can be styled mo
   /* The content property is used with ::before and ::after to generate content in an element */
   position: absolute;
   /* Position the pseudo-element absolutely within the label */
-  left: 6px;
+  left: 4px;
   /* Position the pseudo-element from the left edge of the label */
-  top: 2px;
+  top: 1px;
   /* Position the pseudo-element from the top edge of the label */
-  width: 8px;
+  width: 6px;
   /* Set the width of the pseudo-element */
-  height: 12px;
+  height: 9px;
   /* Set the height of the pseudo-element */
   border: solid #000;
   /* Add a border around the pseudo-element */
@@ -167,4 +167,8 @@ a[href="/forgotPassword.html"] {
 /* Style the registration prompt */
 .registration-prompt {
   font-size: 10px;
+}
+/* Style the "Remember me" label */
+.login-container .remember-me label {
+  font-size: 12px; /* Adjust this value to your liking */
 }
