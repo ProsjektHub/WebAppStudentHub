@@ -1,109 +1,93 @@
-/*
-    
-
+/* 
     layout.css  
-    wird in style.css per @import eingebunden  
+    Included in style.css via @import  
 
-    Stylesheet zur Gestaltung der Layoutbereiche
-    1. Klassisches Seitenlayout (begrenzte Breite, zentriert, Sticky Footer vorbereiten) 
-    2. Kopfbereich (inklusive Inhalte) 
-    3. Inhaltsbereich (Inhalte in eigenem Stylesheet, Sticky Footer mit flex:1) 
-    4. Site-Footer (inklusive Inhalte) 
+    Stylesheet for styling layout areas:
+    1. Classic page layout (limited width, centered, preparing Sticky Footer)
+    2. Header area (including contents)
+    3. Content area (contents in a separate stylesheet, Sticky Footer with flex:1)
+    4. Site Footer (including contents)
 
-    Die Gestaltung der Site-Navigation steht in einem eigenen Stylesheet. 
-
-   */
+    Site navigation styling is in a separate stylesheet.
+*/
 
 
 /** 
-  * 1. Klassisches Seitenlayout (begrenzte Breite, zentriert) 
-  */ 
+  * 1. Classic page layout (limited width, centered) 
+  */
 
-/* Hintergrundfarbe für das Stammelement */ 
+/* Background color for the root element */
 html { background-color: var(--grey-very-light, whitesmoke); }
 
-<<<<<<< HEAD
-/* Grundlegende Gestaltung für body */
+/* Basic styling for body */
 body {
-  /* Hintergrundfarbe und Begrenzung der Breite */ 
+  /* Background color and width limitation */ 
   background-color: var(--color-base-light, white); 
   min-width: 320px; 
   max-width: 600px; 
 
-  /* Horizontal zentrieren */ 
+  /* Center horizontally */ 
   margin: 0 auto;   
 
-  /* Sticky Footer, Schritt 1/2 */
+  /* Sticky Footer, Step 1/2 */
   display: flex;
   flex-flow: column; 
   min-height: 100vh;    
-
 }
 
-/* Optional: Für moderne Browser mehr Platz auch beim klassischen Layout */
-@supports (display: grid) {
-  
+/* Optional: For modern browsers, more space even with classic layout */
+@supports (display: grid) {  
   body {
-    max-width: 960px; 
+    max-width: 1000px; 
   }
-
-} /* Ende @supports */ 
+} /* End @supports */ 
 
 
 /** 
-  * 2. Kopfbereich (inklusive Inhalte)  
-  */ 
+  * 2. Header area (including contents)  
+  */
 
-/* Innen- und Außenabstände */
+/* Inner and outer margins */
 .site-header { 
   padding: 1rem 1rem 0 1rem; 
   margin-bottom: 1rem; 
 } 
 
-/* Fine-Tuning: Die Abstände um Logo und Slogan anpassen */ 
-=======
-/* Margin between logo and slogan */
-/* logo er tatt bort */
->>>>>>> 5a2cb61 (Added image, icons, and styled with colors)
+/* Fine-Tuning: Adjust margins around logo and slogan */
 .site-header h1 { margin-bottom: 0; }
 .site-header p { margin-top: 0; }
 
-/* nav - se navi-flex.css */
 
 /** 
-<<<<<<< HEAD
-  * 3. Inhaltsbereich (Inhalte in content.css)  
-=======
-  * 2. Content Area (Infobox - Styles in a separate stylesheet: content.css) 
->>>>>>> 5a2cb61 (Added image, icons, and styled with colors)
-  */ 
+  * 3. Content area (contents in content.css)  
+  */
 
-/* Innen- und Außenabstände */
+/* Inner and outer margins */
 .site-content { 
   line-height: 1.5; 
   padding: 0 1rem; 
   margin-bottom: 2rem; 
 
-  /* Sticky Footer, Schritt 2/2 */
+  /* Sticky Footer, Step 2/2 */
   flex: 1; 
 } 
  
 
 /** 
-  * 4. Fußbereich (inklusive Inhalte)  
-  */ 
+  * 4. Footer area (including contents)  
+  */
 
-/* Grundlegende Gestaltung für den Footer */ 
+/* Basic styling for the footer */ 
 .site-footer {
-<<<<<<< HEAD
   font-size: smaller; 
   background-color: var(--grey-very-dark, #333);
   color: var(--color-base-light, white); 
   text-align: right; 
   padding: 1rem;
+  
 }
 
-/* Die Navigation im Fußbereich */   
+/* Navigation in the footer */   
 .footer-nav ul {
   display: flex;
   list-style: none; 
@@ -124,19 +108,6 @@ body {
 .footer-nav li:last-child {
   margin-right: 0; 
   margin-left: auto; 
-=======
-    background-color: #00a3d2;
-    color: white; 
-
-    padding: 0.5rem 1rem; 
-    margin: 1rem 0; 
-}  
-
-/* "Back to top" link - font slightly smaller and aligned to the right */
-.site-footer {
-    font-size: smaller;
-    text-align: right;
->>>>>>> 5a2cb61 (Added image, icons, and styled with colors)
 }
 
 .site-footer a {
@@ -154,5 +125,5 @@ body {
 }
 
 /** 
-  * Ende layout.css 
+  * End of layout.css 
   */ 

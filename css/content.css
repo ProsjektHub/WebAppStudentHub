@@ -1,18 +1,13 @@
 /* 
-* 1. Content area (infobox) og updates
+* 1. Content area (infobox) and updates
 */
-
-
-
-
-
 
 /* Styling for infoboxes */
 .infoboxen {
-    background-color: var(--color-background-dark); 
-    color: var(--color-font); 
-    padding: 1rem; 
-    margin-bottom: 1rem; 
+  background-color: var(--color-background-dark); 
+  color: var(--color-font); 
+  padding: 1rem; 
+  margin-bottom: 1rem; 
 }
 
 .infobox {
@@ -21,37 +16,33 @@
 
   text-align: center;
   background-color: var(--color-background-light);
-  color: var(--color-font) 
+  color: var(--color-font); /* Added missing semicolon */
   padding: 1rem; 
   margin: 1rem; 
-  
-  box-shadow: 4px 8px  8px rgba(0, 0, 0, 0.2); 
+
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.2); 
   border-radius: 1rem;
 }
 
-/* das letzte Element in jeder Infobox: */
-.infobox :last-child {
+/* The last element in each infobox: */
+.infobox:last-child { /* Removed space before pseudo-class */
   margin-top: auto;
 }
 
-
 @media screen and (min-width: 600px) {
-
   .infoboxen > .inside {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1rem;
   }
 }
-
 
 .icon img[src$="svg"] {
   width: 4rem;
   height: auto; 
 }
 
-
-/* Oppdateringsoversikt Stiler */
+/* Update overview Styles */
 .update-overview {
   background-color: var(--grey-very-light, whitesmoke); 
   padding: 1rem; 
@@ -68,7 +59,7 @@
   grid-column: 1/-1; 
 }
 
-/* Enkelt oppdateringselement */
+/* Single update element */
 .update-tasks, .update-budget, .update-community {
   text-align: center; 
   background-color: var(--grey-light, #eee);
@@ -87,21 +78,20 @@
   font-weight: bold; 
 }
 
-/* Stil for listeelementer i oppdateringer, om nødvendig */
+/* Style for list items in updates, if necessary */
 .update-tasks ul, .update-budget ul, .update-community ul {
-  padding-left: 20px; /* Justering for listeinnrykk */
+  padding-left: 20px; /* Adjustment for list indentation */
 }
 
-/* Gjelder for skjermer bredere enn 600px */
+/* Applies to screens wider than 600px */
 @media screen and (min-width: 600px) {
   .update-overview > .updates-container {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem; 
+      display: grid; 
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1rem; 
   }
 
   .update-tasks, .update-budget, .update-community {
-    /* Tilpassinger for bredere skjermer her, om nødvendig */
+      /* Adjustments for wider screens here, if necessary */
   }
 }
-
