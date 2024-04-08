@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+   
+
         <title>StudentHub - Your All-in-One Student Organizer</title>
         <meta name="description" content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, manage finances, and much more.">
 
@@ -12,8 +14,8 @@
 
         <script>
             document.documentElement.classList.remove('no-js'); 
-            document.documentElement.classList.add('js');
-        </script>
+            document.documentElement.classList.add('js'); 
+          </script>
 
  </head>
 
@@ -22,13 +24,18 @@
 
     <header class="site-header">
         <div class="wrapper">
+
             <div class="logo-container">
-                <img src="bilder/logo/iconfinderCom/SVG.svg"  
-                     srcset="bilder/logo/iconfinderCom/SVG.svg 2x"
-                     alt=""
-                     width="222"
-                     height="36">
+                <a href="index.html">
+                    <img src="bilder/logo/iconfinderCom/SVG.svg"  
+                         srcset="bilder/logo/iconfinderCom/SVG.svg 2x"
+                         alt="StudentHub Logo"
+                         width="222"
+                         height="36">
+                </a>
             </div>
+            
+
             <div class="text-container">
                 <h1 class="site-logo">StudentHub</h1>
                 <p class="site-slogan">Your Ultimate Companion for Student Life</p>
@@ -42,67 +49,94 @@
             
 
     <nav class="site-nav">
-        <button class="menubutton">Menu</button>
         <div class="inside">
+
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menu</button>
+
+            
+
             <ul>
                 <li><a href="index.html" class="current">Home</a></li>
                 <li><a href="tasks.html">Tasks</a></li>
                 <li><a href="finance.html">Finance</a></li>
-                <li><a href="together.html">Community</a></li>
+                <li><a href="community.html">Community</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
+
+    <main class="site-content" id="content"> 
+        <div class="inside">
+    
+          <section class="content-intro">
+    
+            <h2>Contact</h2>
+    
+            <p>Questions? Suggestions? On this page you will find ways to get in touch with us.
+
+            </p>
+    
+          </section>
+    
+          <section class="team">
+            <h2 class="visually-hidden">team</h2>
+    
+            <address>
+            <p>Team 09 <br>
+                Semester Assignment <br>
+                </p>
+            <p>Universitetet i Sørøst-Norge </a></p>
+            </address>
+          </section>
+    
+          <section class="contactForm" id="contactForm">
+    
+            <h2 class="visually-hidden">contactForm</h2>
+    
+            <p>You can send us a message using the form below.
+                Please fill in all fields.</p>
+    
+            <form action="#" method="post">
+    
+              <label for="name">Your name:</label>
+              <input type="text" id="name" name="name" required>
+    
+              <label for="e-mail">Your email:</label>
+              <input type="email" id="e-mail" name="e-mail" required>
+    
+              <label for="message">Your message:</label>
+              <textarea id="message" name="message" cols="30" rows="5" required></textarea>
+    
+              <label for="GDPR">GDPR-Consent</label>
+              <div class="GDPR-text"><label><input type="checkbox" id="GDPR" name="GDPR" required>By using this form you agree to the storage and processing of your data by this website.</label> (<a href="#" target="_blank" rel="noreferrer noopener">Data protection</a>).</div>
+    
+              <button type="submit" value="Sent">Send</button>
+    
+            </form>
+    
+          </section>
+    
+        </div>
+      </main> 
     
 
-    <figure class="image">
-       
-        <img src="bilder/pixabay/studentHubPNG.png" 
-             alt="" 
-             srcset="bilder/pixabay/studentHubPNG.png 1x">
 
-        <!-- <figcaption>Image by Coffe Bean from Pixabay</figcaption> -->
-
-    </figure>
+    
 
 
-        <main class="site-content" id="content">
 
-            <!-- <section class="content-intro">
-                <h2>We'd Love to Hear From You!</h2>
-                <p>Whether you have a question about features, trials, pricing, need a demo, or anything else, our team is ready to answer all your questions.</p>
-                <p>....sette in en sideseksjon med nyttige lenker for studiestartere? læring, veiledning... </p>
-            </section> -->
-
-            <section class="contact-form">
-                <h2>Send Message</h2>
-                
-                <form id="contactForm">
-
-                    <div>
-                        <label for="name">Your Name:</label><br>
-                        <input type="text" id="name" name="name" required><br>
-                    </div>
-
-                    <div>
-                        <label for="email">Your Email:</label><br>
-                        <input type="email" id="email" name="email" required><br>
-                    </div>
-
-                    <div>
-                        <label for="message">Your Message:</label><br>
-                        <textarea id="message" name="message" required></textarea><br>
-                    </div>
-                                                 
-                   <button type=" submit">Send Message</button>
-
-                </form>
-            </section>
-
-        </main>
-
-        <footer class="site-footer">
-            <a href="#top">Back to Top</a>
-        </footer>
-    </body>
+    <footer class="site-footer"> 
+        <div class="inside">
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="#">Impressum</a></li>
+              <li><a href="#">Datenschutz</a></li>
+              <li><a href="#top">Back to Top </a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer> 
+</body>
+    
 </html>
+            

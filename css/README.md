@@ -46,6 +46,16 @@ icon / logo topp venstre:
 
 https://www.iconfinder.com/icons/8673534/ic_fluent_people_community_filled_icon
 
+icon / menu-burger:
+https://www.flaticon.com/free-icon-font/menu-burger_3917065?page=1&position=17&term=menu&origin=search&related_id=3917065
+
+icon- interface - mappe fra flaticon (free)
+file:///C:/Users/ingeb/Downloads/license-142298612-3917762.pdf
+
+
+lisens icon:
+file:///C:/Users/ingeb/Downloads/license-142298612-3917762.pdf
+
 
 commit - melding:
 infobox: shadow, border - radius (runde kanter), hyperlinks som button, contact formular, farger, styleguide, 

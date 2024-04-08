@@ -1,6 +1,6 @@
 /*  ==========================================
 
-
+/* Layout modern.css */
     
 
     Stylesheet zur Gestaltung der Layoutbereiche
@@ -40,47 +40,31 @@ html {
   
 
 
-
-
-  /* Die in content.css definierten Abstände korrigieren - zusätzliche Klasse erhöht die Spezifität */ 
-
-
-.site-content .image  { 
-  background-color: var(--color-background-dark);
+/* Die in content.css definierten Abstände korrigieren - zusätzliche Klasse erhöht die Spezifität */ 
+.site-content .infoboxen { 
   padding-right: 0; 
   padding-left: 0; 
+} 
+.site-content .infobox { 
+  margin-right: 0; 
+  margin-left: 0; 
+}
+
+/* Layoutbereiche - horizontale Innenabstände entfernen */
+.site-header, 
+.site-nav, 
+.site-content, 
+.site-footer { 
+  padding-left: 0; 
+  padding-right: 0; 
 }
 
 
+/** 
+  * Ende layout-modern.css 
+  */ 
 
-  .site-content .infoboxen { 
-    padding-right: 0; 
-    padding-left: 0; 
-  } 
-  .site-content .infobox { 
-    margin-right: 0; 
-    margin-left: 0; 
-  }
 
-  .site-content .updateboxen { 
-    padding-right: 0; 
-    padding-left: 0; 
-  }
-
-  .site-content .updatebox { 
-    margin-right: 0; 
-    margin-left: 0; 
-  }
-
-  
-  /* Layoutbereiche - horizontale Innenabstände entfernen */
-  .site-header, 
-  .site-nav, 
-  .site-content, 
-  .site-footer { 
-    padding-left: 0; 
-    padding-right: 0; 
-  }
   
   
   /** 
