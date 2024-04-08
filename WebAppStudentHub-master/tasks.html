@@ -10,10 +10,10 @@
         .task-list {
             list-style-type: none;
             padding: 0;
-            margin-bottom: 30 px;
+            margin-bottom: 30px;
         }
         .site-footer {
-            margin-bottom: 0 px;
+            margin-bottom: 0px;
         }
         .task-list-item {
             display: flex;
@@ -30,15 +30,15 @@
             gap: 10px;
         }
         .container {
-        width: 100%;
-        max-width: 870px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 20px;
-        background-color: #e7e7e7; /* Light grey background color */
-        border-radius: 10px; /* Rounded corners */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
-        transition: max-width 0.5s ease; /* Smooth transition for max-width change */
+            width: 100%;
+            max-width: 870px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            background-color: #e7e7e7; /* Light grey background color */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+            transition: max-width 0.5s ease; /* Smooth transition for max-width change */
         }
         .task-manager-intro {
             padding: 0 40px;
@@ -50,6 +50,80 @@
         .site-content {
             max-width: 950px;
             margin: 0 auto;
+        }
+        .archive-section {
+            width: 100%;
+            max-width: 870px;
+            margin: 20px auto 0; /* Center the box and add top margin */
+            padding: 20px;
+            background-color: #e7e7e7; /* Light grey background color */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+            transition: max-width 0.5s ease; /* Smooth transition for max-width change */
+        }
+
+        .archive-section h2 {
+            margin: 0; /* Remove default margin for h2 */
+            text-align: center;
+            padding-bottom: 10px; /* Add bottom padding */
+            border-bottom: 1px solid #ccc; /* Add bottom border */
+        }
+
+        .archive-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .archive-list .task-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .archive-list .task-list-item:last-child {
+            border-bottom: none; /* Remove border for last item */
+        }
+
+        .archive-list .task-list-item .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .toggle-archive-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .toggle-archive-btn {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .toggle-archive-btn:hover {
+            background-color: #333;
+        }
+        .intro-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .intro-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .intro-image {
+            flex: 1;
+            text-align: center;
+        }
+        .intro-image img {
+            max-width: 100%;
+            height: auto;
         }
         .finish-btn {
             background-color: green;
@@ -75,42 +149,28 @@
         .delete-btn:hover {
             background-color: darkred;
         }
-        .task-manager-intro {
-        padding: 0 40px;
+        .restore-btn {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
-
-        .intro-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .restore-btn:hover {
+            background-color: darkgreen;
         }
-
-        .intro-text {
-            flex: 1;
-        }
-
-        .intro-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .intro-image img {
-            max-width: 100%;
-            height: auto;
-        }
-
-            </style>
-        </head>
-        <body>
-            <header class="site-header">
-                <h1>StudentHub</h1>
-                <p>Your Ultimate Companion for Student Life</p>
-            </header>
-              <nav class="site-nav">
-                <div class="inside">
-
-                    <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menü</button>
-
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <h1>StudentHub</h1>
+        <p>Your Ultimate Companion for Student Life</p>
+    </header>
+    <nav class="site-nav">
+        <div class="inside">
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menü</button>
             <ul>
                 <li><a href="index.html" class="current">Home</a></li>
                 <li><a href="tasks.html">Tasks</a></li>
@@ -122,16 +182,16 @@
     </nav>
     <main class="site-content" id="content">
         <section class="task-manager-intro">
-    <div class="intro-container">
-        <div class="intro-text">
-            <h2>Task Manager</h2>
-            <p>Welcome to your personal task manager. Organize your assignments, keep track of deadlines, and manage your academic tasks efficiently.</p>
-        </div>
-        <div class="intro-image">
-            <img src="bilder/TasksBilder/Task list.png" alt="Task List Image">
-        </div>
-    </div>
-</section>
+            <div class="intro-container">
+                <div class="intro-text">
+                    <h2>Task Manager</h2>
+                    <p>Welcome to your personal task manager. Organize your assignments, keep track of deadlines, and manage your academic tasks efficiently.</p>
+                </div>
+                <div class="intro-image">
+                    <img src="bilder/TasksBilder/Task list.png" alt="Task List Image">
+                </div>
+            </div>
+        </section>
 
         <div class="container">
             <h2>Add tasks here</h2>
@@ -145,6 +205,17 @@
             <ul id="taskList" class="task-list">
                 <li class="empty-message" id="activeEmptyMessage">No active tasks</li>
             </ul>
+        </div>
+        <!-- Task Archive Section -->
+        <section class="archive-section">
+            <h2>Archive</h2>
+            <ul id="archiveList" class="archive-list">
+                <!-- Archived tasks will be displayed here -->
+            </ul>
+        </section>
+        <!-- Toggle Archive Button -->
+        <div class="toggle-archive-container">
+            <button class="toggle-archive-btn" onclick="toggleArchive()">Toggle Archive</button>
         </div>
     </main>
     <footer class="site-footer">
@@ -180,8 +251,8 @@
                 finishButton.textContent = 'Finish';
                 finishButton.className = 'finish-btn';
                 finishButton.onclick = function() {
-                    deleteTask(li); // Call delete task function
                     moveToArchive(li); // Move finished task to the archive
+                    deleteTask(li); // Call delete task function
                 };
 
                 buttonsDiv.appendChild(deleteButton);
@@ -205,9 +276,8 @@
 
                 // Hide or show the task list container based on whether there are active tasks
                 updateTaskListVisibility();
-                }
             }
-
+        }
 
         // Function to delete a task
         function deleteTask(taskItem) {
@@ -216,21 +286,21 @@
 
             // Hide or show the task list container based on whether there are active tasks
             updateTaskListVisibility();
-            }
+        }
 
-            // Function to update empty message for active list
-            function updateEmptyMessage(listType) {
-                var emptyMessage = document.getElementById(listType + 'EmptyMessage');
-                var taskList = document.getElementById('taskList');
-                if (taskList.children.length > 1) { // If there are tasks other than the empty message
-                    emptyMessage.style.display = 'none'; // Hide empty message
-                } else {
-                    emptyMessage.style.display = 'block'; // Show empty message
-                }
+        // Function to update empty message for active list
+        function updateEmptyMessage(listType) {
+            var emptyMessage = document.getElementById(listType + 'EmptyMessage');
+            var taskList = document.getElementById('taskList');
+            if (taskList.children.length > 1) { // If there are tasks other than the empty message
+                emptyMessage.style.display = 'none'; // Hide empty message
+            } else {
+                emptyMessage.style.display = 'block'; // Show empty message
             }
+        }
 
         // Function to update task list visibility based on whether there are active tasks
-                function updateTaskListVisibility() {
+        function updateTaskListVisibility() {
             var taskListContainer = document.getElementById('taskListContainer');
             var taskList = document.getElementById('taskList');
 
@@ -270,6 +340,53 @@
                     task.querySelector('span').textContent = timerStr;
                 }
             });
+        }
+
+               // Function to move finished tasks to the archive
+        function moveToArchive(taskItem) {
+            var taskList = document.getElementById('archiveList');
+            var archivedTask = taskItem.cloneNode(true); // Clone the task item
+            var buttonsDiv = archivedTask.querySelector('.buttons');
+            buttonsDiv.remove(); // Remove buttons from the archived task
+            var deleteButton = document.createElement('button');
+            var restoreButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.className = 'delete-btn';
+            deleteButton.onclick = function() {
+                if (confirm('Are you sure you want to delete this task permanently?')) {
+                    deleteTask(archivedTask); // Call delete task function
+                }
+            };
+            restoreButton.textContent = 'Restore';
+            restoreButton.className = 'restore-btn';
+            restoreButton.onclick = function() {
+                restoreTask(archivedTask); // Restore task to active list
+                deleteTask(archivedTask); // Delete task from archive list
+            };
+            var buttonsContainer = document.createElement('div');
+            buttonsContainer.className = 'buttons';
+            buttonsContainer.appendChild(deleteButton);
+            buttonsContainer.appendChild(restoreButton);
+            archivedTask.appendChild(buttonsContainer); // Append buttons container to archived task
+            taskList.appendChild(archivedTask); // Append the archived task to the archive list
+        }
+
+
+        // Function to restore a task from the archive to the input field
+        function restoreTask(taskItem) {
+            var taskName = taskItem.textContent.replace('Restore', '').replace('Delete', '').trim(); // Extract task name without buttons
+            var taskInput = document.getElementById('taskInput');
+            taskInput.value = taskName; // Set task name as input value
+        }
+
+        // Function to toggle the visibility of the archive section
+        function toggleArchive() {
+            var archiveSection = document.querySelector('.archive-section');
+            if (window.getComputedStyle(archiveSection).display === 'none') {
+                archiveSection.style.display = 'block'; // Show the archive
+            } else {
+                archiveSection.style.display = 'none'; // Toggle the archive visibility
+            }
         }
     </script>
 </body>
