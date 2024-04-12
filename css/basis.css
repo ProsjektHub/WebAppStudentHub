@@ -26,13 +26,30 @@ html {
     --color-icon-task:#00a3d2;
 
 /* Andre farger som kan brukes: */
+/* må endre yello her på steder...? ellr må ikke endre?   */
     --color-yellow: #fcd770; 
     --color-skincolour2:#fcd4b4; 
     --color-purple-light:#ff33cc; 
     --color-yellow-nav:#f9d5b4; 
 
+    /* Person 1 */
+     --color-organeP1:#e18a00; 
+     --color-yelloP1: #f9d5b4
+     ; 
+     --color-blueP1:#00a3d2; 
 
+
+/* Person 2 */
+--color-yellowP2:#fcd770; 
+--color-blackP2:#120800; 
+--color-faceP2:#fcd4b4; 
+--color-purpleP2:#ff33cc; 
+
+/* Person 3 */
+--color-greyP3:#818889; 
 }
+
+
 
    
 /**  
@@ -47,6 +64,9 @@ html { scroll-behavior: smooth; }
 
 /* Collapsing Margins vermeiden */ 
 h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote { margin-top: 0; }
+
+
+
 
 /* Bilder und Videos mit flexibler Breite einbinden */ 
 img, video { max-width: 100%; height: auto; }
@@ -80,7 +100,8 @@ margin: 0 auto;
 
 
 /* Überschriften - Schriftgröße und Strichstärke */ 
-h1 { font-size: 2.5rem; font-weight: 500; } 
+h1 { font-size: 2.5rem; font-weight: 500;
+ } 
 h2 { font-size: 2rem; font-weight: 500; } 
 h3 { font-size: 1.75rem; font-weight: 500; } 
 h4 { font-size: 1.5rem; font-weight: 500; }
@@ -88,7 +109,10 @@ h5 { font-size: 1.25rem; }
 h6 { font-size: 1rem; } 
 
 /* Unterstreichung für Hyperlinks dünn und etwas weiter weg vom Text */ 
-a { text-decoration-thickness: 1px; text-underline-offset: 0.1875em; }
+a { text-decoration-thickness: 1px; text-underline-offset: 0.1875em;
+  text-decoration: none; }
+
+ 
 
 
 

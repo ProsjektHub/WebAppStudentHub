@@ -1,3 +1,61 @@
+.icon img[src$="svg"] {
+  width: 4rem;
+  height: auto; 
+}
+
+/* .content-intro h2 {
+  color: #818889
+} */
+
+.content-intro {
+  position: relative;
+}
+.content-intro img {
+  display: block;
+  
+  max-width: 100%; /* Tilpasser seg foreldrelementets bredde */
+  height: auto; /* Beholder bildets proporsjoner */
+ 
+}
+
+.image-caption {
+  position: absolute;
+  top: 2px; 
+  left: 30%;
+  transform: translateX(-50%);
+  z-index: 1; 
+  font-family: 'Optima', cursive; /* Bruk Lobster fonten eller en annen håndskriftfont */
+  color: var(--color-nav); 
+  font-size: 2.5rem; /* Standard skriftstørrelse */
+  font-weight: lighter; /* Redusert skriftvekt for å gjøre den lettere */
+  opacity: 0.8; /* Reduser gjennomsiktigheten for å gjøre teksten mindre dominerende */
+}
+
+/* Medieforespørsel for mindre skjermstørrelser */
+@media screen and (max-width: 768px) {
+  .image-caption {
+    font-size: 2rem; /* Mindre skriftstørrelse for mindre skjermer */
+  }
+}
+
+/* Medieforespørsel for skjermer som er 600 piksler eller bredere */
+@media screen and (min-width: 600px) {
+  .image-caption {
+    font-size: 3rem; /* Juster skriftstørrelsen etter behov */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* Linkzustände für den Inhaltsbereich */
 .site-content a:link { color: var(--color-nav,#00a3d2); } 
 .site-content a:visited { color: var(--color-nav,#00a3d2); } 
@@ -7,11 +65,13 @@
 
 
 
+
 /* Styling for infoboxes */
 .infoboxen {
     background-color: var(--color-background-dark,#e9e9e9 ); 
     padding: 1rem; 
-    margin-bottom: 1 rem; 
+    margin-bottom: 1rem; 
+  
 }
 
 .infobox {
@@ -23,12 +83,16 @@
 
   text-align: center;
   background-color: var(--color-background-light);
+  
   color: var(--color-font);  
   padding: 1rem; 
   margin: 1rem; 
+
+  /* border-radius: 10px;  */
+   /* border-radius: 0.5rem; */
+  /* box-shadow: var(--color-shadow);   */
+
   
-  box-shadow: var(--color-shadow); 
-  /* border-radius: 0.5rem; */
 }
 
 
@@ -48,76 +112,102 @@
 }
 
 
-.icon img[src$="svg"] {
+/* .infobox img[src$=".svg"] {
+	width: 4rem;
+	height: auto;
+} */
+
+.infobox svg {
   width: 4rem;
-  height: auto; 
+  height: auto;
 }
 
 
 
 
-
-
-
-
-/** 
-  * Updateboxen 
+/*
+   Updateboxen 
   */ 
 
+  .updateboxen {
+   margin-top: 40px; 
+  }
+
   @media screen and (min-width: 600px) {
-  
-    .updateboxen > .inside {
+  .updateboxen > .inside {
       display: grid; 
       grid-template-columns: 1fr 1fr 1fr ;
       grid-gap: 1rem; 
     }
-
     
     .updateboxen > .inside > h2 {
          grid-column: 1/-1; 
+        
     }
 
   } /* Ende @media */
 
+
+
   .updatebox {
     text-align: center; 
-    background-color: var(--color-background-dark,#e9e9e9 );
+    background-color: var(--color-background-light ); 
     color: var(--color-font,#120800);
-    background-image: linear-gradient(to right, var(--color-grey-border), var(color-grey-border-light));
-   box-shadow: 0 1px 3px var(--color-shadow); 
-  
-    padding: 1rem;
-  border-left: 5px solid var(--color-icon-finance, #a19dff);
-    margin: 0; 
+          
+      /* background-image: linear-gradient(to right, var(--color-grey-border), var(color-grey-border-light));     */
+         
+      box-shadow: var(--color-shadow); 
+      padding: 1rem;
+      margin: 0; 
     margin-bottom: 1rem;
   }
+    
+   .banner {
+    background: #cc3399; /* Bakgrunnsfarge for banneret */
+    color: white; /* Tekstfarge for banneret */
+    font-size: 1.25rem; /* Størrelse på tekst */
+    padding: 2rem; /* Polstring for innholdet */
+    margin: -0.5rem -0.5rem 1rem -0.5rem; /* Marginaler for justering */
+  } 
 
-
-  /* .updatebox p:first-child { 
-    font-size: 1.25rem; 
-    font-weight: bold;  
-  }*/
+  .banner svg {
+    width: 50%; /* Bruk 100% av bredden til banneret */
+    height: auto; /* For å bevare proporsjonene */
+     }
+  
 
   /* Unregelmäßiges Grid */
-  .updatebox:nth-child(5) {
-    /* Platzierung per auto-placement, aber über 2 Spalten und Zeilen */
-    grid-column: span 2; 
-    grid-row: span 2; 
+.updatebox:nth-child(5) {
+  /* Plassering per auto-placement, men over 2 kolonner og rader */
+  grid-column: span 2;
+  grid-row: span 2;
 
-    /* Vertikal zentrieren */
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-  }
+  /* Vertikal senterjustering */
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
 
-  .updatebox blockquote { 
-    margin: 0; 
-  } 
+
+
   .updatebox p:first-child { 
     font-size: 1.25rem; 
     font-weight: bold; 
   }
 
+  .updatebox {
+    border: 2px solid transparent; /* Gjør grensen usynlig */
+    border-radius: 5px; /* Runde hjørner */
+    padding: 20px;
+    margin-bottom: 20px; /* Legg til mellomrom mellom boksene */
+}
 
-  /* dashboard */
+.updatebox {
+  padding: 20px;
+  margin-bottom: 20px; /* Legg til mellomrom mellom boksene */
+}
+
+
+  
+
 
