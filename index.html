@@ -47,41 +47,44 @@
         </div>
     </header>
    
-                 
-    <nav class="site-nav">
+      
+   <nav class="site-nav">
         <div class="inside">
-
            <!-- Integreret Hamburger Ikon -->
         <span class="hamburger"></span>
 
-        <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menu</button>
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menu</button>
 
             
 
             <ul>
               <li class="current"><a href="index.html" >Home</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="community.html">Community</a></li>
                 <li><a href="tasks.html">Tasks</a></li>
                 <li><a href="finance.html">Finance</a></li>
-                <li><a href="community.html">Community</a></li>
+                
+                
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
-    
-     
-    <main class="site-content" id="content">
+   
+   
+<section class="content-intro">
+		
+        <div class="inside">
+        
+          <h2>Struggling with managing your academic life? </h2>
 
-        <section class="content-intro">
-            <div class="inside">
-              <h2 class="image-caption">Achieve More.</h2>
-              <figure class="image-container">
-                <img src="bilder/pixabay/studentHubPNG.png" alt="" srcset="bilder/pixabay/studentHubPNG.png 1x">
-             
-              </figure>
-            </div>
-          </section>
- 
-          
+          <p> <img src="bilder/pixabay/studentHubPNG.png"
+            alt=""
+            srcset="bilder/pixabay/studentHubPNG.png 1x"> </p>
+
+        </div>
+      </section> 
+
+    
         <section class="infoboxen">
             <div class="inside">
                 <h2 class="visually-hidden">Features Overview</h2>
@@ -105,9 +108,10 @@
 <!-- Budget Tool -->
             <article class="infobox">
 
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                    <path d="M640-520q17 0 28.5-11.5T680-560q0-17-11.5-28.5T640-600q-17 0-28.5 11.5T600-560q0 17 11.5 28.5T640-520Zm-320-80h200v-80H320v80ZM180-120q-34-114-67-227.5T80-580q0-92 64-156t156-64h200q29-38 70.5-59t89.5-21q25 0 42.5 17.5T720-820q0 6-1.5 12t-3.5 11q-4 11-7.5 22.5T702-751l91 91h87v279l-113 37-67 224H480v-80h-80v80H180Zm60-80h80v-80h240v80h80l62-206 98-33v-141h-40L620-720q0-20 2.5-38.5T630-796q-29 8-51 27.5T547-720H300q-58 0-99 41t-41 99q0 98 27 191.5T240-200Zm240-298Z" fill="#cc3399"/>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#a19dff">
+                    <path d="M640-520q17 0 28.5-11.5T680-560q0-17-11.5-28.5T640-600q-17 0-28.5 11.5T600-560q0 17 11.5 28.5T640-520Zm-320-80h200v-80H320v80ZM180-120q-34-114-67-227.5T80-580q0-92 64-156t156-64h200q29-38 70.5-59t89.5-21q25 0 42.5 17.5T720-820q0 6-1.5 12t-3.5 11q-4 11-7.5 22.5T702-751l91 91h87v279l-113 37-67 224H480v-80h-80v80H180Zm60-80h80v-80h240v80h80l62-206 98-33v-141h-40L620-720q0-20 2.5-38.5T630-796q-29 8-51 27.5T547-720H300q-58 0-99 41t-41 99q0 98 27 191.5T240-200Zm240-298Z"/>
                   </svg>
+                  
            
                 <h3>Budgeting Basics</h3>
                 <p>Learn how to effectively manage your finances and budget wisely. Manage finances smarter with a planner that adapts to you.</p>
@@ -118,9 +122,10 @@
 <!-- Community: -->
             <article class="infobox">
         
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                    <path d="M0-240v-63q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z" fill="#e18a00"/>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#fcd770">
+                    <path d="m480-80-20-400-140-40H40v-80h240l280-200 52 61-166 119h114l312-180 48 56-340 264-20 400h-80ZM240-640q-33 0-56.5-23.5T160-720q0-33 23.5-56.5T240-800q33 0 56.5 23.5T320-720q0 33-23.5 56.5T240-640Z"/>
                   </svg>
+                  
 
 
                 
@@ -141,87 +146,54 @@
             </div>  
         </section>
 
-
-        <section class="updateboxen">
-            <div class="inside">
-                <h2>Your Personal Dashboard.          
-                </h2>
-
- <!-- Today's Task denne jeg jobber på  -->
-                <figure class="updatebox">
-                    <div class="banner">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                            <path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z" fill="white"/>
-                          </svg>
-                          
-                    </div>
-                    <h3>Today's Task</h3>
-                    <p>Visualize your achievements and stay motivated with our progress tracker.</p>
-                  </figure>
-                  
-    <!-- Your Events -->           
-    <figure class="updatebox">
-        <div class="banner">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                <path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z" fill="white"/>
-              </svg>
-              
-        </div>
-            <h3>Your Time, Your Events</h3>
-            <p>Anticipate excitement—upcoming events curated just for you.</p>
-        </figure>
-
-
-
         
-<!-- Budget -->
-                <figure class="updatebox">
-                    <div class="banner">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                            <path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z" fill="white"/>
-                          </svg>
-                          
-                    </div>
-                    <h3>Your Budget</h3>
-                    <p>Manage your finances wisely with our budgeting tools.</p>
+        <section class="studentFeedback">
+            <div class="inside">
+                <h2>Student Feedback</h2>
+                <figure class="studentFeedbackItem">
+                    <blockquote>
+                        <p>More organized!</p>
+                    </blockquote>
+                    <figcaption>— Emma, Econ Student</figcaption>
                 </figure>
 
-            
-<!-- Today's Focus-->
-<figure class="updatebox">
-    <div class="banner">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-            <path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z" fill="white"/>
-          </svg>
-          
-    </div>
-    <h3>Today's Focus: </h3>
-    <p>Born to win!<br>Chart your daily journey, one step closer to success!</p>
-</figure>
+                <figure class="studentFeedbackItem">
+                    <blockquote>
+                        <p>Time saver!</p>
+                    </blockquote>
+                    <figcaption>— Jonas, IT Student</figcaption>
+                </figure>
 
- <!-- Personal Goals  -->
- <figure class="updatebox">
-                    
-    <div class="banner">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-            <path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z" fill="white"/>
-          </svg>
-                                                                      </div>
-    <h3>Your Goals</h3>
-    <p>Your goals, your horizon—reach them with vision and persistence.</p>
-</figure>
+                <figure class="studentFeedbackItem">
+                    <blockquote>
+                        <p>Fun learning!</p>
+                    </blockquote>
+                    <figcaption>— Tom, Law Student</figcaption>
+                </figure>
 
+                <figure class="studentFeedbackItem">
+                    <blockquote>
+                        <p>Makes learning fun and engaging!</p>
+                    </blockquote>
+                    <figcaption>— Sofia, Law Student</figcaption>
+                </figure>
 
-                    
+                <figure class="studentFeedbackItem">
+                    <blockquote>
+                        <p>Always in control!</p>
+                    </blockquote>
+                    <figcaption>— Kine, Law Student</figcaption>
+                </figure>
 
-                
-            
             </div>
         </section>
-    
-       
-    </main>
+        
 
+
+
+
+
+    </main>
 
     <footer class="site-footer"> 
         <div class="inside">
@@ -229,13 +201,12 @@
             <ul>
               <li><a href="#">Legal Notice</a></li>
               <li><a href="#">Privacy Protection</a></li>
-             
+              <li><a href="contact.html">Contact</a></li>
               <li><a href="#top">Back to Top </a></li>
             </ul>
           </nav>
         </div>
       </footer> 
-      
 </body>
     
 </html>

@@ -1,61 +1,201 @@
 <!DOCTYPE html>
-<html lang="en" id="top" class="no-js">
+<html lang="en" id="top" class = "no-js">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudentHub - Together</title>
-    <meta name="description" content="Explore the social integration aspect of StudentHub, where students can connect, share, and grow together.">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/together.css" rel="stylesheet">
-    <script>
-        document.documentElement.classList.remove('no-js'); 
-        document.documentElement.classList.add('js');
-    </script>
-</head>
-<body class="home">
+
+   
+
+        <title>StudentHub - Your All-in-One Student Organizer</title>
+        <meta name="description" content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, manage finances, and much more.">
+
+        <link href="css/style.css" rel="stylesheet">
+
+        <script>
+            document.documentElement.classList.remove('no-js'); 
+            document.documentElement.classList.add('js'); 
+          </script>
+
+ </head>
+
+
+ <body class="home"> 
+
     <header class="site-header">
+      <div class="inside"></div>
         <div class="wrapper">
+
             <div class="logo-container">
-                <img src="bilder/logo/iconfinderCom/SVG.svg"  
-                     srcset="bilder/logo/iconfinderCom/SVG.svg 2x"
-                     alt=""
-                     width="222"
-                     height="36">
-            </div>
+    <a href="index.html">
+        <img src="bilder/logo/iconfinderCom/SVG.svg"  
+             srcset="bilder/logo/iconfinderCom/SVG.svg 2x"
+             alt="StudentHub Logo"
+             width="222"
+             height="36">
+    </a>
+</div>
+
+
+
+
+
             <div class="text-container">
                 <h1 class="site-logo">StudentHub</h1>
-                <p class="site-slogan">Your Ultimate Companion for Student Life</p>
+                <p class="site-slogan">Transform Your Student Life: Achieve More, Stress Less with StudentHub Life</p>
             </div>
         </div>
     </header>
+    
+
+    
+   
+            
 
     <nav class="site-nav">
-        <button class="menubutton">Menu</button>
         <div class="inside">
+           <!-- Integreret Hamburger Ikon -->
+        <span class="hamburger"></span>
+
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menu</button>
+
+            
+
             <ul>
-                <li><a href="index.html">Home</a></li>
+              <li class="current"><a href="index.html" >Home</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="community.html">Community</a></li>
                 <li><a href="tasks.html">Tasks</a></li>
                 <li><a href="finance.html">Finance</a></li>
-                <li><a href="community.html" class="current">Community</a></li>
+              
+                
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
+    
+     
+    <main class="site-content" id="content"> 
 
-    <main class="site-content" id="content">
-        <section class="social-integration">
-            <h2>Connect, Share, and Grow Together</h2>
-            <p>Discover new friendships and study groups within our vibrant student community.</p>
-            <!-- Image Slider Placeholder -->
-            <div class="image-slider-placeholder" style="max-width: 800px; margin: auto; padding: 20px; border: 2px dashed #ccc; text-align: center;">
-                <h3>Picture Slide Coming Soon</h3>
-                <!-- Placeholder image or text indicating where the slider will be -->
-            </div>
+      <div class="inside">
+
+        <section class="content-intro float-umschliessen">
+
+          <h2>Community overskrift </h2>
+          
+
+          <figure class="float-rechts">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m480-80-20-400-140-40H40v-80h240l280-200 52 61-166 119h114l312-180 48 56-340 264-20 400h-80ZM240-640q-33 0-56.5-23.5T160-720q0-33 23.5-56.5T240-800q33 0 56.5 23.5T320-720q0 33-23.5 56.5T240-640Z"/></svg>
+        </figure>
+        
+        
+       
+
+            
+
+          <p>Ready to make today productive? Your personalized dashboard brings all your essential student tools into focus.</p>
+          <p>Designed to adapt to your unique needs, helping you stay on top of your academic and social life effortlessly.</p>
+          <p>Explore the dashboard below to seamlessly manage your schedule, track your progress, and connect with your campus community</p>
         </section>
-    </main>
+ 
+          
 
-    <footer class="site-footer">
-        <a href="#top">Back to Top</a>
-    </footer>
+
+
+        <section class="updateboxen">
+          <div class="inside">
+              <h2>Events around Campus...          
+              </h2>
+
+<!-- Today's Task denne jeg jobber på  -->
+              <figure class="updatebox">
+                  <div class="banner">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                          <path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z" fill="white"/>
+                        </svg>
+                        
+                  </div>
+                  <h3>Today's Task</h3>
+                  <p>Visualize your achievements and stay motivated with our progress tracker.</p>
+                </figure>
+                
+  <!-- Your Events -->           
+  <figure class="updatebox">
+      <div class="banner">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+              <path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z" fill="white"/>
+            </svg>
+            
+      </div>
+          <h3>Your Time, Your Events</h3>
+          <p>Anticipate excitement—upcoming events curated just for you.</p>
+      </figure>
+
+
+
+      
+<!-- Budget -->
+              <figure class="updatebox">
+                  <div class="banner">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                          <path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z" fill="white"/>
+                        </svg>
+                        
+                  </div>
+                  <h3>Your Budget</h3>
+                  <p>Manage your finances wisely with our budgeting tools.</p>
+              </figure>
+
+          
+<!-- Today's Focus-->
+<figure class="updatebox">
+  <div class="banner">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+          <path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z" fill="white"/>
+        </svg>
+        
+  </div>
+  <h3>Today's Focus: </h3>
+  <p>Born to win!<br>Chart your daily journey, one step closer to success!</p>
+</figure>
+
+<!-- Personal Goals  -->
+<figure class="updatebox">
+                  
+  <div class="banner">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+          <path d="m354-287 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-350Z" fill="white"/>
+        </svg>
+                                                                    </div>
+  <h3>Your Goals</h3>
+  <p>Your goals, your horizon—reach them with vision and persistence.</p>
+</figure>
+
+
+                  
+
+              
+          
+          </div>
+      </section>
+  
+     
+  </main>
+
+
+    <footer class="site-footer"> 
+      <div class="inside">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#">Legal Notice</a></li>
+            <li><a href="#">Privacy Protection</a></li>
+           
+            <li><a href="#top">Back to Top </a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer> 
 </body>
+  
 </html>
+            

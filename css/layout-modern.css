@@ -3,12 +3,12 @@
 /* Layout modern.css */
     
 
-    Stylesheet zur Gestaltung der Layoutbereiche
+    /* Stylesheet zur Gestaltung der Layoutbereiche
     - mehrere farbige Abschnitte über die gesamte Seitenbreite  
     - body reicht von ganz links bis ganz rechts 
     - die Begrenzung der Breite erfolgt durch div.inside 
 
-    Die Gestaltung der Site-Navigation steht in einem eigenen Stylesheet. 
+    Die Gestaltung der Site-Navigation steht in einem eigenen Stylesheet.  */
 
     ======================================= */
 
@@ -31,7 +31,7 @@ html {
     margin: 0 auto; 
   }
   
-  /* Modernes Layout: Für moderne Browser mehr Platz für mehrspaltige Layouts */
+  /* Modernes Layout: Nur für moderne Browser, die display grid versthen -  mehr Platz für mehrspaltige Layouts */
   @supports (display: grid) {
     
     .inside { max-width: 960px; }

@@ -7,7 +7,7 @@
  /* Globale Custom Properties definieren  */
 
 html {
-
+ 
     --color-background-light: #f9f9f9; 
     --color-background-dark: #e9e9e9; 
     --color-font: #120800; 
@@ -74,6 +74,7 @@ img, video { max-width: 100%; height: auto; }
 /* figure ohne horizontale Außenabstände */
 figure { margin-left: 0; margin-right: 0; } 
 
+/*  for bilde i intro */
 
 /**  
   * 3. Grundlegende Gestaltung für Schrift und Text  
