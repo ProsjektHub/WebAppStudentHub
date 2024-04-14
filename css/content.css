@@ -197,7 +197,7 @@ height: auto;
   .float-rechts svg {
     width: 150px;
     height: 150px;
-    fill: #fcd770;
+    /* fill: #fcd770; */
 }
 
 
