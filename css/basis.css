@@ -91,6 +91,7 @@ max-width: 600px;
 line-height: 1.5; 
 padding:1rem; 
 margin: 0 auto; 
+color:var(--color-font,   #120800 ); 
 }  
 @media screen and (min-width: 768px) {
     html{ font-size: 1.125rem;}
