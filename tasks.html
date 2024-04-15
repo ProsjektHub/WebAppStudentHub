@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html lang="en" id="top">
+    <!DOCTYPE html>
+<html lang="en" id="top" class = "no-js">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasks - StudentHub</title>
-    <meta name="description" content="Manage your tasks efficiently with StudentHub's Task Manager. Stay on top of your assignments and deadlines with ease.">
-    <link href="css/style.css" rel="stylesheet">
+
+   
+
+        <title>StudentHub - Your All-in-One Student Organizer</title>
+        <meta name="description" content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, manage finances, and much more.">
+
+        <link href="css/style.css" rel="stylesheet">
     <style>
         .task-list {
             list-style-type: none;
@@ -57,7 +62,7 @@
             transition: max-width 0.5s ease; /* Smooth transition for max-width change */
         }
         .task-manager-intro {
-            padding: 0 40px;
+            padding: 0 20px;
         }
         .empty-message {
             color: #888;
@@ -178,24 +183,68 @@
             background-color: darkgreen;
         }
     </style>
-</head>
-<body>
+        <script>
+            document.documentElement.classList.remove('no-js'); 
+            document.documentElement.classList.add('js'); 
+          </script>
+
+ </head>
+
+
+ <body class="home"> 
+
     <header class="site-header">
-        <h1>StudentHub</h1>
-        <p>Your Ultimate Companion for Student Life</p>
+      <div class="inside"></div>
+        <div class="wrapper">
+
+            <div class="logo-container">
+    <a href="index.html">
+        <img src="bilder/logo/iconfinderCom/SVG.svg"  
+             srcset="bilder/logo/iconfinderCom/SVG.svg 2x"
+             alt="StudentHub Logo"
+             width="222"
+             height="36">
+    </a>
+</div>
+
+
+
+
+
+            <div class="text-container">
+                <h1 class="site-logo">StudentHub</h1>
+                <p class="site-slogan">Transform Your Student Life: Achieve More, Stress Less with StudentHub Life</p>
+            </div>
+        </div>
     </header>
+    
+
+    
+   
+            
+
     <nav class="site-nav">
         <div class="inside">
-            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menü</button>
+           <!-- Integreret Hamburger Ikon -->
+        <span class="hamburger"></span>
+
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menu</button>
+
+            
+
             <ul>
-                <li><a href="index.html" class="current">Home</a></li>
+              <li class="current"><a href="index.html" >Home</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="community.html">Community</a></li>
                 <li><a href="tasks.html">Tasks</a></li>
                 <li><a href="finance.html">Finance</a></li>
-                <li><a href="community.html">Community</a></li>
+              
+                
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
+
     <main class="site-content" id="content">
         <section class="task-manager-intro">
             <div class="intro-container">
@@ -234,10 +283,18 @@
             <button class="toggle-archive-btn" onclick="toggleArchive()">Toggle Archive</button>
         </div>
     </main>
-    <footer class="site-footer">
-        <a href="#top">Back to Top</a>
-    </footer>
-
+    <footer class="site-footer"> 
+        <div class="inside">
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="#">Legal Notice</a></li>
+              <li><a href="#">Privacy Protection</a></li>
+             
+              <li><a href="#top">Back to Top </a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer> 
     <script>
         // Function to add a new task
         function addTask() {
