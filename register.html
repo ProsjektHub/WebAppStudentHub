@@ -28,7 +28,8 @@
             <input type="password" id="password" name="password" required minlength="5">
 
             <!-- Error message for password -->
-            <div id="passwordError" class="hidden" style="color: red;">Password must be at least 5 characters long.</div>
+            <div id="passwordError" class="hidden" style="color: red;">Password must be at least 5 characters long.
+            </div>
 
             <!-- Submit button for the form -->
             <button type="submit">Register</button>
@@ -52,29 +53,7 @@
                 document.getElementById('passwordError').classList.add('hidden');
             }
         });
-    </script>
-        <!-- Dirkje J van der Poel -- Firebase scripts en initialisatiecode START-->
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
-  
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyDmrDR7uYC45wHzfdoqdjaMx7UOh-kuVdQ",
-      authDomain: "webappstudenthub.firebaseapp.com",
-      projectId: "webappstudenthub",
-      storageBucket: "webappstudenthub.appspot.com",
-      messagingSenderId: "1035596609254",
-      appId: "1:1035596609254:web:88dedcd5ef5c38b40b2d27",
-      measurementId: "G-7RDG5CVV9D"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
-  <!-- Dirkje J van der Poel -- Firebase scripts en initialisatiecode STOP-->
-</body>
+    
+</body >
 
-</html>
+</html >
