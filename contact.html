@@ -1,158 +1,157 @@
 <!DOCTYPE html>
-<html lang="en" id="top" class="no-js">
+<html lang="en" id="top" class = "no-js">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+
+        <title>StudentHub - Your All-in-One Student Organizer</title>
+        <meta name="description" content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, manage finances, and much more.">
+
+        <link href="css/style.css" rel="stylesheet">
+
+        <script>
+            document.documentElement.classList.remove('no-js'); 
+            document.documentElement.classList.add('js'); 
+          </script>
+
+ </head>
+
+
+ <body class="home"> 
+
+    <header class="site-header">
+      <div class="inside"></div>
+        <div class="wrapper">
+
+            <div class="logo-container">
+    <a href="index.html">
+        <img src="bilder/logo/iconfinderCom/SVG.svg"  
+             srcset="bilder/logo/iconfinderCom/SVG.svg 2x"
+             alt="StudentHub Logo"
+             width="222"
+             height="36">
+    </a>
+</div>
 
 
 
-  <title>StudentHub - Your All-in-One Student Organizer</title>
-  <meta name="description"
-    content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, manage finances, and much more.">
-
-  <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-  <!-- by Dirkje J vd Poel -- dropdown-menu library -->
-  <script>
-    document.documentElement.classList.remove('no-js');
-    document.documentElement.classList.add('js'); 
-  </script>
-
-</head>
 
 
-<body class="home">
-
-  <header class="site-header">
-    <div class="inside"></div>
-    <div class="wrapper">
-
-      <div class="logo-container">
-        <a href="index.html">
-          <img src="bilder/logo/iconfinderCom/SVG.svg" srcset="bilder/logo/iconfinderCom/SVG.svg 2x"
-            alt="StudentHub Logo" width="222" height="36">
-        </a>
-      </div>
-
-      <div class="text-container">
-        <h1 class="site-logo">StudentHub</h1>
-        <p class="site-slogan">Transform Your Student Life: Achieve More, Stress Less with StudentHub Life</p>
-
-        <!-- Added by Dirkje J. vd Poel -- User icon with dropdown menu -->
-        <div class="dropdown">
-          <!-- User icon that triggers the dropdown menu when clicked -->
-          <i class="fas fa-user dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('show')"></i>
-          <!-- The dropdown menu that shows when the user icon is clicked -->
-          <div class="dropdown-menu">
-            <!-- Link to the login page -->
-            <a href="login.html">Log In</a>
-            <!-- Link to the index page, effectively logging the user out -->
-            <a href="index.html">Log Out</a>
-          </div>
+            <div class="text-container">
+                <h1 class="site-logo">StudentHub</h1>
+                <p class="site-slogan">Transform Your Student Life: Achieve More, Stress Less with StudentHub Life</p>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </header>
+    
 
+    
+   
+            
 
-  <nav class="site-nav">
-    <div class="inside">
-      <!-- Integreret Hamburger Ikon -->
-      <span class="hamburger"></span>
+    <nav class="site-nav">
+        <div class="inside">
+           <!-- Integreret Hamburger Ikon -->
+        <span class="hamburger"></span>
 
-      <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menu</button>
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menu</button>
 
+            
 
-
-      <ul>
-        <li class="current"><a href="index.html">Home</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="community.html">Community</a></li>
-        <li><a href="tasks.html">Tasks</a></li>
-        <li><a href="finance.html">Finance</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-
-
-
-  <main class="site-content" id="content">
-    <div class="inside">
-
-      <section class="content-intro">
-
-        <h2>Contact</h2>
-
-        <p>Questions? Suggestions? On this page you will find ways to get in touch with us.
-
-        </p>
-
-      </section>
-
-      <section class="team">
-        <h2 class="visually-hidden">team</h2>
-
-        <address>
-          <p>Team 09 <br>
-            Semester Assignment <br>
-          </p>
-          <p>Universitetet i Sørøst-Norge </a></p>
-        </address>
-      </section>
-
-      <section class="contactForm" id="contactForm">
-
-        <h2 class="visually-hidden">contactForm</h2>
-
-        <p>You can send us a message using the form below.
-          Please fill in all fields.</p>
-
-        <form action="#" method="post">
-
-          <label for="name">Your name:</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="e-mail">Your email:</label>
-          <input type="email" id="e-mail" name="e-mail" required>
-
-          <label for="message">Your message:</label>
-          <textarea id="message" name="message" cols="30" rows="5" required></textarea>
-
-          <label for="GDPR">GDPR-Consent</label>
-          <div class="GDPR-text"><label><input type="checkbox" id="GDPR" name="GDPR" required>By using this form you
-              agree to the storage and processing of your data by this website.</label> (<a href="#" target="_blank"
-              rel="noreferrer noopener">Data protection</a>).</div>
-
-          <button type="submit" value="Sent">Send</button>
-
-        </form>
-
-      </section>
-
-    </div>
-  </main>
+            <ul>
+              <li class="current"><a href="index.html" >Home</a></li>
+              
+              <li><a href="community.html">Community</a></li>
+                <li><a href="task.html">Task</a></li>
+                <li><a href="budget.html">Budget</a></li>
+              
+                
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
 
 
 
+    <main class="site-content" id="content"> 
+        <div class="inside">
+    
+          <section class="content-intro">
+    
+            <h2>Contact</h2>
+    
+            <p>Questions? Suggestions? On this page you will find ways to get in touch with us.
+
+            </p>
+    
+          </section>
+    
+          <section class="team">
+            <h2 class="visually-hidden">team</h2>
+    
+            <address>
+            <p>Team 09 <br>
+                Semester Assignment <br>
+                </p>
+            <p>Universitetet i Sørøst-Norge </a></p>
+            </address>
+          </section>
+    
+          <section class="contactForm" id="contactForm">
+    
+            <h2 class="visually-hidden">contactForm</h2>
+    
+            <p>You can send us a message using the form below.
+                Please fill in all fields.</p>
+    
+            <form action="#" method="post">
+    
+              <label for="name">Your name:</label>
+              <input type="text" id="name" name="name" required>
+    
+              <label for="e-mail">Your email:</label>
+              <input type="email" id="e-mail" name="e-mail" required>
+    
+              <label for="message">Your message:</label>
+              <textarea id="message" name="message" cols="30" rows="5" required></textarea>
+    
+              <label for="GDPR">GDPR-Consent</label>
+              <div class="GDPR-text"><label><input type="checkbox" id="GDPR" name="GDPR" required>By using this form you agree to the storage and processing of your data by this website.</label> (<a href="#" target="_blank" rel="noreferrer noopener">Data protection</a>).</div>
+    
+              <button type="submit" value="Sent">Send</button>
+    
+            </form>
+    
+          </section>
+    
+        </div>
+      </main> 
+    
+
+
+    
 
 
 
-
-  <footer class="site-footer">
-    <div class="inside">
-      <nav class="footer-nav">
-        <ul>
-          <li><a href="#">Legal Notice</a></li>
-          <li><a href="#">Privacy Protection</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="#top">Back to Top </a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
+      <footer class="site-footer"> 
+        <div class="inside">
+          <nav class="footer-nav">
+            <ul>
+              <li><a href="#">Legal Notice</a></li>
+              <li><a href="#">Privacy Protection</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#top">Back to Top </a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer> 
 </body>
-
+    
 </html>
+    
+
+            
