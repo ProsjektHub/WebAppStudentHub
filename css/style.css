@@ -6,28 +6,9 @@
 @import url("layout.css"); 
 @import url("layout-modern.css"); 
 @import url("header.css"); 
-<<<<<<< HEAD
-
-/* @import url("layout-modern.css");  */
-
-/* tat ut navi-flex.css - slettes?  */
-
-/* Modul für eine responsive Inline-Navigation */
-
-=======
->>>>>>> Abdiqani_branch
 @import url("navi-responsive.css");
 @import url("dropdown.css"); 
 @import url("content.css");
-<<<<<<< HEAD
-
-
-
-
-@import url("contact.css"); 
-
-@import url("dropdown.css");  /* New dropdown CSS */
-=======
 @import url("contact.css"); 
 @import url("overview.css"); 
 @import url("footer.css"); 
@@ -41,7 +22,6 @@
 
 
 
->>>>>>> Abdiqani_branch
 
 
 
