@@ -5,75 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudentHub - Together</title>
     <meta name="description" content="Explore the social integration aspect of StudentHub, where students can connect, share, and grow together.">
-    <link href="css/style.css" rel="stylesheet">
-   <link href="css/together.css" rel="stylesheet">
+     <link href="style.css" rel="stylesheet">
+    <!-- <link href="css/together.css" rel="stylesheet">-->
+ 
 
-    
-    
-    <link rel="stylesheet" href="lightbox.css" />
-    <script src="lightbox.js" defer></script>
-     <script src="together.js" defer></script>
+    <script src="lightbox.js" ></script>
+    <script src="together.js" ></script>
 </head>
 <body>
 
-   
-    <header class="site-header">
-        <h1>StudentHub</h1>
-        <p>Your Ultimate Companion for Student Life</p>
-    </header>
-    <nav class="site-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="tasks.html">Tasks</a></li>
-            <li><a href="finance.html">Finance</a></li>
-            <li><a href="together.html" class="current">Together</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <article>
+<header class="site-header">
+    <h1>StudentHub</h1>
+    <p>Your Ultimate Companion for Student Life</p>
+</header>
+<nav class="site-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="finance.html">Finance</a></li>
+        <li><a href="together.html" class="current">Together</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<article>
     <main class="site-content" id="content">
         <section class="social-integration">
             <h2>Connect, Share, and Grow Together</h2>
             <p>Discover new friendships and study groups within our vibrant student community.</p>
-            
-                <h1>Interactive Presentation</h1>
-                <p>To navigate through slides::</p>
-                <ul>
-                   <li>Use the Right or Left arrow buttons to progress or go back through the collection of images.</li>
-                   <li>Press the Play/Pause button to cycle through the images automatically..</li>
-                   <li>Select an image to display it in full screen mode.</li>
-                </ul>
-               
-                
-                <div id="lightbox"></div>
-             </article>
-             
-              <!-- Image Slider Placeholder -->
-            <div class="image-slider-placeholder" style="max-width: 800px;  padding: 5px 10px; padding: 20px;  text-align: center;">
-           
-    </section>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    
-</section>
-<section class="student-testimonials">
-    <h2>What Students Say</h2>
-    <p>Real stories from students who have found their community through StudentHub.</p>
-    <div class="testimonial">
-        <p>"Joining study groups on StudentHub helped me ace my exams!"</p>
-        <cite>&mdash; Sam</cite>
-    </div>
-    <div class="testimonial">
-        <p>"I've made lifelong friends through the community features. Highly recommend!"</p>
-        <cite>&mdash; Alex</cite>
-    </div>
-</section>
-        
+
+            <h1>Interactive Slideshow</h1>
+            <p>For moving between slides::</p>
+            <ul>
+                <li>Utilize the Forward or Backward arrow keys to advance or regress through the series of visuals.</li>
+                <li>Click the Play/Pause icon to automatically cycle through the visuals.</li>
+                <li>Choose an image to view it in fullscreen mode.</li>
+            </ul>
+
+            <div id="lightbox"></div>
+        </section>
+
+        <!-- Image Slider Placeholder -->
+        <div class="image-slider-placeholder" style="max-width: 800px; padding: 5px 10px; padding: 20px; text-align: center;">
+            <br><br><br><br><br><br>
+        </div>
+
+        <section class="upcoming-events">
+            <h2>Upcoming Events</h2>
+            <form method="post" action="/signup">
+                <input type="hidden" name="eventName" value="Football Tournament">
+                <input type="hidden" name="eventLocation" value="Sports Complex">
+                <div class="event">
+                    <h3>Football Tournament</h3>
+                    <p class="event-date">Date: April 25, 2024</p>
+                    <p class="event-location">Location: Sports Complex</p>
+                    <p>Description: Join us for an exciting football tournament! All skill levels welcome.</p>
+                    <button class="participate-btn" type="submit">Sign Up</button>
+                </div>
+            </form>
+
+            <!-- Add more events here -->
+        </section>
+        <div id="confirmation-message" style="display: none;"></div>
     </main>
     <footer class="site-footer">
         <a href="#top">Back to Top</a>
     </footer>
-    
+</article>
+
 </body>
 </html>

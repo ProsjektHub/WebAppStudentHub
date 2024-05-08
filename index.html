@@ -1,117 +1,144 @@
 <!DOCTYPE html>
-<html lang="en" id="top" class = "no-js">
+<html lang="en" id="top" class="no-js">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Your All-in-One Student Organizer</title>
+    <meta name="description"
+        content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, handle finances, and enhance social integration, making it easier to connect and participate in community activities.">
 
-        <title>StudentHub - Your All-in-One Student Organizer</title>
-        <meta name="description" content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, manage finances, and much more.">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
 
-        <link href="css/style.css" rel="stylesheet">
-
-        <script>
-            document.documentElement.classList.remove('no-js'); 
-            document.documentElement.classList.add('js');
-        </script>
-
- </head>
-
-
- <body class="home"> 
+<body class="home">
 
     <header class="site-header">
+        <div class="inside"></div>
         <div class="wrapper">
+
             <div class="logo-container">
-                <img src="bilder/logo/iconfinderCom/SVG.svg"  
-                     srcset="bilder/logo/iconfinderCom/SVG.svg 2x"
-                     alt=""
-                     width="222"
-                     height="36">
+                <a href="index.html">
+                    <img src="bilder/logo/iconfinderCom/SVG.svg" srcset="bilder/logo/iconfinderCom/SVG.svg 2x"
+                        alt="StudentHub Logo" width="222" height="36">
+                </a>
             </div>
+
+          
             <div class="text-container">
                 <h1 class="site-logo">StudentHub</h1>
-                <p class="site-slogan">Your Ultimate Companion for Student Life</p>
+                <p class="site-slogan">Transform Your Student Life: Achieve More, Stress Less with StudentHub Life</p>
+                <!-- Added by Dirkje J. vd Poel -- User icon with dropdown menu -->
+                <div class="dropdown">
+                    <!-- User icon that triggers the dropdown menu when clicked -->
+                    <i class="fas fa-user dropdown-toggle"
+                        onclick="this.nextElementSibling.classList.toggle('show')"></i>
+                    <!-- The dropdown menu that shows when the user icon is clicked -->
+                    <div class="dropdown-menu">
+                        <!-- Link to the login page -->
+                        <a href="login.html">Log In</a>
+                        <!-- Link to the index page, effectively logging the user out -->
+                        <a href="index.html">Log Out</a>
+                    </div>
+                </div>
             </div>
         </div>
+        </div>
     </header>
-    
-
-    
-   
-            
+    <div>
+        <!-- Display the user's email -->
+        <p>Hei, <span id="userEmail"></span></p>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const email = urlParams.get('email');
+        if (email) {
+            document.getElementById('userEmail').textContent = email;
+        }
+    </script>
+ <script>
+    function fetchEventData() {
+        // Assuming you're making a GET request to /index.html with the user's email as a query parameter
+        const userEmail = encodeURIComponent(document.getElementById('userEmail').textContent);
+        window.location.href = `/index.html?email=${userEmail}`;
+    }
+    </script>
 
     <nav class="site-nav">
-        <button class="menubutton">Menu</button>
         <div class="inside">
+            <!-- Integreret Hamburger Ikon -->
+            <span class="hamburger"></span>
+
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menu</button>
+
             <ul>
-                <li><a href="index.html" class="current">Home</a></li>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="community.html">Community</a></li>
                 <li><a href="tasks.html">Tasks</a></li>
-                <li><a href="finance.html">Finance</a></li>
-                <li><a href="together.html">Community</a></li>
+                <li><a href="budget.html">Budget</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
     </nav>
-    
 
-    <figure class="image">
-       
-        <img src="bilder/pixabay/studentHubPNG.png" 
-             alt="" 
-             srcset="bilder/pixabay/studentHubPNG.png 1x">
-
-        <!-- <figcaption>Image by Coffe Bean from Pixabay</figcaption> -->
-
-    </figure>
-
-    <!-- https://pixabay.com/illustrations/avatar-clients-icons-customers-2191932/ -->
-    
 
     <main class="site-content" id="content">
 
-        <!-- <section class="content-intro">
-        
-            <h2>Welcome to StudentHub</h2>
-            <p>Struggling with managing your academic life? StudentHub offers tools for task organization, financial management, and much more.</p>
-        </section> -->
+        <section class="content-intro">
+
+            <img src="bilder/pixabay/studentHubPNG.png" alt="" srcset="bilder/pixabay/studentHubPNG.png 1x">
+            </figure>
+            </div>
+        </section>
+
 
         <section class="infoboxen">
             <div class="inside">
                 <h2 class="visually-hidden">Features Overview</h2>
 
            
-            
+   <!-- Task: -->         
+            <article class="infobox">
+                                             
+<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+    <path d="m438-240 226-226-58-58-169 169-84-84-57 57 142 142ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" fill="#00a3d2"/>
+  </svg>
+
+                <h3>Boost Your Productivity</h3>
+                <p>Studies show that organized students achieve up to 50% more. Boost your productivity by mastering task management.</p>
+                <p><a href="tasks.html">Explore tips</a></p>  
+
+           
+            </article>
+
+
+<!-- Budget Tool -->
             <article class="infobox">
 
-                <figure class = "icon">
-                    <img src="bilder/icon/flaticonCom/task.svg" alt=" icon task">
-                </figure>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                    <path d="M640-520q17 0 28.5-11.5T680-560q0-17-11.5-28.5T640-600q-17 0-28.5 11.5T600-560q0 17 11.5 28.5T640-520Zm-320-80h200v-80H320v80ZM180-120q-34-114-67-227.5T80-580q0-92 64-156t156-64h200q29-38 70.5-59t89.5-21q25 0 42.5 17.5T720-820q0 6-1.5 12t-3.5 11q-4 11-7.5 22.5T702-751l91 91h87v279l-113 37-67 224H480v-80h-80v80H180Zm60-80h80v-80h240v80h80l62-206 98-33v-141h-40L620-720q0-20 2.5-38.5T630-796q-29 8-51 27.5T547-720H300q-58 0-99 41t-41 99q0 98 27 191.5T240-200Zm240-298Z" fill="#cc3399"/>
+                  </svg>
+           
+                <h3> Budget Smarter</h3>
+                <p>Learn how to effectively manage your finances and budget wisely. Manage finances smarter with a planner that adapts to you.</p>
+                <p><a href="budget.html">Read more</a></p>
+            </article>
+
+
+<!-- Community: -->
+            <article class="infobox">
+        
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                    <path d="M0-240v-63q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z" fill="#fcd770"/>
+                  </svg>
+                  
+
+
                 
-
-                <h3>Task Management</h3>
-                <p>Keep your assignments and deadlines in check with our intuitive task manager.</p>
-                <p><a href="tasks.html">Tasks</a></p>  
-            </article>
-
-            <article class="infobox">
-
-                <figure class = "icon">
-                    <img src="bilder/icon/flaticonCom/budget.svg" alt=" icon task">
-                </figure>
-                <h3>Financial Planner</h3>
-                <p>Manage your budget and track expenses effortlessly.</p>
-                <p><a href="finance.html">Finance</a></p>
-            </article>
-
-            <article class="infobox">
-                <figure class = "icon">
-                    <img src="bilder/icon/flaticonCom/community2.svg" alt=" icon task">
-                </figure>
- 
-                <h3>Community</h3>
-                <p>Join study groups. </p>
-                <p><a href="together.html">Together</a></p>
+                <h3>Strength in Numbers</h3>
+                <p>Studies show that a sense of community significantly enhances student well-being and academic success. Find your Community.  </p>
+                <p><a href="community.html">Discover more</a></p>
             </article>
 
             <!-- <article class="infobox">
@@ -124,50 +151,71 @@
                 <p><a href="contact.html">Contact</a></p>
             </article> -->
             </div>  
-
         </section>
 
-        <section class="update-overview">
-            <h2>Latest Updates - lage en oversikt fra deres feature her
-                
-            </h2>
-            <p>Get a quick overview of what's new with your tasks, budget, and community engagement.</p>
-            
-            <div class="updates-container">
-                <article class="update-tasks">
-                    <h3>Upcoming Tasks</h3>
-                    <ul>
-                        <li>Complete your Math assignment by tomorrow.</li>
-                        <li>Start researching for your History paper.</li>
-                    </ul>
-                    <p>Manage all your <a href="tasks.html">tasks</a>.</p>
-                </article>
-                
-                <article class="update-budget">
-                    <h3>Weekly Budget Summary</h3>
-                    <p>You've spent 80% of your weekly budget. Watch your expenses to stay on track!</p>
-                    <p>Review your <a href="finance.html">budget</a> in detail.</p>
-                </article>
-                
-                <article class="update-community">
-                    <h3>Community Highlights</h3>
-                    <p>You're invited to join the "Study Smart" group this Friday!</p>
-                    <p>Discover more in <a href="together.html">Together</a>.</p>
-                </article>
+<!-- Uptadeboxen / Personal Dashboard  -->
+        <section class="updateboxen">
+            <div class="inside">
+                <h2>Your Personal Dashboard         
+                </h2>
+
+ <!-- Today's Task denne jeg jobber på  -->
+                <figure class="updatebox">
+                    <div class="banner">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                            <path d="m438-240 226-226-58-58-169 169-84-84-57 57 142 142ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" fill="white"/>
+                          </svg>
+                          
+                    </div>
+                    <h3>Today's Task</h3>
+                    <p>See today's tasks at a glance.</p>
+                  </figure>
+                  
+    <!-- Your Events -->           
+    <figure class="updatebox">
+        <div class="banner">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                <path d="m204.339844 531.089844 87.730468-87.730469c11.699218-11.699219 30.679688-11.699219 42.378907 0l40.339843 40.339844c11.699219 11.699218 11.699219 30.679687 0 42.378906l-87.730469 87.730469c-11.699218 11.699219-30.679687 11.699219-42.378906 0l-40.339844-40.339844c-11.699218-11.699218-11.699218-30.679687 0-42.378906zm0 0" fill="#00a3d2"/>
+                <path d="m259.328125-367.941406c-60.894531-23.070313-101.753906-83.914063-101.753906-151.714844 0-94.242188 76.566406-170.808594 170.808594-170.808594 94.242187 0 170.808594 76.566406 170.808594 170.808594 0 67.800781-40.859374 128.644531-101.753906 151.714844-21.089844 8.023437-35.574219 28.429687-35.574219 50.351562v30.765625c0 11.085938 8.996094 20.082032 20.082031 20.082032h61.472657c11.085938 0 20.082032-8.996094 20.082032-20.082032v-30.765625c0-23.039063-16.855469-43.390625-39.457032-48.296874zm0 0" fill="#00a3d2"/>
+                <path d="m800-40v40h-160v-40c0-88.222656-71.777344-160-160-160s-160 71.777344-160 160v40h-80v-40c0-123.714844 100.285156-224 224-224s224 100.285156 224 224v40h-80v-40c0-88.222656-71.777344-160-160-160s-160 71.777344-160 160v40h-80v-40c0-123.714844 100.285156-224 224-224s224 100.285156 224 224v40h-80zm0 0"/>
+            </svg>
+        </div>
+        <h3>Your Events</h3>
+        <p>Stay updated on upcoming events and deadlines.</p>
+        <p><a href="calendar.html">View Calendar</a></p>
+      </figure>
+
+
             </div>
         </section>
-        
-
-
-
     </main>
 
-                <footer class="site-footer">
-                    <a href="#top">Back to Top</a>
+    <footer class="site-footer">
+        <div class="inside">
 
-                    
-                </footer>
-</body>
+            <div class="footer-nav">
+                <h2 class="visually-hidden">Footer Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="tasks.html">Tasks</a></li>
+                    <li><a href="budget.html">Budget</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-text">
+                <p>&copy; 2024 StudentHub. All Rights Reserved.</p>
+                <p>Icons made by <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a>
+                    from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="script.js"></script> -->
     
+</body>
+
 </html>
-            

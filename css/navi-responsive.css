@@ -1,6 +1,17 @@
+/* Stylesheet zur Gestaltung der Site-Navigation */
+/* basiert auf display: flex */
+/* Gestaltung nach dem Prinzip Mobile First: */
+/* 1. Gestaltung für die mobile Navigation */
+/* 2. Menübutton per CSS gestalten */
+/* 3. Menübutton per CSS ausblenden */
+/* 4. Navigationsliste mit dem Menübutton einblenden */
+/* 5. Eine horizontale Navigation für breitere Viewports */
+
+/* 1. Gestaltung für die mobile Navigation */
+
 /* Navigationsbereich gestalten */
-.site-nav { 
-  background-color: var(--color-nav); /* Bruker din fargevariabel */
+.site-nav {
+  background-color: var(--color-nav,#00a3d2);
   color: white;
   box-shadow: 0 2px 6px var(--color-shadow);
   margin-bottom: 2rem;
@@ -11,10 +22,10 @@
 }
 
 /* Navigationsliste als Flex-Container */
-.site-nav ul { 
-  display: none; /* Skjult som standard, vises ved aktivert JavaScript */
+.site-nav ul {
+  display: flex;
   flex-flow: column;
-  list-style: none;  
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -22,48 +33,87 @@
 /* Navigationslinks gestalten */
 .site-nav a {
   display: block;
-  background: var(--color-nav); /* Bruker din fargevariabel */
+  background: var(--color-nav, #00a3d2);
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
 
 /* Hover und Focus gestalten */
-.site-nav a:hover, .site-nav a:focus {
-  background: var(--color-nav-dark); /* Bruker din fargevariabel for mørkere navigasjonsbakgrunn */
+.site-nav a:hover,
+.site-nav a:focus {
+  background: var(--color-nav-darker, #007293);
   color: white;
-  text-decoration: none; /* Beholder ingen understrekning på hover og focus */
 }
 
 /* Im Moment der Aktivierung */
 .site-nav a:active {
-  background: var(--color-nav-dark); /* Bruker din fargevariabel for mørkere navigasjonsbakgrunn */
+  background: var(--color-nav-darker);
   color: white;
 }
 
 /* Aktuellen Menüpunkt hervorheben */
-.current a { 
-  background: var(--color-nav-dark); /* Bruker din fargevariabel for mørkere navigasjonsbakgrunn */
+.current a {
+  background: var(--color-nav-darker);
   color: white;
-  text-decoration: underline; /* Kun den aktive lenken har understreking */
+  text-decoration: underline;
 }
 
-/* Menübutton gestalten - Viser kun for små skjermer, skjult for større skjermer */
-.menubutton {
-  display: block; /* Viser menyknappen */
+/* 2. Menübutton per CSS gestalten */
+
+/* Kein JavaScript? Menübutton ausblenden */
+.no-js .menubutton {
+  display: none;
+}
+
+/* Menübutton gestalten */
+.js .menubutton {
+  display: flex;
+  align-items: center;
   cursor: pointer;
-  background: var(--color-nav); /* Bruker din fargevariabel */
+  background: inherit;
   color: white;
   font: inherit;
   text-align: center;
   padding: 0.5rem 1rem;
-  border: none;
-  margin: 0 auto; /* Sentrerer knappen */
+  border: 0;
+  margin: 0;
 }
+
+/* Hamburgerikon */
+.js .menubutton::before {
+  content: url("../../UIComponentLibrary/hamburger.svg");
+  width: 1rem;
+  height: 1rem;
+  margin: 0.25rem;
+}
+
+/* 3. Menübutton per CSS ausblenden */
+
+.js .site-nav ul {
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* 4. Navigationsliste mit dem Menübutton einblenden */
+
+/* Navigationsliste mit leichter Animation einblenden */
+.js .showmenu + ul {
+  max-height: 100rem;
+  overflow: auto;
+  transition: max-height 0.5s ease;
+}
+
+/* Tausche Hamburger gegen X */
+.js .menubutton.showmenu::before {
+  content: url("../../UIComponentLibrary/menuclose.svg");
+}
+
+/* 5. Eine horizontale Navigation für breitere Viewports */
 
 @media screen and (min-width: 600px) {
   .menubutton {
-    display: none !important; /* Skjuler menyknappen for bredere skjermer */
+    display: none !important;
   }
 
   .site-nav {
@@ -71,16 +121,23 @@
     top: 0;
   }
 
-  .site-nav ul { 
-    display: flex; /* Gjør navigasjonslisten synlig og horisontal for bredere skjermer */
+  .site-nav .inside {
+    padding: 0 1rem;
+  }
+
+  .site-nav ul {
+    max-height: none !important;
     flex-flow: row;
     padding: 0;
-    max-height: none !important;
   }
 
   .site-nav li {
     flex: 1;
+    max-width: 10rem;
     text-align: center;
-    border-left: none; /* Fjerner vertikale linjer mellom menyelementene */
+    border-left: 1px solid var(--color-grey-border);
+  }
+  .site-nav li:last-child {
+    border-right: 1px solid var(--color-grey-border);
   }
 }
