@@ -1,0 +1,86 @@
+/* Navigationsbereich gestalten */
+.site-nav { 
+  background-color: var(--color-nav); /* Bruker din fargevariabel */
+  color: white;
+  box-shadow: 0 2px 6px var(--color-shadow);
+  margin-bottom: 2rem;
+}
+
+.site-nav .inside {
+  padding: 0;
+}
+
+/* Navigationsliste als Flex-Container */
+.site-nav ul { 
+  display: none; /* Skjult som standard, vises ved aktivert JavaScript */
+  flex-flow: column;
+  list-style: none;  
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigationslinks gestalten */
+.site-nav a {
+  display: block;
+  background: var(--color-nav); /* Bruker din fargevariabel */
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+/* Hover und Focus gestalten */
+.site-nav a:hover, .site-nav a:focus {
+  background: var(--color-nav-dark); /* Bruker din fargevariabel for mørkere navigasjonsbakgrunn */
+  color: white;
+  text-decoration: none; /* Beholder ingen understrekning på hover og focus */
+}
+
+/* Im Moment der Aktivierung */
+.site-nav a:active {
+  background: var(--color-nav-dark); /* Bruker din fargevariabel for mørkere navigasjonsbakgrunn */
+  color: white;
+}
+
+/* Aktuellen Menüpunkt hervorheben */
+.current a { 
+  background: var(--color-nav-dark); /* Bruker din fargevariabel for mørkere navigasjonsbakgrunn */
+  color: white;
+  text-decoration: underline; /* Kun den aktive lenken har understreking */
+}
+
+/* Menübutton gestalten - Viser kun for små skjermer, skjult for større skjermer */
+.menubutton {
+  display: block; /* Viser menyknappen */
+  cursor: pointer;
+  background: var(--color-nav); /* Bruker din fargevariabel */
+  color: white;
+  font: inherit;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin: 0 auto; /* Sentrerer knappen */
+}
+
+@media screen and (min-width: 600px) {
+  .menubutton {
+    display: none !important; /* Skjuler menyknappen for bredere skjermer */
+  }
+
+  .site-nav {
+    position: sticky;
+    top: 0;
+  }
+
+  .site-nav ul { 
+    display: flex; /* Gjør navigasjonslisten synlig og horisontal for bredere skjermer */
+    flex-flow: row;
+    padding: 0;
+    max-height: none !important;
+  }
+
+  .site-nav li {
+    flex: 1;
+    text-align: center;
+    border-left: none; /* Fjerner vertikale linjer mellom menyelementene */
+  }
+}

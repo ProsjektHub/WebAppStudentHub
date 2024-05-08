@@ -4,8 +4,14 @@
 
 <head>
     <title>Registration</title>
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/auth.css">
+=======
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="style.css" rel="stylesheet">
+    
+>>>>>>> Abdiqani_branch
 </head>
 
 <body>
@@ -17,19 +23,40 @@
 
         <form action="/login" method="POST" id="login-form">
             <!-- TODO Implement the server-side logic for the login form -->
+<<<<<<< HEAD
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required>
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
 
+=======
+        
+            <!-- Remove the username field -->
+            <!-- <label for="username">Username</label>
+            <input type="text" id="username" name="username" required> -->
+        
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required> <!-- Change type to email -->
+        
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        
+>>>>>>> Abdiqani_branch
             <div class="remember-me">
                 <input type="checkbox" id="remember-me" name="remember-me">
                 <label for="remember-me">Remember me</label>
             </div>
+<<<<<<< HEAD
 
             <button type="submit">Login</button>
         </form>
+=======
+        
+            <button type="submit">Login</button>
+        </form>
+        
+>>>>>>> Abdiqani_branch
         <!-- End of the login form -->
 
         <!-- Link to the forgot password page -->
@@ -55,6 +82,20 @@
                 $('#logout-message').text('You have been logged out successfully.');
             }
         });
+<<<<<<< HEAD
+=======
+
+             // Get the error message from the URL query parameters
+             const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+            // Display the error message if it exists
+            if (error) {
+                const errorMessage = document.createElement('p');
+                errorMessage.textContent = error;
+                document.body.appendChild(errorMessage);
+                errorMessage.style.color="red";
+            }
+>>>>>>> Abdiqani_branch
     </script>
 </body>
 

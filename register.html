@@ -3,8 +3,14 @@
 
 <head>
     <title>Registration</title>
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/auth.css">
+=======
+    <link href="css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="auth.css" rel="stylesheet">
+>>>>>>> Abdiqani_branch
 </head>
 
 <body>
@@ -13,10 +19,13 @@
 
         <!-- Start of the registration form -->
         <form id="register-form" action="/register" method="post">
+<<<<<<< HEAD
             <!-- Username field -->
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
+=======
+>>>>>>> Abdiqani_branch
             <!-- Email field -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
@@ -53,7 +62,25 @@
                 document.getElementById('passwordError').classList.add('hidden');
             }
         });
+<<<<<<< HEAD
     
 </body >
 
 </html >
+=======
+
+         // Get the error message from the URL query parameters
+         const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+            // Display the error message if it exists
+            if (error) {
+                const errorMessage = document.createElement('p');
+                errorMessage.textContent = error;
+                document.body.appendChild(errorMessage);
+                errorMessage.style.color="red";
+            }
+    </script>
+</body>
+
+</html>
+>>>>>>> Abdiqani_branch
