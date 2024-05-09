@@ -26,30 +26,38 @@
   --color-icon-task:#00a3d2;
 
 /* Andre farger som kan brukes: */
-/* må endre yello her på steder...? ellr må ikke endre?   */
+
   --color-yellow: #fcd770; 
   --color-skincolour2:#fcd4b4; 
   --color-purple-light:#ff33cc; 
   --color-yellow-nav:#f9d5b4; 
 
-  /* Person 1 */
+  /* Person 1 * Task Feature farger/
    --color-organeP1:#e18a00; 
-   --color-yelloP1: #f9d5b4
-   ; 
+   --color-yelloP1: #f9d5b4 ; 
    --color-blueP1:#00a3d2; 
 
 
-/* Person 2 */
+/* Person 2 Community Feature */
 --color-yellowP2:#fcd770; 
 --color-blackP2:#120800; 
 --color-faceP2:#fcd4b4; 
 --color-purpleP2:#ff33cc; 
 
-/* Person 3 */
+/* Person 3 Contact Feature */
 --color-greyP3:#818889; 
+--color-skinnP3:#f7d9b5; 
+--color-purpleDarkP3:#1e0043; 
+--color-purpleLightP3:#a19dff; 
+
+
+
+/* Person 4 Budget Feature Farger */
+--color-brownP4:#6b4426; 
+--color-skinnP4:#d8aa8b; 
+--color-purpleP4: #cc3399; 
+
 }
-
-
 
  
 /**  

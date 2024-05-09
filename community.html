@@ -1,206 +1,172 @@
 <!DOCTYPE html>
-<html lang="en" id="top">
+<html lang="en" id="top" class="no-js">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudentHub - Together</title>
-    <meta name="description" content="Explore the social integration aspect of StudentHub, where students can connect, share, and grow together.">
-     <link href="style.css" rel="stylesheet">
-     <!-- <link href="css/style.css" rel="stylesheet"> -->
-    <!-- <link href="css/together.css" rel="stylesheet">-->
- 
+    <title>StudentHub - Your All-in-One Student Organizer</title>
+    <meta name="description"
+        content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, handle finances, and enhance social integration, making it easier to connect and participate in community activities.">
+
+
+
+    <title>StudentHub - Your All-in-One Student Organizer</title>
+    <meta name="description"
+        content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, handle finances, and enhance social integration, making it easier to connect and participate in community activities.">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 
     <script src="lightbox.js" ></script>
-    <script src="together.js" ></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="together.js" ></script>    
+
     <!-- by Dirkje J vd Poel -- dropdown-menu library -->
-  
     <script>
-      document.documentElement.classList.remove('no-js');
-      document.documentElement.classList.add('js'); 
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js'); 
     </script>
-  
-  </head>
-  
-  
-  <body class="home">
-  
+
+</head>
+
+
+<body class="home">
+
     <header class="site-header">
-      <div class="inside"></div>
-      <div class="wrapper">
-  
-        <div class="logo-container">
-          <a href="index.html">
-            <img src="bilder/logo/iconfinderCom/SVG.svg" srcset="bilder/logo/iconfinderCom/SVG.svg 2x"
-              alt="StudentHub Logo" width="222" height="36">
-          </a>
-        </div>
-  
-  
-  
-  
-  
-        <div class="text-container">
-          <h1 class="site-logo">StudentHub</h1>
-          <p class="site-slogan">Transform Your Student Life: Achieve More, Stress Less with StudentHub Life</p>
-  
-          <!-- Added by Dirkje J. vd Poel -- User icon with dropdown menu -->
-          <div class="dropdown">
-            <!-- User icon that triggers the dropdown menu when clicked -->
-            <i class="fas fa-user dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('show')"></i>
-            <!-- The dropdown menu that shows when the user icon is clicked -->
-            <div class="dropdown-menu">
-              <!-- Link to the login page -->
-              <a href="login.html">Log In</a>
-              <!-- Link to the index page, effectively logging the user out -->
-              <a href="index.html">Log Out</a>
+        <div class="inside"></div>
+        <div class="wrapper">
+
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="bilder/logo/iconfinderCom/SVG.svg" srcset="bilder/logo/iconfinderCom/SVG.svg 2x"
+                        alt="StudentHub Logo" width="222" height="36">
+                </a>
             </div>
-          </div>
+
+            <div class="text-container">
+                <h1 class="site-logo">StudentHub</h1>
+                <p class="site-slogan">Transform Your Student Life: Achieve More</p>
+
+                <!-- Added by Dirkje J. vd Poel -- User icon with dropdown menu -->
+                <div class="dropdown">
+                    <!-- User icon that triggers the dropdown menu when clicked -->
+                    <i class="fas fa-user dropdown-toggle"
+                        onclick="this.nextElementSibling.classList.toggle('show')"></i>
+                    <!-- The dropdown menu that shows when the user icon is clicked -->
+                    <div class="dropdown-menu">
+                        <!-- Link to the login page -->
+                        <a href="login.html">Log In</a>
+                        <!-- Link to the index page, effectively logging the user out -->
+                        <a href="index.html">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </header>
-  
-  
-  
-  
-  
-  
+    
+
+    
+   
+      
+
     <nav class="site-nav">
-      <div class="inside">
-        <!-- Integreret Hamburger Ikon -->
+        <div class="inside">
+           <!-- Integreret Hamburger Ikon -->
         <span class="hamburger"></span>
-  
-        <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menu</button>
-  
-  
-  
-        <ul>
-          <li class="current"><a href="index.html">Home</a></li>
-          <li><a href="dashboard.html">Dashboard</a></li>
-          <li><a href="community.html">Community</a></li>
-          <li><a href="tasks.html">Tasks</a></li>
-          <li><a href="budget.html">Budget</a></li>
-  
-  
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menu</button>
+
+            
+
+            <ul>
+              <li class="current"><a href="index.html" >Home</a></li>
+              
+              <li><a href="community.html">Community</a></li>
+                <li><a href="tasks.html">Task</a></li>
+                <li><a href="budget.html">Budget</a></li>
+              
+                
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-  
-  
-    <main class="site-content" id="content">
-  
+    
+     
+    <main class="site-content" id="content"> 
       <div class="inside">
-  
         <section class="content-intro float-umschliessen">
-  
           <h2>Join our Community platform</h2>
-  
-  
+          
           <figure class="float-rechts">
             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-              <path
-                d="M0-240v-63q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z"
-                fill="#fcd770" />
+              <path d="M0-240v-63q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z" fill="#fcd770"/>
             </svg>
-  
-          </figure>
-  
-  
-  
-  
-  
-  
+
+        </figure>   
+                 
           <p>Join our Community platform to connect, collaborate, and succeed.</p>
-          <p>Dive into campus life with a tap! Simply click on an image to sign up for an event. Instantly, you'll receive
-            a confirmation message with the event’s name, ensuring you're all set.</p>
+          <p>Dive into campus life with a tap! Simply click on an image to sign up for an event. Instantly, you'll receive a confirmation message with the event’s name, ensuring you're all set.</p>
           <p>Join the fun and make the most of your student experience!</p>
         </section>
-  
-  
-  
-  
-  
-  
-  
-        <!-- <section class="studentFeedback">
-          <div class="inside">
-              <h2>Student Feedback</h2>
-              <figure class="studentFeedbackItem">
-                  <blockquote>
-                      <p>More organized!</p>
-                  </blockquote>
-                  <figcaption>— Emma, Econ Student</figcaption>
-              </figure>
-  
-              <figure class="studentFeedbackItem">
-                  <blockquote>
-                      <p>Time saver!</p>
-                  </blockquote>
-                  <figcaption>— Jonas, IT Student</figcaption>
-              </figure>
-  
-              <figure class="studentFeedbackItem">
-                  <blockquote>
-                      <p>Fun learning!</p>
-                  </blockquote>
-                  <figcaption>— Tom, Law Student</figcaption>
-              </figure>
-  
-              <figure class="studentFeedbackItem">
-                  <blockquote>
-                      <p>Makes learning fun and engaging!</p>
-                  </blockquote>
-                  <figcaption>— Sofia, Law Student</figcaption>
-              </figure>
-  
-              <figure class="studentFeedbackItem">
-                  <blockquote>
-                      <p>Always in control!</p>
-                  </blockquote>
-                  <figcaption>— Kine, Law Student</figcaption>
-              </figure>
-  
-          </div>
-      </section> -->
-  
-      <div id="lightbox"></div>
-    </main>
+ 
         
-        <!-- Image Slider Placeholder -->
-        <div class="image-slider-placeholder" style="max-width: 800px; padding: 5px 10px; padding: 20px; text-align: center;">
-            <br><br><br><br><br><br>
-        </div>
 
-        <section class="upcoming-events">
-            <h2>Upcoming Events</h2>
-            <form method="post" action="/signup">
-                <input type="hidden" name="eventName" value="Football Tournament">
-                <input type="hidden" name="eventLocation" value="Sports Complex">
-                <div class="event">
-                    <h3>Football Tournament</h3>
-                    <p class="event-date">Date: May 25, 2024</p>
-                    <p class="event-location">Location: Sports Complex</p>
-                    <p>Description: Join us for an exciting football tournament! All skill levels welcome.</p>
-                    <button class="participate-btn" type="submit">Sign Up</button>
-                </div>
-            </form>
 
+
+
+      
+   <section>
+
+            <!-- Image Slider Placeholder -->
+            <div class="image-slider-placeholder" style="max-width: 800px; padding: 5px 10px; padding: 20px; text-align: center;">
+            
+          </div>
+
+      </div>
+   </section>
+   <div class="inside"> <div id="lightbox"></di</div>
+   
+  </main>
+
+    
+<!-- satt inn div class ="inside" : -->
+      <section class="upcoming-events">
+                <div class="inside">
+          <h2>Upcoming Events</h2>
+          <form method="post" action="/signup">
+              <input type="hidden" name="eventName" value="Football Tournament">
+              <input type="hidden" name="eventLocation" value="Sports Complex">
+              <div class="event">
+                  <h3>Football Tournament</h3>
+                  <p class="event-date">Date: May 25, 2024</p>
+                  <p class="event-location">Location: Sports Complex</p>
+                  <p>Description: Join us for an exciting football tournament! All skill levels welcome.</p>
+                  <button class="participate-btn" type="submit">Sign Up</button>
+              </div>
+          </form>
             <!-- Add more events here -->
-        </section>
-        <div id="confirmation-message" style="display: none;"></div>
-    </main>
-    <footer class="site-footer">
+        </div>
+  
+    </section>
+    <div id="confirmation-message" style="display: none;"></div>
+</main>
+
+
+
+
+    <footer class="site-footer"> 
       <div class="inside">
         <nav class="footer-nav">
           <ul>
             <li><a href="#">Legal Notice</a></li>
             <li><a href="#">Privacy Protection</a></li>
-  
+           
             <li><a href="#top">Back to Top </a></li>
           </ul>
         </nav>
       </div>
-    </footer>
-</article>
-
+    </footer> 
 </body>
+  
 </html>
+            

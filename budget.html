@@ -1,71 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" id="top" class = "no-js">
+<html lang="en" id="top" class="no-js">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   
-
-        <title>StudentHub - Your All-in-One Student Organizer</title>
-        <meta name="description" content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, manage finances, and much more.">
-
-        <!-- <link href="css/style.css" rel="stylesheet"> -->
-        <link href="style.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-        
-     
+    <title>StudentHub - Your All-in-One Student Organizer</title>
+    <meta name="description"
+        content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, handle finances, and enhance social integration, making it easier to connect and participate in community activities.">
 
 
-        <script>
-            document.documentElement.classList.remove('no-js'); 
-            document.documentElement.classList.add('js'); 
-          </script>
 
- </head>
+    <title>StudentHub - Your All-in-One Student Organizer</title>
+    <meta name="description"
+        content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, handle finances, and enhance social integration, making it easier to connect and participate in community activities.">
 
-   
-    
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 
- <body class="home"> 
+    <!-- by Dirkje J vd Poel -- dropdown-menu library -->
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js'); 
+    </script>
+
+</head>
+
+
+<body class="home">
 
     <header class="site-header">
-      <div class="inside"></div>
+        <div class="inside"></div>
         <div class="wrapper">
 
             <div class="logo-container">
-    <a href="index.html">
-        <img src="bilder/logo/iconfinderCom/SVG.svg"  
-             srcset="bilder/logo/iconfinderCom/SVG.svg 2x"
-             alt="StudentHub Logo"
-             width="222"
-             height="36">
-    </a>
-</div>
-
-
-
-
+                <a href="index.html">
+                    <img src="bilder/logo/iconfinderCom/SVG.svg" srcset="bilder/logo/iconfinderCom/SVG.svg 2x"
+                        alt="StudentHub Logo" width="222" height="36">
+                </a>
+            </div>
 
             <div class="text-container">
                 <h1 class="site-logo">StudentHub</h1>
-                <p class="site-slogan">Transform Your Student Life: Achieve More, Stress Less with StudentHub Life</p>
-            <!-- Added by Dirkje J. vd Poel -- User icon with dropdown menu -->
-            <div class="dropdown">
-                <!-- User icon that triggers the dropdown menu when clicked -->
-                <i class="fas fa-user dropdown-toggle"
-                    onclick="this.nextElementSibling.classList.toggle('show')"></i>
-                <!-- The dropdown menu that shows when the user icon is clicked -->
-                <div class="dropdown-menu">
-                    <!-- Link to the login page -->
-                    <a href="login.html">Log In</a>
-                    <!-- Link to the index page, effectively logging the user out -->
-                    <a href="index.html">Log Out</a>
+                <p class="site-slogan">Transform Your Student Life: Achieve More</p>
+
+                <!-- Added by Dirkje J. vd Poel -- User icon with dropdown menu -->
+                <div class="dropdown">
+                    <!-- User icon that triggers the dropdown menu when clicked -->
+                    <i class="fas fa-user dropdown-toggle"
+                        onclick="this.nextElementSibling.classList.toggle('show')"></i>
+                    <!-- The dropdown menu that shows when the user icon is clicked -->
+                    <div class="dropdown-menu">
+                        <!-- Link to the login page -->
+                        <a href="login.html">Log In</a>
+                        <!-- Link to the index page, effectively logging the user out -->
+                        <a href="index.html">Log Out</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
+        </div>
     </header>
     
 
@@ -84,9 +77,9 @@
 
             <ul>
               <li class="current"><a href="index.html" >Home</a></li>
-              <li><a href="dashboard.html">Dashboard</a></li>
+              
               <li><a href="community.html">Community</a></li>
-                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="tasks.html">Task</a></li>
                 <li><a href="budget.html">Budget</a></li>
               
                 
@@ -153,47 +146,45 @@
   
         <section>
           <h3>Add Transaction</h3>
-          
+  
           <form id="transactionForm" method="post" action="/add-transaction" >
-            <div>
-                <label for="type">
-                  <input type="checkbox" name="type" id="type" />
-                  <div class="option">
-                    <span>Expense</span>
-                    <span>Income</span>
-                  </div>
-                </label>
-              </div>
-              <div>
-                <label for="name">Name</label>
-                <input type="text" name="name" required />
-              </div>
-              <div>
-                <label for="amount">Amount</label>
-                <input
-                  type="number"
-                  name="amount"
-                  value="0"
-                  min="0.01"
-                  step="0.01"
-                  required
-                />
-              </div>
-              <div>
-                <label for="date">Date</label>
-                <input type="date" name="date" required />
-              </div>
-              <div>
-              <label for="category">Category</label>
-              <select name="category" id="category"></select>
+              <label for="type">
+                <input type="checkbox" name="type" id="type" />
+                <div class="option">
+                  <span>Expense</span>
+                  <span>Income</span>
+                </div>
+              </label>
             </div>
-              <button type="submit">Submit</button>
-            </form>
-        
+            <div>
+              <label for="name">Name</label>
+              <input type="text" name="name" required />
+            </div>
+            <div>
+              <label for="amount">Amount</label>
+              <input
+                type="number"
+                name="amount"
+                value="0"
+                min="0.01"
+                step="0.01"
+                required
+              />
+            </div>
+            <div>
+              <label for="date">Date</label>
+              <input type="date" name="date" required />
+            </div>
+            <div>
+            <label for="category">Category</label>
+            <select name="category" id="category"></select>
+          </div>
+            <button type="submit">Submit</button>
+          </form>
         </section>
       </main>
   <div id="fireworks-container" style="display: none;"></div>
-    
+      <!-- <script src="JavaScript/budget_script.js"></script> -->
 
         </section>
           
@@ -214,13 +205,10 @@
       </nav>
     </div>
   </footer>
- 
-  
-  
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
- <script src="budget_script.js"></script> 
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <script src="budget_script.js"></script> 
 </body>
 
 </html>
