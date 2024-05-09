@@ -131,11 +131,6 @@ app.get("/tasks.html", function(req, res) {
     res.sendFile(__dirname + "/tasks.html");
 });
 
-// Serve dashboard.html
-app.get("/dashboard.html", function(req, res) {
-    res.sendFile(__dirname + "/dashboard.html");
-});
-
 // Serve finance.html
 app.get("/budget.html", function(req, res) {
     res.sendFile(__dirname + "/budget.html");

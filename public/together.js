@@ -150,7 +150,7 @@ function showParticipationConfirmation(eventName) {
            // Create and append the new confirmation message
            let confirmationMessage = document.createElement("div");
            confirmationMessage.textContent = "\u2022 PLEASE, CHECK THE UPCOMING EVENTS: " + eventName; // Add dot at the beginning
-           //confirmationMessage.style.color = "";
+           //confirmationMessage.style.color = "green";
            confirmationMessage.style.fontSize = "larger"; // Increase font size
            //confirmationMessage.style.fontWeight = "bold";
            confirmationMessage.classList.add("confirmationMessage"); // Add a class to identify the message

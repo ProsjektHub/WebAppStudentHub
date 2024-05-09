@@ -16,14 +16,14 @@
 let lightboxTitle = "Choose the activity you want to participate in";
 
 // Names of the image files shown in the slideshow
-let imgFiles = ["Sports.jpg", "StudyGroup.jpg", "Membership.jpg", "Volunteer.jpg",]
+let imgFiles = ["/bilder/Sports.jpg", "/bilder/StudyGroup.jpg", "/bilder/Membership.jpg", "/bilder/Volunteer.jpg",]
 
 // Captions associated with each image
 let imgCaptions = new Array(4);
-imgCaptions[0]= "(Sports Events), This allows students to sign up for various sports teams or intramural leagues, such as soccer, basketball, volleyball, or tennis, to engage in physical activities and represent their university in competitions.";
-imgCaptions[1]="(Study Groups), This facilitate the formation of study groups where students can collaborate on academic projects, prepare for exams, and share resources related to their courses."; 
-imgCaptions[2]="(Club Memberships), This enables students to join different clubs and organizations based on their interests, such as music clubs, debate societies, cultural associations, or coding clubs, to connect with like-minded peers and pursue their passions outside of academics."; 
-imgCaptions[3]="(Volunteer), This provides a platform for students to find volunteering opportunities both on and off-campus, including community service projects, environmental initiatives, and charity events."; 
+imgCaptions[0]= "(Sports Events)"
+imgCaptions[1]="(Study Groups)"
+imgCaptions[2]="(Club Memberships)"
+imgCaptions[3]="(Volunteer)"
 
 //imgCaptions[5]="Tennis";
 
