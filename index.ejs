@@ -184,7 +184,7 @@
                           
                     </div>
                     <h3>Today's Task</h3>
-                    <p>See today's tasks at a glance.</p>
+                    <p>Assignment submission</p>
                   </figure>
                   
     <!-- Your Events -->           
@@ -199,9 +199,9 @@
         
             <h3>Next Event </h3>
 
-            <p>her er hendelsene</p>
+            <!-- <p>Your current event status.</p> -->
 <!-- Inside the <p> tag under "Next Event" -->
-    <p><%= event ? event.eventName : 'Easily track upcoming community events.' %> at: <%= event ? event.eventLocation : 'N/A' %> on: <%= event ? event.eventDate.toDateString() : 'N/A' %></p>
+    <p><%= event ? event.eventName : '' %> </p>
 
 
     
@@ -227,8 +227,8 @@
                           
                     </div>
                     <h3>Your Budget </h3>
-                    <p>Your current financial status.</p>
-
+                    <!-- <p>Your current financial status.</p> -->
+                    <p>Total Budget: <%= budgetTotal %></p>
                     
 <!-- Inside index.ejs -->
 
@@ -236,18 +236,9 @@
 
 
     <!-- Inside the <p> tag under "Budget" -->
-    <p>Total Budget: <%= budgetTotal %></p>
-    <ul>
-        <% budget.forEach(transaction => { %>
-            <li>
-                Type: <%= transaction.type %> 
-                Name: <%= transaction.name %>, <br>
-                Amount: <%= transaction.amount %>, <br>
-                Date: <%= transaction.date ? transaction.date.toDateString() : 'N/A' %>, <br>
-                Category: <%= transaction.category %>
-            </li>
-        <% }); %>
-    </ul>
+  <!-- Inside the <p> tag under "Budget" -->
+
+
     
     
 
