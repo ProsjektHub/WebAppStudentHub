@@ -60,10 +60,7 @@
         </div>
         </div>
     </header>
-    <div>
-        <!-- Display the user's email -->
-        <p>Hei, <span id="userEmail"></span></p>
-    </div>
+   
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const email = urlParams.get('email');
@@ -174,8 +171,10 @@
         <!-- Uptadeboxen / Personal Dashboard  -->
         <section class="updateboxen">
             <div class="inside">
-                <h2>Your Personal Dashboard
-                </h2>
+                <div>
+                    <!-- Display the user's email -->
+                    <p>My Dashboard <span id="userEmail"></span></p>
+                </div>
 
                 <!-- Today's Task denne jeg jobber på  -->
                 <figure class="updatebox">
@@ -280,6 +279,8 @@
      <!-- <script src="JavaScript/script.js"></script>  -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
      <!-- <script src="script.js"></script> -->
+
+     <script src="index.js"></script>
 </body>
     
 </html>
