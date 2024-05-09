@@ -1,13 +1,20 @@
 
 /* CSS Styleguide */
+/* Budget */
+@import url("budget.css"); 
 
 /* Community */
 @import url("lightbox.css"); 
 @import url("together.css"); 
 
-/* Budget */
-@import url("budget.css"); 
+/* Login */
+@import url("dropdown.css");  /* Login CSS*/
+/* @import url(auth.css); Login CSS */
 
+
+@import url("content.css");
+
+@import url("contact.css"); 
 
 /* basic settings */
 @import url("basis.css");
@@ -17,14 +24,10 @@
 @import url("header.css"); 
 @import url("navi-responsive.css");
 
-/* Login */
-@import url("dropdown.css");  /* Login CSS*/
-/* @import url(auth.css); Login CSS */
 
-/*  */
-@import url("content.css");
 
-@import url("contact.css"); 
+
+
 
 
 
