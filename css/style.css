@@ -1,19 +1,29 @@
 
 /* CSS Styleguide */
 
+/* Community */
+@import url("lightbox.css"); 
+@import url("together.css"); 
+
+/* Budget */
+@import url("budget.css"); 
 
 
-@import url("lightbox.css");
-@import url("together.css");
+/* basic settings */
+@import url("basis.css");
 @import url("layout.css"); 
 @import url("layout-modern.css"); 
 @import url("header.css"); 
 @import url("navi-responsive.css");
-@import url("dropdown.css"); 
+
+/* Login */
+@import url("dropdown.css");  /* Login CSS*/
+/* @import url(auth.css); Login CSS */
+
+/*  */
 @import url("content.css");
+
 @import url("contact.css"); 
-@import url("auth.css");
-@import url("basis.css");
 
 
 
@@ -22,11 +32,6 @@
 
 
 
-
-
-
-/* @import url("footer.css"); 
- */
 
 
 /* eof */
