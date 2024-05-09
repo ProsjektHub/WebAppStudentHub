@@ -1,27 +1,33 @@
 
+/* CSS Styleguide */
 
 
-@import url("lightbox.css");
-@import url("together.css");
-@import url("layout.css"); 
-@import url("layout-modern.css"); 
-@import url("header.css"); 
-@import url("navi-responsive.css");
-@import url("dropdown.css"); 
-@import url("content.css");
-@import url("contact.css"); 
 
-
-/*@import url("auth.css");*/
+/* basic settings */
 @import url("basis.css");
 
+@import url("layout.css"); 
+@import url("layout-modern.css"); 
+
+@import url("header.css"); 
+
+/* @import url("layout-modern.css");  */
+
+/* tat ut navi-flex.css - slettes?  */
+
+/* Modul für eine responsive Inline-Navigation */
+
+@import url("navi-responsive.css");
+
+
+@import url("content.css");
 
 
 
 
+@import url("contact.css"); 
 
-
-
+@import url("dropdown.css");  /* New dropdown CSS */
 
 
 
@@ -29,5 +35,6 @@
  */
 
 
+/* eof */
 
 
