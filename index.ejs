@@ -175,8 +175,12 @@
                         </svg>
 
                     </div>
-                    <h3>Today's Task</h3>
-                    <p>See today's tasks at a glance.</p>
+                    <!-- Today's Task -->
+<h3>Today's Task</h3>
+<% tasks.forEach(task => { %>
+    <%= task.taskName %><br>
+<% }); %>
+
                 </figure>
 
                 <!-- Your Events -->
