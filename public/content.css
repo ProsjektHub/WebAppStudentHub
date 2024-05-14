@@ -78,7 +78,6 @@ height: auto;
 
 
 
-
 /* Upadateboxen/Dashboard - grundlegende gestaltung */
 .updateboxen {
   background-color: var(--color-background-light);
@@ -104,6 +103,7 @@ height: auto;
 
 .updatebox :last-child {
   margin-top: auto; 
+  
 }
 
 .banner {
@@ -153,9 +153,10 @@ height: auto;
       grid-gap: 1rem; 
     }
 
-    .updateboxen> .inside > h2 {
+    .updateboxen> .inside > div {
       grid-column: 1/-1; 
     }
+    
 
   } /* Ende @media */
    
@@ -202,6 +203,7 @@ height: auto;
 
 
  
+
 
 
 

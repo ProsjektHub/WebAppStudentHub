@@ -7,10 +7,11 @@ const ejs = require('ejs');
 
 
 
+
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
-
+app.use(bodyParser.json());
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -28,6 +29,16 @@ const dbURI = 'mongodb://localhost:27017/App_database';
 mongoose.connect(dbURI)
     .then(() => console.log('MongoDB connected'))
     .catch((err) => console.error(err));
+
+
+    // Define a Mongoose schema and model for task data
+const taskSchema = new mongoose.Schema({
+    taskName: String,
+    dueDate: Date
+});
+
+// Specify the database name as "App_database" when creating the Task model
+const Task = mongoose.model('Task', taskSchema);
 
     const transactionSchema = new mongoose.Schema({
         
@@ -66,14 +77,7 @@ const eventSchema = new mongoose.Schema({
 
 const Event = mongoose.model('Event', eventSchema);
 
-// Define a Mongoose schema and model for task data
-const taskSchema = new mongoose.Schema({
-    taskName: String,
-    dueDate: Date
-});
 
-// Specify the database name as "App_database" when creating the Task model
-const Task = mongoose.model('Task', taskSchema);
 
 // Define a Mongoose schema and model for contact messages
 const contactMessageSchema = new mongoose.Schema({
@@ -92,6 +96,7 @@ const ContactMessage = mongoose.model('ContactMessage', contactMessageSchema);
 
 
 // Update the route handler for serving index.html
+// Update the route handler for serving index.ejs
 app.get("/index.html", function(req, res) {
     const userEmail = req.query.email;
 
@@ -104,15 +109,23 @@ app.get("/index.html", function(req, res) {
                     // Calculate total budget amount
                     const totalBudget = budget.reduce((total, transaction) => total + transaction.amount, 0);
 
-                    // Render the index.ejs template with both event and budget data
-                    ejs.renderFile(__dirname + "/index.ejs", { event, budget, budgetTotal: totalBudget }, function(err, str) {
-                        if (err) {
+                    // Fetch tasks data
+                    Task.find({})
+                        .then(tasks => {
+                            // Render the index.ejs template with event, budget, and tasks data
+                            ejs.renderFile(__dirname + "/index.ejs", { event, budget, budgetTotal: totalBudget, tasks }, function(err, str) {
+                                if (err) {
+                                    console.error(err);
+                                    res.status(500).send("An error occurred while rendering the template.");
+                                } else {
+                                    res.send(str);
+                                }
+                            });
+                        })
+                        .catch(err => {
                             console.error(err);
-                            res.status(500).send("An error occurred while rendering the template.");
-                        } else {
-                            res.send(str);
-                        }
-                    });
+                            res.status(500).send("An error occurred while fetching tasks data.");
+                        });
                 })
                 .catch(err => {
                     console.error(err);
@@ -126,14 +139,10 @@ app.get("/index.html", function(req, res) {
 });
 
 
+
 // Serve tasks.html
 app.get("/tasks.html", function(req, res) {
     res.sendFile(__dirname + "/tasks.html");
-});
-
-// Serve dashboard.html
-app.get("/dashboard.html", function(req, res) {
-    res.sendFile(__dirname + "/dashboard.html");
 });
 
 // Serve finance.html
@@ -327,25 +336,39 @@ app.post("/reset-password", function(req, res) {
 });
 // Route to handle adding a new task
 
-app.post("/add-task", function(req, res) {
-    const { taskName, dueDate } = req.body;
+// Route to handle adding a new task
+app.post('/add-task', (req, res) => {
+    const taskInput = req.body.taskInput;
+    const dueDate = req.body.dueDate;
 
+    console.log('Task Input:', taskInput); // Log the task input
+    console.log('Due Date:', dueDate); // Log the due date
+
+    // Create a new task instance
     const newTask = new Task({
-        taskName,
-        dueDate
+        taskName: taskInput,
+        dueDate: dueDate
     });
 
+    // Save the new task to the database
     newTask.save()
-    .then(task => {
-        console.log("Task added successfully:", task); // Log the details of the added task
-        res.json(task); // Send the task object as JSON in the response
-    })
-    
-        .catch(err => {
-            console.error("Error adding task:", err);
-            res.status(500).send("An error occurred while adding the task.");
+        .then((savedTask) => {
+            console.log('Task added to database:', savedTask);
+            res.status(200).send('Task added successfully');
+        })
+        .catch((err) => {
+            console.error('Error adding task to database:', err);
+            res.status(500).send('Internal Server Error');
         });
 });
+
+
+
+
+
+
+// Start the server
+
 
 
 

@@ -53,12 +53,12 @@
 
 
 /* Person 4 Budget Feature Farger */
---color-brownP4:#6b4426; 
---color-skinnP4:#d8aa8b; 
+--color-brownP4: #6b4426; 
+--color-skinnP4: #d8aa8b; 
 --color-purpleP4: #cc3399; 
 
-}
 
+}
  
 /**  
 * 2. Globale Einstellungen für die gesamte Website 
@@ -91,7 +91,7 @@ figure { margin-left: 0; margin-right: 0; }
 body {
 /* Systemschriftart auf dem Gerät des Benutzers; »Best Practice« kann sich ändern */
 font-family: system-ui, -apple-system, "Segoe UI", Roboto, 
-           "Helvetica Neue", Arial, sans-serif; 
+         "Helvetica Neue", Arial, sans-serif; 
 
 /* Definition der Standardschriftgröße (optional)  */
 font-size: 1rem; 
@@ -133,16 +133,16 @@ text-decoration: none; }
 
 /* Boxen am Bildschirm ausblenden */
 .visually-hidden {
-  position: absolute !important;
-  clip: rect(0, 0, 0, 0) !important; 
-  overflow: hidden !important;
-  white-space: nowrap !important;
+position: absolute !important;
+clip: rect(0, 0, 0, 0) !important; 
+overflow: hidden !important;
+white-space: nowrap !important;
 
-  width: 1px !important; 
-  height: 1px !important; 
-  padding: 0 !important; 
-  border: 0 !important; 
-  margin: -1px !important; 
+width: 1px !important; 
+height: 1px !important; 
+padding: 0 !important; 
+border: 0 !important; 
+margin: -1px !important; 
 }
 
 /* Klassen zum Floaten und Clearen */
@@ -154,7 +154,7 @@ text-decoration: none; }
 /* Bildbeschriftung bei gefloateten Bildern zentrieren */
 figure[class~="float-rechts"], 
 figure[class~="float-links"] {
-  text-align: center;
+text-align: center;
 }
 
 /* Floats umschliessen */ 
@@ -162,10 +162,10 @@ figure[class~="float-links"] {
 
 @supports (display:flow-root) {
 
-  .float-umschliessen {
-    display: flow-root; 
-    overflow: initial;       
-  }
+.float-umschliessen {
+  display: flow-root; 
+  overflow: initial;       
+}
 
 }
 
