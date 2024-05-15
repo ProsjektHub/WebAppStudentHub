@@ -85,3 +85,20 @@ function addTask() {
         // Optionally, you can show an error message to the user
     });
 }
+
+// Code added by Dirkje J v.d. Poel
+// This line exports the addTask function so that it can be imported and tested in other files.
+module.exports = { addTask };
+
+// Code added by Dirkje J v.d. Poel
+// This function is needed for the updateTimers call in the addTask function.
+// It's currently empty and needs to be filled with the correct logic to update timers.
+function updateTimers() {
+  // Implement the logic for updating timers here
+}
+// Code added by Dirkje J v.d. Poel
+// This function is needed for the updateTaskListVisibility call in the addTask function.
+// It's currently empty and needs to be filled with the correct logic to update the visibility of the task list.
+function updateTaskListVisibility() {
+    // Implement the logic for updating the visibility of the task list here
+  }
