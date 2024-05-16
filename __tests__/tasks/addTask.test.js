@@ -1,6 +1,6 @@
 // Test written by Dirkje J vd Poel
 // Import the addTask function from task.js
-const { addTask } = require('../task'); 
+const { addTask } = require('../../task'); 
 
 // Mock the DOM for testing
 document.body.innerHTML = `
@@ -19,7 +19,7 @@ global.fetch = jest.fn(() =>
 );
 
 // Mock the addTask function
-jest.mock('../task', () => ({
+jest.mock('../../task', () => ({
   addTask: jest.fn(() => fetch('/add-task', { method: 'POST' })),
 }));
 
