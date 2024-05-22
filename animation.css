@@ -76,7 +76,6 @@ body {
 }
 
 
-/* Style for the address section */
 address {
     position: relative;
     width: 100%;
@@ -85,18 +84,16 @@ address {
 
 }
 
-/* Container for the canvas */
 #canvasBox {
     position: relative;
     width: 100%;
-    height: 585.5px; /* Juster høyden til ønsket verdi */
+    height: 585.5px;
     overflow: hidden;
 }
 
-/* Style for the canvas inside the address section */
 #animationCanvas {
     position: absolute;
-    bottom: 0; /* Plasserer canvas nederst */
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
