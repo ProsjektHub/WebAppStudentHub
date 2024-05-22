@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.site-header, .site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.site-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.site-nav ul li {
+    margin-right: 10px;
+}
+
+.site-nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contactForm {
+    margin-top: 20px;
+}
+
+.contactForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contactForm input, .contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.contactForm button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contactForm button:hover {
+    background-color: #555;
+}
+
+/* Style for the address section */
+address {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+
+}
+
+/* Container for the canvas */
+#canvasBox {
+    position: relative;
+    width: 100%;
+    height: 585.5px; /* Juster høyden til ønsket verdi */
+    overflow: hidden;
+}
+
+/* Style for the canvas inside the address section */
+#animationCanvas {
+    position: absolute;
+    bottom: 0; /* Plasserer canvas nederst */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
