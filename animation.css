@@ -51,6 +51,31 @@ body {
     background-color: #555;
 }
 
+.GDPR-text {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.GDPR-text label {
+    margin: 0;
+    display: inline-block;
+}
+
+.GDPR-text input[type="checkbox"] {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    height: auto;
+}
+
+.gdpr-consent-description {
+    margin: 0;
+    display: inline-block;
+}
+
+
 /* Style for the address section */
 address {
     position: relative;
