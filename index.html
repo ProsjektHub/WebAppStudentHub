@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" id="top" class="no-js">
+<!-- Class "no-js" /"menu-no-js"  checks if JavaScript is enabled in the visitor's browser. The "no-js" and "menu-no-js" classes are initially added to the html element to handle different styles or functionalities based on whether JavaScript is enabled in the user's browser. -->
+<html lang="en" id="top" class="no-js menu-no-js">
 
 <head>
     <meta charset="utf-8">
@@ -16,12 +17,23 @@
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    
+    <!-- This script checks if JavaScript is enabled in the user's browser. 
+    If it is, it removes the "menu-no-js" class and adds the "js" class to the html element. 
+    This is used to handle different styles or functionalities for the menu button.  -->
+    <script>
+        document.documentElement.classList.remove('menu-no-js');
+        document.documentElement.classList.add('js');
+    </script>
+    
 
     <!-- by Dirkje J vd Poel -- dropdown-menu library -->
-    <script>
+        <script>
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js'); 
     </script>
+
+
 
 </head>
 

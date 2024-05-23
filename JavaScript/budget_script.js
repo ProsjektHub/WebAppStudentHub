@@ -1,4 +1,18 @@
-const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+//by Dirkje j vd Poel for testing unit test
+let transactions = []; // Define transactions here
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const form = document.getElementById('transactionForm');
+  const fireworksContainer = document.getElementById('fireworks-container');
+
+  if(form) {
+    form.addEventListener('submit', addTransaction);
+  } else {
+    console.error("Form not found in the DOM");
+  }
+
+  transactions = JSON.parse(localStorage.getItem('transactions')) || []; // Update transactions here
+});
 
 // Add new properties for categories for expense and income
 const categories = [
@@ -40,7 +54,7 @@ function updateTotal() {
     .reduce((total, trx) => total + trx.amount, 0);
 
   const balanceTotal = incomeTotal - expenseTotal;
-  balanceElement.style.backgroundColor = balanceTotal === 0 ? 'blue' : balanceTotal > 0 ? 'green' : 'red';
+  //balanceElement.style.backgroundColor = balanceTotal === 0 ? 'blue' : balanceTotal > 0 ? 'green' : 'red';
 
   balance.textContent = formatter.format(balanceTotal);
   income.textContent = formatter.format(incomeTotal);
