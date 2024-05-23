@@ -444,7 +444,7 @@ app.get("/logout", function(req, res) {
 
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, funpm testnction() {
+app.listen(PORT, function testnction() {
     console.log(`Server running on port ${PORT}`);
 });
 
