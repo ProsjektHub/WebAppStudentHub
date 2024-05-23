@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" id="top" class="no-js">
+<!-- Class "no-js" /"menu-no-js"  checks if JavaScript is enabled in the visitor's browser. The "no-js" and "menu-no-js" classes are initially added to the html element to handle different styles or functionalities based on whether JavaScript is enabled in the user's browser. -->
+<html lang="en" id="top" class="no-js menu-no-js">
 
 <head>
     <meta charset="utf-8">
@@ -9,22 +10,31 @@
         content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, handle finances, and enhance social integration, making it easier to connect and participate in community activities.">
 
 
-
-    <title>StudentHub - Your All-in-One Student Organizer</title>
-    <meta name="description"
-        content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, handle finances, and enhance social integration, making it easier to connect and participate in community activities.">
-
     <link href="css/style.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+ 
+    
+ 
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    
+    <!-- This script checks if JavaScript is enabled in the user's browser. 
+    If it is, it removes the "menu-no-js" class and adds the "js" class to the html element. 
+    This is used to handle different styles or functionalities for the menu button.  -->
+    <script>
+        document.documentElement.classList.remove('menu-no-js');
+        document.documentElement.classList.add('js');
+    </script>
+    
 
     <!-- by Dirkje J vd Poel -- dropdown-menu library -->
-    <script>
+        <script>
         document.documentElement.classList.remove('no-js');
         document.documentElement.classList.add('js'); 
     </script>
+
+
 
 </head>
 
@@ -88,14 +98,17 @@
 
 
     <main class="site-content" id="content">
-<!-- content intro = hovedbilde mennesker -->
+<!-- content intro = Main image on the landing page -->
         <section class="content-intro">
 
-            <img src="bilder/pixabay/studentHubPNG.png" alt="" srcset="bilder/pixabay/studentHubPNG.png 1x">
+            <img src="bilder/pixabay/studentHubPNG.png" alt="Illustration of people representing students" srcset="bilder/pixabay/studentHubPNG.png 1x">
+            <!-- <figcaption>Image by <a href="https://pixabay.com/users/nashvilleunited-3094135/" target="_blank">NashvilleUnited</a> from <a href="https://pixabay.com" target="_blank">Pixabay</a></figcaption> -->
             </figure>
             </div>
         </section>
 
+
+  
 
         <section class="infoboxen">
             <div class="inside">
@@ -239,11 +252,6 @@
                     <h3>Goal</h3>
                     <p>Reach your goal with vision and persistence.</p>
                 </figure>
-
-
-
-
-
 
             </div>
         </section>

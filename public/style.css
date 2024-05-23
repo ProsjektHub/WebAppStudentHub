@@ -11,9 +11,7 @@
 @import url("dropdown.css");  /* Login CSS*/
  /* @import url("auth.css");  */
 
-@import url("content.css");
 
-@import url("contact.css"); 
 
 /* basic settings */
 @import url("basis.css");
@@ -21,6 +19,10 @@
 @import url("layout-modern.css"); 
 @import url("header.css"); 
 @import url("navi-responsive.css");
+/* endret rekkefølge */
+@import url("content.css");
+
+@import url("contact.css"); 
 
 
 
