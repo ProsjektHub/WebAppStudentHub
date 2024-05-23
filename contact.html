@@ -12,6 +12,7 @@
     <link href="css/contact.css" rel="stylesheet"> -->
 
     <link rel="stylesheet"  href="style.css" >
+    <link rel="stylesheet"  href="animation.css" >
     <link rel="stylesheet"  href="cssstyle.css" >
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -122,10 +123,14 @@
             <h2 class="visually-hidden">team</h2>
     
             <address>
+                <div id="canvasBox">
             <p>Team 09 <br>
                 Semester Assignment <br>
-                </p>
+            </p>
             <p>Universitetet i Sørøst-Norge </a></p>
+
+                <canvas id="animationCanvas" width="300" height="300"></canvas>
+            </div>
             </address>
           </section>
     
@@ -148,7 +153,11 @@
               <textarea id="message" name="message" cols="30" rows="5" required></textarea>
     
               <label for="GDPR">GDPR-Consent</label>
-              <div class="GDPR-text"><label><input type="checkbox" id="GDPR" name="GDPR" required>By using this form you agree to the storage and processing of your data by this website.</label> (<a href="#" target="_blank" rel="noreferrer noopener">Data protection</a>).</div>
+              <div class="GDPR-text"><label><input type="checkbox" id="GDPR" name="GDPR" required>By using this form you agree to the storage and processing of your data by this website.
+              (<a href="#" target="_blank" rel="noreferrer noopener">Data protection</a>).
+              </label> 
+              
+              </div>
     
               <button type="submit" value="Sent">Send</button>
     
@@ -160,7 +169,7 @@
         </div>
       </main> 
     
-
+      <script src="animation.js"></script>
          
     <footer class="site-footer">
         <div class="inside">
