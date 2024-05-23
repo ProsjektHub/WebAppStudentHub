@@ -5,9 +5,6 @@ const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
 const ejs = require('ejs');
 
-
-
-
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -21,7 +18,6 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-
 // MongoDB URI
 const dbURI = 'mongodb+srv://abdiqanihirsi:pg3RyDhEcpRZiL7J@cluster0.etwl1rv.mongodb.net/App_database?retryWrites=true&w=majority&tlsAllowInvalidCertificates=true'; 
 
@@ -30,8 +26,7 @@ mongoose.connect(dbURI)
     .then(() => console.log('MongoDB connected'))
     .catch((err) => console.error(err));
 
-
-    // Define a Mongoose schema and model for task data
+// Define a Mongoose schema and model for task data
 const taskSchema = new mongoose.Schema({
     taskName: String,
     dueDate: Date
@@ -40,16 +35,15 @@ const taskSchema = new mongoose.Schema({
 // Specify the database name as "App_database" when creating the Task model
 const Task = mongoose.model('Task', taskSchema);
 
-    const transactionSchema = new mongoose.Schema({
-        
-        type: String, // Either "Expense" or "Income"
-        name: String,
-        amount: Number,
-        date: Date,
-        category: String
-    });
-    
-    const Transaction = mongoose.model('Transaction', transactionSchema);
+const transactionSchema = new mongoose.Schema({
+    type: String, // Either "Expense" or "Income"
+    name: String,
+    amount: Number,
+    date: Date,
+    category: String
+});
+
+const Transaction = mongoose.model('Transaction', transactionSchema);
 
 // Define a Mongoose schema and model for user data
 const userSchema = new mongoose.Schema({
@@ -77,8 +71,6 @@ const eventSchema = new mongoose.Schema({
 
 const Event = mongoose.model('Event', eventSchema);
 
-
-
 // Define a Mongoose schema and model for contact messages
 const contactMessageSchema = new mongoose.Schema({
     name: String,
@@ -89,14 +81,7 @@ const contactMessageSchema = new mongoose.Schema({
 
 const ContactMessage = mongoose.model('ContactMessage', contactMessageSchema);
 
-
-
-
-
-
-
 // Update the route handler for serving index.html
-// Update the route handler for serving index.ejs
 app.get("/index.html", function(req, res) {
     const userEmail = req.query.email;
 
@@ -137,8 +122,6 @@ app.get("/index.html", function(req, res) {
             res.status(500).send("An error occurred while fetching event data.");
         });
 });
-
-
 
 // Serve tasks.html
 app.get("/tasks.html", function(req, res) {
@@ -190,8 +173,7 @@ app.post("/add-transaction", function(req, res) {
         console.error("Error adding transaction:", err); // Log error message
         res.status(500).send("An error occurred while adding the transaction.");
     });
-    });
-
+});
 
 // Route to handle sign-up requests
 app.post("/register", function(req, res) {
@@ -233,7 +215,6 @@ app.post("/register", function(req, res) {
         });
 });
 
-
 // Route to handle login requests
 app.post("/login", function(req, res) {
     const { email, password } = req.body;
@@ -265,8 +246,6 @@ app.post("/login", function(req, res) {
             res.status(500).send("An error occurred while finding the user.");
         });
 });
-
-
 
 // Route to handle forgot password requests
 app.post("/forgot-password", function(req, res) {
@@ -303,7 +282,6 @@ app.post("/forgot-password", function(req, res) {
         });
 });
 
-
 // Route to handle password reset form submission
 app.post("/reset-password", function(req, res) {
     const { email, password, token } = req.body;
@@ -334,7 +312,6 @@ app.post("/reset-password", function(req, res) {
             res.status(500).send("An error occurred while verifying the token.");
         });
 });
-// Route to handle adding a new task
 
 // Route to handle adding a new task
 app.post('/add-task', (req, res) => {
@@ -362,16 +339,6 @@ app.post('/add-task', (req, res) => {
         });
 });
 
-
-
-
-
-
-// Start the server
-
-
-
-
 // Route to handle sign-up requests for events
 app.post("/signup", function(req, res) {
     const newEvent = new Event({
@@ -391,7 +358,6 @@ app.post("/signup", function(req, res) {
             res.status(500).send("An error occurred while signing up for the event.");
         });
 });
-
 
 // Serve contact.html
 app.get("/contact.html", function(req, res) {
@@ -417,7 +383,6 @@ app.post("/contact-submit", function(req, res) {
 });
 
 // Logout route
-
 app.get("/logout", function(req, res) {
     // Retrieve the user's email from the query parameter
     const userEmail = req.query.email;
@@ -441,10 +406,9 @@ app.get("/logout", function(req, res) {
         });
 });
 
-
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, function testnction() {
+// Start the server
+const PORT = process.env.PORT || 3001; // Change the port to 3000
+app.listen(PORT, function() {
     console.log(`Server running on port ${PORT}`);
 });
 
