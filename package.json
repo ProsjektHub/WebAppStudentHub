@@ -26,6 +26,9 @@
     "jest-fetch-mock": "^3.0.3"
   },
   "dependencies": {
+    "bcrypt": "^5.1.1",
+    "ejs": "^3.1.10",
+    "nodemailer": "^6.9.13",
     "util": "^0.12.5"
   }
 }
