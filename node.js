@@ -23,7 +23,7 @@ const transporter = nodemailer.createTransport({
 
 
 // MongoDB URI
-const dbURI = 'mongodb://localhost:27017/App_database'; 
+const dbURI = 'mongodb+srv://abdiqanihirsi:pg3RyDhEcpRZiL7J@cluster0.etwl1rv.mongodb.net/App_database?retryWrites=true&w=majority&tlsAllowInvalidCertificates=true'; 
 
 // Connect to MongoDB
 mongoose.connect(dbURI)
