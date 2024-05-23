@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" id="top" class="no-js">
+<!-- Class "no-js" /"menu-no-js"  checks if JavaScript is enabled in the visitor's browser. The "no-js" and "menu-no-js" classes are initially added to the html element to handle different styles or functionalities based on whether JavaScript is enabled in the user's browser. -->
+<html lang="en" id="top" class="no-js menu-no-js">
 
 <head>
     <meta charset="utf-8">
@@ -8,14 +9,25 @@
     <meta name="description"
         content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, handle finances, and enhance social integration, making it easier to connect and participate in community activities.">
 
+<!-- This script checks if JavaScript is enabled in the user's browser. 
+    If it is, it removes the "menu-no-js" class and adds the "js" class to the html element. 
+    This is used to handle different styles or functionalities for the menu button.  -->
+    <script>
+      document.documentElement.classList.remove('menu-no-js');
+      document.documentElement.classList.add('js');
+  </script>
+  
 
+  <!-- by Dirkje J vd Poel -- dropdown-menu library -->
+      <script>
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js'); 
+  </script>
 
-    <title>StudentHub - Your All-in-One Student Organizer</title>
-    <meta name="description"
-        content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, handle finances, and enhance social integration, making it easier to connect and participate in community activities.">
+ 
 
     <link href="css/style.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <!-- <link href="style.css" rel="stylesheet"> -->
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -46,21 +58,21 @@
             </div>
 
             <div class="text-container">
-                <h1 class="site-logo">StudentHub</h1>
-                <p class="site-slogan">Transform Your Student Life: Achieve More</p>
+              <h1 class="site-logo">StudentHub</h1>
+              <p class="site-slogan">Transform Your Student Life: Achieve More</p>
 
-                <!-- Added by Dirkje J. vd Poel -- User icon with dropdown menu -->
-                <div class="dropdown">
-                    <!-- User icon that triggers the dropdown menu when clicked -->
-                    <i class="fas fa-user dropdown-toggle"
-                        onclick="this.nextElementSibling.classList.toggle('show')"></i>
-                    <!-- The dropdown menu that shows when the user icon is clicked -->
-                    <div class="dropdown-menu">
-                        <!-- Link to the login page -->
-                        <a href="login.html">Log In</a>
-                        <!-- Link to the index page, effectively logging the user out -->
-                        <a href="index.html">Log Out</a>
-                    </div>
+              <!-- Added by Dirkje J. vd Poel -- User icon with dropdown menu -->
+              <div class="dropdown">
+                  <!-- User icon that triggers the dropdown menu when clicked -->
+                  <i class="fas fa-user dropdown-toggle"
+                      onclick="this.nextElementSibling.classList.toggle('show')"></i>
+                  <!-- The dropdown menu that shows when the user icon is clicked -->
+                  <div class="dropdown-menu">
+                      <!-- Link to the login page -->
+                      <a href="login.html">Log In</a>
+                      <!-- Link to the index page, effectively logging the user out -->
+                      <a href="index.html">Log Out</a>
+                  </div>
                 </div>
             </div>
         </div>

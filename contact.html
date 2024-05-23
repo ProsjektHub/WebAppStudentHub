@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" id="top" class="no-js">
+<!-- Class "no-js" /"menu-no-js"  checks if JavaScript is enabled in the visitor's browser. The "no-js" and "menu-no-js" classes are initially added to the html element to handle different styles or functionalities based on whether JavaScript is enabled in the user's browser. -->
+<html lang="en" id="top" class="no-js menu-no-js">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudentHub - Your All-in-One Student Organizer</title>
     <meta name="description"
-      content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, manage finances, and much more.">
+        content="StudentHub is an all-in-one app that helps students manage their daily life, organize tasks, handle finances, and enhance social integration, making it easier to connect and participate in community activities.">
+
     <meta name="description" content="Get in touch with the StudentHub team for any questions, feedback, or support requests you may have. We're here to help you make the most of your student life.">
     <!-- <link href="css/style.css" rel="stylesheet">
     <link href="css/contact.css" rel="stylesheet"> -->
@@ -17,7 +19,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- by Dirkje J vd Poel -- dropdown-menu library -->
 
-   
+   <!-- This script checks if JavaScript is enabled in the user's browser. 
+    If it is, it removes the "menu-no-js" class and adds the "js" class to the html element. 
+    This is used to handle different styles or functionalities for the menu button.  -->
+    <script>
+        document.documentElement.classList.remove('menu-no-js');
+        document.documentElement.classList.add('js');
+    </script>
+    
+
+    <!-- by Dirkje J vd Poel -- dropdown-menu library -->
+        <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js'); 
+    </script>
 
     <!-- <link rel="stylesheet"  href="contact.css" > -->
     
@@ -148,7 +163,7 @@
               <textarea id="message" name="message" cols="30" rows="5" required></textarea>
     
               <label for="GDPR">GDPR-Consent</label>
-              <div class="GDPR-text"><label><input type="checkbox" id="GDPR" name="GDPR" required>By using this form you agree to the storage and processing of your data by this website.</label> (<a href="#" target="_blank" rel="noreferrer noopener">Data protection</a>).</div>
+              <div class="GDPR-text"><label><input type="checkbox" id="GDPR" name="GDPR" required>By using this form you agree to the storage and processing of your data by this website.</label> (<a href="GDPR.html" target="_blank" rel="noreferrer noopener">Data protection</a>).</div>
     
               <button type="submit" value="Sent">Send</button>
     
