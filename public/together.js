@@ -2,7 +2,7 @@
 /*   
 
       Application to generate a slide show
-      Author: Abdiqani
+      Author: Code from the lecture. Modified and reused by Abdiqani
       Date:   
 
       Filename: together.js

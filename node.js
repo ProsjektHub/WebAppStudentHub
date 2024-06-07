@@ -15,13 +15,13 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'abqani2@gmail.com',
-        pass: 'yxjc asbb wvmx ypjm'
+        user: '',
+        pass: ''
     }
 });
 
 // MongoDB URI
-const dbURI = 'mongodb+srv://abdiqanihirsi:pg3RyDhEcpRZiL7J@cluster0.etwl1rv.mongodb.net/App_database?retryWrites=true&w=majority&tlsAllowInvalidCertificates=true'; 
+const dbURI = ''; 
 
 // Connect to MongoDB
 mongoose.connect(dbURI)
@@ -346,7 +346,7 @@ app.post("/signup", function(req, res) {
     const newEvent = new Event({
         eventName: req.body.eventName,
         // Use a fixed date for the event
-        eventDate: new Date("2024-05-25"),
+        eventDate: new Date("2024-06-25"),
         eventLocation: req.body.eventLocation
     });
 
