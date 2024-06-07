@@ -1,23 +1,23 @@
 /*  =======================================
 
 
-    Stylesheet zur Gestaltung der Site-Navigation
-    - basiert auf display: flex
-    - Gestaltung nach dem Prinzip Mobile First: 
-      1. Gestaltung für die mobile Navigation  
-      2. Menübutton per CSS gestalten 
-      3. Menübutton per CSS ausblenden 
-      4. Navigationsliste mit dem Menübutton einblenden
-      5. Eine horizontale Navigation für breitere Viewports 
+ Stylesheet for the design of the site navigation
+ * - based on display: flex
+ * - Design according to the Mobile First principle:
+ *   1. Styling for the mobile navigation
+ *   2. Style the menu button with CSS
+ *   3. Hide the menu button with CSS
+ *   4. Show the navigation list with the menu button
+ *   5. A horizontal navigation for wider viewports
 
     ================================= */
 
 
 /** 
-  * 1. Gestaltung für die mobile Navigation  
+  *  1. Styling for the mobile navigation 
   */     
     
-/* Navigationsbereich gestalten */
+/* Style the navigation area */
 .site-nav { 
   background-color: var(--color-nav,#00a3d2);
   color: white; 
@@ -30,7 +30,7 @@
   padding: 0; 
 }
 
-/* Navigationsliste als Flex-Container */
+/* Navigation list as a flex container */
 .site-nav ul { 
   display: flex;
   flex-flow: column; 
@@ -40,9 +40,9 @@
   margin: 0; 
 }
 
-/* Die Listenelemente li benötigen in der mobilen Navigation kein CSS  */
 
-/* Navigationslinks gestalten */
+/* Style the navigation links */
+
 .site-nav a {
   display: block;
   background: var(--color-nav, #00a3d2);
@@ -51,35 +51,33 @@
   padding: 0.5rem 1rem; 
 }
 
-/* Hover und Focus gestalten */
+/* Style hover and focus */
 .site-nav a:hover, .site-nav a:focus {
   background: var(--color-nav-darker, #007293); 
   color:white; 
 }
 
-/* Im Moment der Aktivierung */
+/* At the moment of activation */
 .site-nav a:active {
   background: var(--color-nav-darker); 
   color:white; 
 }
 
-/* Aktuellen Menüpunkt hervorheben */
+/* Highlight the current menu item */
 .current a { 
   background: var(--color-nav-darker); 
   color: white; 
   text-decoration: underline; 
 }
 
-
-
 /** 
-  * 2. Menübutton per CSS gestalten 
+  * 2. Style the menu button with CSS
   */     
 
-/* Kein JavaScript? Menübutton ausblenden */
-.no-js .menubutton { display: none; }
+/* No JavaScript? Hide the menu button */
+.menu-no-js .menubutton { display: none; }
 
-/* Menübutton gestalten */
+/* Style the menu button */
 .js .menubutton {
   display: flex;
   align-items: center;
@@ -95,9 +93,10 @@
 }
 
 
-/* Hamburgerikon */
+
+/* Hamburger icon */
 .js .menubutton::before {
-  content: url("../../UIComponentLibrary/hamburger.svg"); 
+  content: url("../UIComponentLibrary/hamburger.svg"); 
   width: 1rem; 
   height: 1rem; 
   margin: 0.25rem; 
@@ -105,7 +104,7 @@
 
 
 /**
-  * 3. Menübutton per CSS ausblenden 
+  * 3. Hide the menu button with CSS
   */
 
 .js .site-nav ul {
@@ -115,153 +114,20 @@
 
 
 /**
-  * 4. Navigationsliste mit dem Menübutton einblenden 
-  */
+ * 4. Show the navigation list with the menu button
+ */
 
-/* Navigationsliste mit leichter Animation einblenden  */
+/* Show the navigation list with a slight animation */
+
 .js .showmenu + ul {
   max-height: 100rem; 
   overflow: auto; 
   transition: max-height 0.5s ease;
 }
 
-/* Tausche Hamburger gegen X */
+/* Change Hamburger to X when menu is shown */
 .js .menubutton.showmenu::before {
-  content: url("../../UIComponentLibrary/menuclose.svg");
-}
-
-
-/**
-/*  =======================================
-
-
-    Stylesheet zur Gestaltung der Site-Navigation
-    - basiert auf display: flex
-    - Gestaltung nach dem Prinzip Mobile First: 
-      1. Gestaltung für die mobile Navigation  
-      2. Menübutton per CSS gestalten 
-      3. Menübutton per CSS ausblenden 
-      4. Navigationsliste mit dem Menübutton einblenden
-      5. Eine horizontale Navigation für breitere Viewports 
-
-   
-
-
-/** 
-  * 1. Gestaltung für die mobile Navigation  
-  */     
-    
-/* Navigationsbereich gestalten */
-.site-nav { 
-  background-color: var(--color-nav,#00a3d2);
-  color: white; 
-
-  box-shadow: 0 2px 6px var(--color-shadow);
-  margin-bottom: 2rem; 
-}
-
-.site-nav .inside {
-  padding: 0; 
-}
-
-/* Navigationsliste als Flex-Container */
-.site-nav ul { 
-  display: flex;
-  flex-flow: column; 
-  list-style: none;  
-  
-  padding: 0; 
-  margin: 0; 
-}
-
-/* Die Listenelemente li benötigen in der mobilen Navigation kein CSS  */
-
-/* Navigationslinks gestalten */
-.site-nav a {
-  display: block;
-  background: var(--color-nav, #00a3d2);
-  color: white; 
-  text-decoration: none; 
-  padding: 0.5rem 1rem; 
-}
-
-/* Hover und Focus gestalten */
-.site-nav a:hover, .site-nav a:focus {
-  background: var(--color-nav-darker, #007293); 
-  color:white; 
-}
-
-/* Im Moment der Aktivierung */
-.site-nav a:active {
-  background: var(--color-nav-darker); 
-  color:white; 
-}
-
-/* Aktuellen Menüpunkt hervorheben */
-.current a { 
-  background: var(--color-nav-darker); 
-  color: white; 
-  text-decoration: underline; 
-}
-
-
-
-/** 
-  * 2. Menübutton per CSS gestalten 
-  */     
-
-/* Kein JavaScript? Menübutton ausblenden */
-.no-js .menubutton { display: none; }
-
-/* Menübutton gestalten */
-.js .menubutton {
-  display: flex;
-  align-items: center;
-
-  cursor: pointer;
-  background: inherit;
-  color:white; 
-  font: inherit; 
-  text-align: center; 
-  padding: 0.5rem 1rem; 
-  border: 0; 
-  margin: 0; 
-}
-
-
-/* Hamburgerikon */
-.js .menubutton::before {
-  content: url("../../UIComponentLibrary/hamburger.svg"); 
-  width: 1rem; 
-  height: 1rem; 
-  margin: 0.25rem; 
-}
-
-
-/**
-  * 3. Menübutton per CSS ausblenden 
-  */
-
-.js .site-nav ul {
-  max-height: 0; 
-  overflow: hidden; 
-}
-
-
-/**
-  * 4. Navigationsliste mit dem Menübutton einblenden 
-  */
-
-/* Navigationsliste mit leichter Animation einblenden  */
-.js .showmenu + ul {
-  max-height: 100rem; 
-  overflow: auto; 
-  transition: max-height 0.5s ease;
-}
-
-/* Tausche Hamburger gegen X */
-.js .menubutton.showmenu::before {
-  content: url("../../UIComponentLibrary/menuclose.svg");
+  content: url("../UIComponentLibrary/menuclose.svg");
 }
 
 
@@ -269,86 +135,43 @@
   * 5. Eine horizontale Navigation für breitere Viewports 
   */
 
-  @media screen and (min-width: 600px) {
+ /* Ensure the menu button is not displayed on wider screens */
+ @media screen and (min-width: 600px) {
   
-    .menubutton { display: none !important; }
-  
-    .site-nav {
-      position: sticky;
-      top: 0; 
-    }
-  
-    .site-nav .inside {
-      padding: 0 1rem; 
-    }
-  
-    .site-nav ul { 
-      max-height: none !important; 
-      flex-flow: row; 
-      padding: 0; 
-    }
-  
-    .site-nav li {
-      flex: 1; 
-      max-width: 10rem; 
-      text-align: center;
-      border-left: 1px solid var(--color-grey-border); 
-    }
-    .site-nav li:last-child {
-      border-right: 1px solid var(--color-grey-border);
-    }
-  
+  .menubutton { display: none !important; }
+
+  .site-nav {
+    position: sticky;
+    top: 0; 
+  }
+
+  .site-nav .inside {
+    padding: 0 1rem; 
+  }
+
+  .site-nav ul { 
+    max-height: none !important; 
+    flex-flow: row; 
+    padding: 0; 
+  }
+
+  .site-nav li {
+    flex: 1; 
+    max-width: 10rem; 
+    text-align: center;
+    border-left: 1px solid var(--color-grey-border); 
+  }
+  .site-nav li:last-child {
+    border-right: 1px solid var(--color-grey-border);
+  }
+}
 
   /**  
-    * Die Gestaltung der Links 
-    * wird von der mobilen Navigation übernommen 
+    The design of the links is taken over from the mobile navigation.
     */
 
-
-} /* Ende @media */ 
-
-
 /** 
-  * Ende navi-responsiv.css 
-  */ 
-  
-    .menubutton { display: none !important; }
-  
-    .site-nav {
-      position: sticky;
-      top: 0; 
-    }
-  
-    .site-nav .inside {
-      padding: 0 1rem; 
-    }
-  
-    .site-nav ul { 
-      max-height: none !important; 
-      flex-flow: row; 
-      padding: 0; 
-    }
-  
-    .site-nav li {
-      flex: 1; 
-      max-width: 10rem; 
-      text-align: center;
-      border-left: 1px solid var(--color-grey-border); 
-    }
-    .site-nav li:last-child {
-      border-right: 1px solid var(--color-grey-border);
-    }
-  
-
-  /**  
-    * Die Gestaltung der Links 
-    * wird von der mobilen Navigation übernommen 
-    */
+  * End of navi-responsiv.css 
+  */
 
 
-/* Ende @media */ 
-
-
-/** 
-  * Ende navi-responsiv.css 
-  */ 

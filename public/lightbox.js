@@ -9,7 +9,7 @@
 
 
       Filename:lightbox.js
-      Author: Abdiqani Hirsi
+      Author: Code from lecture. Modified and rused by Abdiqani Hirsi
 */
 
 
