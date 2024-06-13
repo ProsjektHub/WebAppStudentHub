@@ -1,5 +1,14 @@
 
-/* CSS Styleguide */
+/** ====================================================
+     
+StudentHub: CSS Layouts 
+
+    style.css 
+    - central stylesheet for importing modules 
+    - included in HTML files via <link>
+
+===================================================== */
+
 /* Budget */
 @import url("budget.css"); 
 
@@ -11,7 +20,7 @@
 @import url("dropdown.css");  /* Login CSS*/
  /* @import url("auth.css");  */
 
-@import url("content.css");
+
 
 @import url("contact.css"); 
 
@@ -21,6 +30,11 @@
 @import url("layout-modern.css"); 
 @import url("header.css"); 
 @import url("navi-responsive.css");
+
+/* kan aktiveres for å vise UX notater med pop up tekst fra filen indexUX_Modals */
+@import url("ux-modals.css");
+
+@import url("content.css");
 
 
 
